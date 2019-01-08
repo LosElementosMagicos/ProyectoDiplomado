@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb600526513750729</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>600526513750729</string>
+    <key>FacebookDisplayName</key>
+    <string>Lend It</string>
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+        <string>fbauth2</string>
+    </array>
+    
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>226719894933-hjergtsv5r51eos665r5ev2bntv37udh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.226719894933-hjergtsv5r51eos665r5ev2bntv37udh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBMAYkdBpFDq1pN2dPgus4axotW5geo7YM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>226719894933</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.project8.Lend-It</string>
+	<key>PROJECT_ID</key>
+	<string>lendit-224720</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lendit-224720.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:226719894933:ios:08e6f35becfd3e81</string>
+	<key>DATABASE_URL</key>
+	<string>https://lendit-224720.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserProfileViewController" customModule="Lend_It" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="4tr-bK-5Bg" customClass="UserProfileViewController" customModule="Lend_It" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="Iue-dw-yxH" customClass="UserPro">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="yhO-f5-7SQ">
+                        <rect key="frame" x="90" y="100" width="140" height="140"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="140" id="NXf-yQ-4g1"/>
+                            <constraint firstAttribute="height" constant="140" id="phR-w2-RZA"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cfu-yx-Nzu">
+                        <rect key="frame" x="20" y="290" width="240" height="190.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U1T-io-8oX">
+                                <rect key="frame" x="0.0" y="0.0" width="131" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cg-5q-2Pt">
+                                        <rect key="frame" x="0.0" y="0.0" width="131" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="James Hetfield" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9i-rv-cEW">
+                                        <rect key="frame" x="0.0" y="19.5" width="131" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Px9-E1-ilZ">
+                                <rect key="frame" x="0.0" y="73.5" width="174" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número Telefónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCi-G3-wIp">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Sfu-KL-MQm">
+                                        <rect key="frame" x="0.0" y="19.5" width="174" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0447773124567" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfW-je-7OZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPf-dK-NEk">
+                                                <rect key="frame" x="157" y="0.0" width="17" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qeR-32-GPF">
+                                <rect key="frame" x="0.0" y="147" width="240" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo Electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzw-o4-N9C">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="un_correo_cualquiera@hotmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0B0-b2-8wD">
+                                        <rect key="frame" x="0.0" y="19.5" width="240" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXD-Eb-k5x">
+                        <rect key="frame" x="260" y="380" width="40" height="30"/>
+                        <state key="normal" title="editar"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="yhO-f5-7SQ" firstAttribute="centerX" secondItem="Ymy-3H-sjr" secondAttribute="centerX" id="2hX-tQ-bSw"/>
+                    <constraint firstItem="Ymy-3H-sjr" firstAttribute="trailing" secondItem="cfu-yx-Nzu" secondAttribute="trailing" constant="60" id="Mtu-wP-Xxv"/>
+                    <constraint firstItem="cfu-yx-Nzu" firstAttribute="leading" secondItem="Ymy-3H-sjr" secondAttribute="leading" constant="20" id="OUS-xz-Ral"/>
+                    <constraint firstItem="yhO-f5-7SQ" firstAttribute="top" secondItem="Ymy-3H-sjr" secondAttribute="top" constant="80" id="Zym-Ax-auF"/>
+                    <constraint firstItem="fXD-Eb-k5x" firstAttribute="centerY" secondItem="RfW-je-7OZ" secondAttribute="centerY" id="ejH-7n-loO"/>
+                    <constraint firstItem="Ymy-3H-sjr" firstAttribute="trailing" secondItem="fXD-Eb-k5x" secondAttribute="trailing" constant="20" id="wBJ-Wm-OvX"/>
+                    <constraint firstItem="cfu-yx-Nzu" firstAttribute="top" secondItem="yhO-f5-7SQ" secondAttribute="bottom" constant="50" id="xlb-ly-QLm"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="Ymy-3H-sjr"/>
+            </view>
+            <point key="canvasLocation" x="850" y="128"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="default-user" width="300" height="300"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_Lend_It {
+  umbrella header "Pods-Lend It-umbrella.h"
+
+  export *
+  module * { export * }
+}

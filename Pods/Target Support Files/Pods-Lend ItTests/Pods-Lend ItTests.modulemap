@@ -1,0 +1,6 @@
+framework module Pods_Lend_ItTests {
+  umbrella header "Pods-Lend ItTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
