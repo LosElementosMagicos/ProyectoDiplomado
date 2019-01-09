@@ -7,10 +7,14 @@ import GoogleMaps
 import Firebase
 import FirebaseDatabase
 import FBSDKLoginKit
+import FirebaseStorage
 
 class MapViewController: UIViewController, UISearchBarDelegate {
     
     var nearbyPlaces = [Item]()
+    // Firebase storage
+    var storageRef: StorageReference!
+    var storageDownloadTask: StorageDownloadTask!
     @IBOutlet weak var hamburgerTrailingC: NSLayoutConstraint!
     @IBOutlet weak var hamburgerLeadingC: NSLayoutConstraint!
     @IBOutlet weak var hamburgerView: UIView!
@@ -33,6 +37,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        storageRef = Storage.storage().reference()
         // Place users name
         profileNameLabel.text = UserDefaults.standard.string(forKey: "userName")
         // Hides hamburger menu
@@ -53,6 +58,8 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // Hides Keyboard
+        searchBar.endEditing(true)
         // Loads nearby markers
         retrieveData(searchBarWord: searchBar.text ?? "") { (message) in
             print(message)
@@ -201,7 +208,34 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         loginManager.logOut()
         performSegue(withIdentifier: "unwindToSignInSegue", sender: self)
     }
+    
+    func downloadImage(from storageImagePath: String, completion: @escaping (_ image: UIImage) -> Void) {
+        // 1. Get a filePath to save the image at
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let filePath = "file:\(documentsDirectory)/myimage.jpg"
+        // 2. Get the url of that file path
+        guard let fileURL = URL(string: filePath) else { return }
+        
+        // 3. Start download of image and write it to the file url
+        storageDownloadTask = storageRef.child(storageImagePath).write(toFile: fileURL, completion: { (url, error) in
+            // 4. Check for error
+            if let error = error {
+                print("Error downloading:\(error)")
+                return
+                // 5. Get the url path of the image
+            } else if let imagePath = url?.path {
+                // 6. Return the image
+                completion(UIImage(contentsOfFile: imagePath)!)
+            }
+        })
+        // 7. Finish download of image
+        //return
+    }
+
 }
+
+
 
 
 // MARK: - CLLocationManagerDelegate
@@ -249,12 +283,23 @@ extension MapViewController: GMSMapViewDelegate {
     guard let infoView = UIView.viewFromNibName("MarkerInfoView") as? MarkerInfoView else {
       return nil
     }
+    // Place marker info
     infoView.nameLabel.text = placeMarker.place.itemName
-    /*if let photo = placeMarker.place.photo {
-      infoView.placePhoto.image = photo
+    
+    marker.tracksInfoWindowChanges = true
+    let photoPath = placeMarker.place.itemPhoto1
+    if let imageData = UserDefaults.standard.data(forKey: photoPath) {
+        infoView.placePhoto.image = UIImage(data: imageData)
     } else {
-      infoView.placePhoto.image = UIImage(named: "generic")
-    }*/
+        downloadImage(from: photoPath) { (image) in
+            infoView.placePhoto.image = image
+            print("finished downloading photo")
+            let imageData = image.jpegData(compressionQuality: 0.1)
+            UserDefaults.standard.set(imageData, forKey: photoPath)
+            marker.tracksInfoWindowChanges = false
+        }
+    }
+    searchBar.endEditing(true)
     return infoView
   }
   

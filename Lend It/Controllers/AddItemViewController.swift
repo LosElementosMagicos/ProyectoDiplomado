@@ -97,7 +97,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         // 1. Get image data from selected image
         guard
             let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
-            let imageData = image.jpegData(compressionQuality: 0.5) else {
+            let imageData = image.jpegData(compressionQuality: 0.1) else {
                 print("Could not get Image JPEG Representation")
                 return
         }
