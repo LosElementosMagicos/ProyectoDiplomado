@@ -84,8 +84,6 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             sender.tag = 1 // Helps identify which button was tapped
             imagePicker.sourceType = UIImagePickerController.SourceType.camera
             imagePicker.allowsEditing = true
-            //imagePicker.cameraViewTransform = CGAffineTransform(translationX: <#T##CGFloat#>, y: <#T##CGFloat#>)
-            UIApplication.shared.statusBarStyle = .default
             self.present(imagePicker, animated: true, completion: nil)
         } else {
             let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
@@ -174,7 +172,6 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             self.navigationController?.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
-        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {

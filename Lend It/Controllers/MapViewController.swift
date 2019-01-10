@@ -11,6 +11,8 @@ import FirebaseStorage
 
 class MapViewController: UIViewController, UISearchBarDelegate {
     
+    @IBOutlet weak var lendButton: UIButton!
+    @IBOutlet weak var rentButton: UIButton!
     var nearbyPlaces = [Item]()
     // Firebase storage
     var storageRef: StorageReference!
@@ -36,6 +38,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rentButton.isHidden = true
         searchBar.delegate = self
         storageRef = Storage.storage().reference()
         // Place users name
@@ -232,6 +235,11 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         // 7. Finish download of image
         //return
     }
+    
+    func swapLendRentButtons() {
+        lendButton.isHidden = !lendButton.isHidden
+        rentButton.isHidden = !rentButton.isHidden
+    }
 
 }
 
@@ -276,6 +284,10 @@ extension MapViewController: GMSMapViewDelegate {
     searchBar.endEditing(true)
   }
   
+    func mapView(_ mapView: GMSMapView, didCloseInfoWindowOf marker: GMSMarker) {
+        swapLendRentButtons()
+    }
+    
   func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
     guard let placeMarker = marker as? PlaceMarker else {
       return nil
@@ -285,8 +297,9 @@ extension MapViewController: GMSMapViewDelegate {
     }
     // Place marker info
     infoView.nameLabel.text = placeMarker.place.itemName
+    infoView.priceLabel.text = String(placeMarker.place.price)
     // Make image circular
-    infoView.placePhoto.layer.cornerRadius = profileImageView.frame.width / 2
+    infoView.placePhoto.layer.cornerRadius = infoView.placePhoto.frame.width / 2
     infoView.placePhoto.clipsToBounds = true
     marker.tracksInfoWindowChanges = true
     let photoPath = placeMarker.place.itemPhoto1
@@ -307,6 +320,8 @@ extension MapViewController: GMSMapViewDelegate {
   
   func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
     mapCenterPinImage.fadeOut(0.25)
+    // Change lend rent buttons
+    swapLendRentButtons()
     return false
   }
   
