@@ -42,5 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("User is not logged")
         }
     }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Delete item photos from user defaults
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+            if key.hasPrefix(Auth.auth().app!.options.googleAppID) {
+                UserDefaults.standard.removeObject(forKey: key)
+            }
+        }
+    }
 }
 

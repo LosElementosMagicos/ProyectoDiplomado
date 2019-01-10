@@ -51,7 +51,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1Z-CE-a8o">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1au-IT-v5Z" userLabel="RentButton">
+                                <rect key="frame" x="102.5" y="593.5" width="170" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="3bZ-Or-lWX"/>
+                                    <constraint firstAttribute="width" secondItem="1au-IT-v5Z" secondAttribute="height" multiplier="200:39" id="uVV-2a-DLz"/>
+                                </constraints>
+                                <state key="normal" image="button_rent-it"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1Z-CE-a8o" userLabel="LendButton">
                                 <rect key="frame" x="102.5" y="593.5" width="170" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="S1Z-CE-a8o" secondAttribute="height" multiplier="200:39" id="BVI-2C-TyF"/>
@@ -157,6 +165,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nnZ-TW-jbz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-75" id="1c9-NQ-byf"/>
+                            <constraint firstItem="1au-IT-v5Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3Yg-gt-BO5"/>
                             <constraint firstItem="9AS-tk-Y2P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Zd-2q-Px2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9AS-tk-Y2P" secondAttribute="trailing" id="9KN-Pl-l3j"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9AS-tk-Y2P" secondAttribute="bottom" id="CgZ-aI-yaS"/>
@@ -171,6 +180,7 @@
                             <constraint firstItem="N3k-fX-MSN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kpo-du-TBT"/>
                             <constraint firstItem="Xhq-aE-gZc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="lZd-C1-eaS"/>
                             <constraint firstItem="S1Z-CE-a8o" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oyo-NN-sMs"/>
+                            <constraint firstItem="9AS-tk-Y2P" firstAttribute="top" secondItem="1au-IT-v5Z" secondAttribute="bottom" constant="20" id="sbJ-F9-s32"/>
                             <constraint firstItem="nnZ-TW-jbz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tUX-T5-m38"/>
                             <constraint firstItem="nnZ-TW-jbz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tqE-wh-f5C"/>
                             <constraint firstItem="N3k-fX-MSN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yw8-TV-JBJ"/>
@@ -190,12 +200,14 @@
                         <outlet property="hamburgerLeadingC" destination="cQx-dY-8kN" id="m7s-Zj-ju2"/>
                         <outlet property="hamburgerTrailingC" destination="1c9-NQ-byf" id="NzO-FS-nVW"/>
                         <outlet property="hamburgerView" destination="nnZ-TW-jbz" id="Iim-NY-QhF"/>
+                        <outlet property="lendButton" destination="S1Z-CE-a8o" id="m8b-Xj-9Dy"/>
                         <outlet property="mapCenterPinImage" destination="iLp-YM-wHS" id="vwP-ek-5bU"/>
                         <outlet property="mapView" destination="N3k-fX-MSN" id="1QD-3J-uoS"/>
                         <outlet property="pinImageVerticalConstraint" destination="Vq6-B1-wMZ" id="1p0-fW-COC"/>
                         <outlet property="profileImageView" destination="VSa-P6-GhM" id="ypG-7h-fhh"/>
                         <outlet property="profileNameLabel" destination="Abk-wF-BRt" id="3uq-hV-6cg"/>
                         <outlet property="profileRepLabel" destination="MVd-Jj-Rrp" id="rH2-M8-717"/>
+                        <outlet property="rentButton" destination="1au-IT-v5Z" id="lAJ-rR-QlB"/>
                         <outlet property="searchBar" destination="Xhq-aE-gZc" id="brl-GS-8Gd"/>
                         <segue destination="wqn-iL-Rhc" kind="unwind" identifier="unwindToSignInSegue" unwindAction="prepareForUnwindWithSegue:" id="EzF-mV-5kN"/>
                     </connections>
@@ -293,6 +305,7 @@
     </scenes>
     <resources>
         <image name="button_lend-it" width="200" height="39"/>
+        <image name="button_rent-it" width="201" height="39"/>
         <image name="default-user" width="300" height="300"/>
         <image name="facebook" width="300" height="44"/>
         <image name="hamburgerMenu" width="22.5" height="22.5"/>
