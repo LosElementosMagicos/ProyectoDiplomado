@@ -285,7 +285,9 @@ extension MapViewController: GMSMapViewDelegate {
     }
     // Place marker info
     infoView.nameLabel.text = placeMarker.place.itemName
-    
+    // Make image circular
+    infoView.placePhoto.layer.cornerRadius = profileImageView.frame.width / 2
+    infoView.placePhoto.clipsToBounds = true
     marker.tracksInfoWindowChanges = true
     let photoPath = placeMarker.place.itemPhoto1
     if let imageData = UserDefaults.standard.data(forKey: photoPath) {

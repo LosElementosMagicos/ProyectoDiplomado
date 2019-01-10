@@ -84,6 +84,8 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             sender.tag = 1 // Helps identify which button was tapped
             imagePicker.sourceType = UIImagePickerController.SourceType.camera
             imagePicker.allowsEditing = true
+            //imagePicker.cameraViewTransform = CGAffineTransform(translationX: <#T##CGFloat#>, y: <#T##CGFloat#>)
+            UIApplication.shared.statusBarStyle = .default
             self.present(imagePicker, animated: true, completion: nil)
         } else {
             let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
@@ -96,7 +98,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         [UIImagePickerController.InfoKey : Any]) {
         // 1. Get image data from selected image
         guard
-            let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
+            let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage,
             let imageData = image.jpegData(compressionQuality: 0.1) else {
                 print("Could not get Image JPEG Representation")
                 return
@@ -168,8 +170,11 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Access the "items" child reference and then create a unique child reference within it and finally set its value
         ref.child("items").child("\(Int(Date.timeIntervalSinceReferenceDate * 1000))").setValue(newItem.toAnyObject())
         let alert  = UIAlertController(title: "Subida Exitosa!", message: "Tu objeto se encuentra listo para ser rentado!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }))
         self.present(alert, animated: true, completion: nil)
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -177,6 +182,16 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
+}
+
+// Corrects bug cropping an offset on images related to not hidding statusbar
+extension UIImagePickerController {
+    open override var childForStatusBarHidden: UIViewController? {
+        return nil
+    }
+    open override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
 
 
