@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" secondItem="bBK-cK-k31" secondAttribute="height" multiplier="1:1" id="HMl-Ty-CQq"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="F4z-mX-b3c" kind="embed" id="Pmz-rc-Bcr"/>
+                                    <segue destination="F4z-mX-b3c" kind="embed" identifier="PhotoPageVCSegue" id="Pmz-rc-Bcr"/>
                                 </connections>
                             </containerView>
                         </subviews>
