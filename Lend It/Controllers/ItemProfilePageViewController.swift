@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemProfilePageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class ItemProfilePageViewController: UIPageViewControllerWithOverlayIndicator , UIPageViewControllerDataSource {
     
     var index = 0
     var photoData: [UIImage] = [UIImage(named: "add-camera.png")!,
