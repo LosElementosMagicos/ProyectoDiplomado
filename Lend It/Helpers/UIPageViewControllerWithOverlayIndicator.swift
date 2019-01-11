@@ -8,6 +8,7 @@
 
 import UIKit
 
+ // Used to place page indicators on top of page controller view
 class UIPageViewControllerWithOverlayIndicator: UIPageViewController {
     override func viewDidLayoutSubviews() {
         for subView in self.view.subviews {

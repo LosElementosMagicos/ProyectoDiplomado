@@ -19,7 +19,7 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBK-cK-k31">
                                 <rect key="frame" x="0.0" y="64" width="375" height="375"/>
-                                <color key="backgroundColor" red="0.052236319759999997" green="0.56656816710000002" blue="0.06084259744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bBK-cK-k31" secondAttribute="height" multiplier="1:1" id="HMl-Ty-CQq"/>
                                 </constraints>
@@ -63,10 +63,24 @@
                     <view key="view" contentMode="scaleToFill" id="8Rc-CU-cXN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xKz-9r-OW5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="waZ-Ko-EAG" firstAttribute="trailing" secondItem="xKz-9r-OW5" secondAttribute="trailing" id="0FJ-eR-yd5"/>
+                            <constraint firstItem="xKz-9r-OW5" firstAttribute="top" secondItem="waZ-Ko-EAG" secondAttribute="top" id="IgV-bo-wKU"/>
+                            <constraint firstItem="xKz-9r-OW5" firstAttribute="leading" secondItem="waZ-Ko-EAG" secondAttribute="leading" id="cap-WC-0II"/>
+                            <constraint firstItem="waZ-Ko-EAG" firstAttribute="bottom" secondItem="xKz-9r-OW5" secondAttribute="bottom" id="wu8-lF-IdC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="waZ-Ko-EAG"/>
                     </view>
                     <size key="freeformSize" width="375" height="375"/>
+                    <connections>
+                        <outlet property="itemImageView" destination="xKz-9r-OW5" id="AHO-ie-6bH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RD8-HG-Y3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
