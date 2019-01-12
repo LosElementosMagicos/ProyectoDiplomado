@@ -50,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UserDefaults.standard.removeObject(forKey: key)
             }
         }
+        clearAllFilesFromTempDirectory()
     }
 }
 

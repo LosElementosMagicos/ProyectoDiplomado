@@ -245,7 +245,9 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("Im inside prepare func")
-        if let vc = segue.destination as? ItemProfilePageViewController {
+        if segue.identifier == "RentItSegue" {
+            let navigationController = segue.destination as! UINavigationController
+            let vc = navigationController.viewControllers.first as! ItemProfileViewController
             let selectedItem = nearbyPlaces[markerNearbyItemIndex]
             vc.item = selectedItem
             vc.photoData[0] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto1)!
@@ -319,23 +321,29 @@ extension MapViewController: GMSMapViewDelegate {
     infoView.placePhoto.layer.cornerRadius = infoView.placePhoto.frame.width / 2
     infoView.placePhoto.clipsToBounds = true
     marker.tracksInfoWindowChanges = true
-    let photoPath1 = placeMarker.place.itemPhoto1
-    let photoPath2 = placeMarker.place.itemPhoto2
-    let photoPath3 = placeMarker.place.itemPhoto3
-    if let loadedImage = loadImageFromDocuments(imagePath: photoPath1) {
-        infoView.placePhoto.image = loadedImage
+    var photoPaths: [String] = ["","",""]
+    photoPaths[0] = placeMarker.place.itemPhoto1
+    photoPaths[1] = placeMarker.place.itemPhoto2
+    photoPaths[2] = placeMarker.place.itemPhoto3
+    if let loadedImage1 = loadImageFromDocuments(imagePath: photoPaths[0]),
+        let loadedImage2 = loadImageFromDocuments(imagePath: photoPaths[1]),
+        let loadedImage3 = loadImageFromDocuments(imagePath: photoPaths[2]) {
+        infoView.placePhoto.animationImages = [loadedImage1,loadedImage2,loadedImage3]
+        infoView.placePhoto.animationDuration = 6.0
+        infoView.placePhoto.animationRepeatCount = 0
+        infoView.placePhoto.startAnimating()
     } else {
-        placeMarker.place.downloadImage(from: photoPath1) { (image) in
+        placeMarker.place.downloadImage(from: photoPaths[0]) { (image) in
             infoView.placePhoto.image = image
             print("finished downloading photo")
-            saveImageToDocuments(image: image, imagePath: photoPath1)
+            saveImageToDocuments(image: image, imagePath: photoPaths[0])
             marker.tracksInfoWindowChanges = false
         }
-        placeMarker.place.downloadImage(from: photoPath2) { (image) in
-            saveImageToDocuments(image: image, imagePath: photoPath2)
+        placeMarker.place.downloadImage(from: photoPaths[1]) { (image) in
+            saveImageToDocuments(image: image, imagePath: photoPaths[1])
         }
-        placeMarker.place.downloadImage(from: photoPath3) { (image) in
-            saveImageToDocuments(image: image, imagePath: photoPath3)
+        placeMarker.place.downloadImage(from: photoPaths[2]) { (image) in
+            saveImageToDocuments(image: image, imagePath: photoPaths[2])
         }
     }
     searchBar.endEditing(true)

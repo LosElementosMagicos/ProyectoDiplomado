@@ -706,8 +706,8 @@ NSURLSessionDataDelegate
 #if !TARGET_OS_TV
     if (resultError && ![metadata.request isGraphErrorRecoveryDisabled] && isSingleRequestToRecover) {
       _recoveringRequestMetadata = metadata;
-        self->_errorRecoveryProcessor = [[FBSDKGraphErrorRecoveryProcessor alloc] init];
-        if ([self->_errorRecoveryProcessor processError:resultError request:metadata.request delegate:self]) {
+      _errorRecoveryProcessor = [[FBSDKGraphErrorRecoveryProcessor alloc] init];
+      if ([_errorRecoveryProcessor processError:resultError request:metadata.request delegate:self]) {
         return;
       }
     }

@@ -10,16 +10,6 @@ import UIKit
 
 class ItemProfilePageViewController: UIPageViewControllerWithOverlayIndicator , UIPageViewControllerDataSource {
     
-    var item: Item = Item(ownerId: "",
-                          borrowingUserId: "",
-                          itemName: "",
-                          latitude: 0,
-                          longitude: 0,
-                          type: "",
-                          price: 0,
-                          itemPhoto1: "",
-                          itemPhoto2: "",
-                          itemPhoto3: "")
     // Array of images to display
     var photoData: [UIImage] = [UIImage(named: "add-camera.png")!,
                                 UIImage(named: "icon_item.png")!,

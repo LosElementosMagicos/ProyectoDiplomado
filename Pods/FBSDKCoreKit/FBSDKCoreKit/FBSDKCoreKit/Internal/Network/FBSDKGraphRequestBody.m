@@ -71,7 +71,7 @@
 {
   NSData *data = UIImageJPEGRepresentation(image, [FBSDKSettings JPEGCompressionQuality]);
   [self _appendWithKey:key filename:key contentType:@"image/jpeg" contentBlock:^{
-      [self->_data appendData:data];
+    [_data appendData:data];
   }];
   [logger appendFormat:@"\n    %@:\t<Image - %lu kB>", key, (unsigned long)([data length] / 1024)];
 }
@@ -81,7 +81,7 @@
                logger:(FBSDKLogger *)logger
 {
   [self _appendWithKey:key filename:key contentType:@"content/unknown" contentBlock:^{
-      [self->_data appendData:data];
+    [_data appendData:data];
   }];
   [logger appendFormat:@"\n    %@:\t<Data - %lu kB>", key, (unsigned long)([data length] / 1024)];
 }

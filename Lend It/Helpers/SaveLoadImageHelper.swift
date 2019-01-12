@@ -34,3 +34,16 @@ func loadImageFromDocuments(imagePath: String) -> UIImage? {
         return nil
     }
 }
+
+func clearAllFilesFromTempDirectory()
+{
+    let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    do {
+        let fileURLs = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil, options: [.skipsHiddenFiles, .skipsSubdirectoryDescendants])
+        for fileURL in fileURLs {
+            if fileURL.pathExtension == "jpg" {
+                try FileManager.default.removeItem(at: fileURL)
+            }
+        }
+    } catch  { print(error) }
+}

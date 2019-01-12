@@ -264,14 +264,14 @@ static NSMutableDictionary *gInstancesDictionary;
         handler(error);
       }
       // on errors, clear out accounts since it may be in a bad state
-        [self->_accounts removeAllObjects];
+      [_accounts removeAllObjects];
       return;
     } else {
       for (NSDictionary *account in result[@"data"]) {
         NSString *userId = account[@"id"];
         NSString *token = account[@"access_token"];
         if (userId && token) {
-            self->_accounts[userId] = [NSMutableDictionary dictionaryWithCapacity:2];
+          _accounts[userId] = [NSMutableDictionary dictionaryWithCapacity:2];
           _accounts[userId][kAccountsDictionaryTokenKey] = token;
           expectedTestAccounts++;
           [permissionConnection addRequest:[[FBSDKGraphRequest alloc] initWithGraphPath:[NSString stringWithFormat:@"%@?fields=permissions", userId]
