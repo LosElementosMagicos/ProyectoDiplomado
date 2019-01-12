@@ -5,9 +5,9 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - FBSDKCoreKit (4.29.0):
-    - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.29.0):
+  - FBSDKCoreKit (4.38.0):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.38.0):
     - FBSDKCoreKit
   - Firebase/Auth (5.14.0):
     - Firebase/CoreOnly
@@ -91,8 +91,8 @@ PODS:
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
-  - FBSDKCoreKit (= 4.29)
-  - FBSDKLoginKit (= 4.29)
+  - FBSDKCoreKit (= 4.38)
+  - FBSDKLoginKit (= 4.38)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -123,8 +123,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  FBSDKCoreKit: 6f139173dc63a1deaff4430a55f2fe5bb222d2af
-  FBSDKLoginKit: 56a057ca6822535ea0faa25f57a7c41edb697fd4
+  FBSDKCoreKit: 2ab7fdbf600dc6b628ba7a49aa29d357a7b4c74e
+  FBSDKLoginKit: 634fa27e72e33620eb6389253337342c03d4a407
   Firebase: 963d5685fae888a56d6d4d9cfce6b9c976958798
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
   FirebaseAuth: 4a5cc5fc2d1721e509e24699b93ebc3d94b1e195
@@ -141,6 +141,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: fc8e533d72ff996380e63ff0b69e7c131bbc5ce7
+PODFILE CHECKSUM: 21572a545620acaf58bd77cf8f53030cb1cb76f1
 
 COCOAPODS: 1.5.3
