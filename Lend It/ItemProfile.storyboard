@@ -17,22 +17,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBK-cK-k31">
-                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKa-3z-WeN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBK-cK-k31">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bBK-cK-k31" secondAttribute="height" multiplier="1:1" id="8ei-RZ-H2e"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="F4z-mX-b3c" kind="embed" identifier="PhotoPageVCSegue" id="Pmz-rc-Bcr"/>
+                                        </connections>
+                                    </containerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inC-hc-flt">
+                                        <rect key="frame" x="87" y="544" width="201" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="201" id="Bk8-Ad-pNa"/>
+                                            <constraint firstAttribute="height" constant="39" id="bJl-Ep-E0n"/>
+                                        </constraints>
+                                        <state key="normal" image="button_rent-it"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tZi-Mn-HsV">
+                                        <rect key="frame" x="16" y="395" width="138" height="149"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="k3y-Ld-1FB">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="63.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMI-dy-5ix">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52" height="33.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEa-hX-9jR">
+                                                        <rect key="frame" x="0.0" y="33.5" width="57" height="30"/>
+                                                        <state key="normal" title="Reviews"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Cnv-2H-pV2">
+                                                <rect key="frame" x="0.0" y="83.5" width="138" height="65.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ls0-jk-2li">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIl-Re-bDD">
+                                                        <rect key="frame" x="0.0" y="31.5" width="138" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Payment method"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="bBK-cK-k31" secondAttribute="height" multiplier="1:1" id="HMl-Ty-CQq"/>
+                                    <constraint firstItem="tZi-Mn-HsV" firstAttribute="top" secondItem="bBK-cK-k31" secondAttribute="bottom" constant="20" id="HHx-MR-YAk"/>
+                                    <constraint firstItem="bBK-cK-k31" firstAttribute="leading" secondItem="UKa-3z-WeN" secondAttribute="leading" id="Wgk-pY-mua"/>
+                                    <constraint firstAttribute="bottom" secondItem="inC-hc-flt" secondAttribute="bottom" constant="20" id="mg7-e3-Hbx"/>
+                                    <constraint firstItem="bBK-cK-k31" firstAttribute="top" secondItem="UKa-3z-WeN" secondAttribute="top" id="nTn-NW-uet"/>
+                                    <constraint firstItem="bBK-cK-k31" firstAttribute="centerX" secondItem="inC-hc-flt" secondAttribute="centerX" id="oN8-n7-etC"/>
+                                    <constraint firstItem="tZi-Mn-HsV" firstAttribute="leading" secondItem="UKa-3z-WeN" secondAttribute="leading" constant="16" id="oOJ-6Z-txo"/>
+                                    <constraint firstAttribute="trailing" secondItem="bBK-cK-k31" secondAttribute="trailing" id="oUu-OV-oBy"/>
+                                    <constraint firstAttribute="bottom" secondItem="bBK-cK-k31" secondAttribute="bottom" constant="228" id="rf7-yf-4Os"/>
+                                    <constraint firstItem="inC-hc-flt" firstAttribute="centerX" secondItem="UKa-3z-WeN" secondAttribute="centerX" id="uCp-Vf-r3N"/>
                                 </constraints>
-                                <connections>
-                                    <segue destination="F4z-mX-b3c" kind="embed" identifier="PhotoPageVCSegue" id="Pmz-rc-Bcr"/>
-                                </connections>
-                            </containerView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bBK-cK-k31" firstAttribute="top" secondItem="z6v-zZ-dZV" secondAttribute="top" id="S5Q-hb-pdO"/>
-                            <constraint firstItem="bBK-cK-k31" firstAttribute="leading" secondItem="z6v-zZ-dZV" secondAttribute="leading" id="rP7-Wn-6LH"/>
-                            <constraint firstItem="bBK-cK-k31" firstAttribute="trailing" secondItem="z6v-zZ-dZV" secondAttribute="trailing" id="xCf-NF-KIv"/>
+                            <constraint firstItem="UKa-3z-WeN" firstAttribute="leading" secondItem="z6v-zZ-dZV" secondAttribute="leading" id="14b-B5-KuI"/>
+                            <constraint firstAttribute="trailing" secondItem="UKa-3z-WeN" secondAttribute="trailing" id="Njo-h5-cyF"/>
+                            <constraint firstAttribute="bottom" secondItem="UKa-3z-WeN" secondAttribute="bottom" id="g3Y-PW-T78"/>
+                            <constraint firstItem="UKa-3z-WeN" firstAttribute="top" secondItem="z6v-zZ-dZV" secondAttribute="top" id="hlk-lg-27j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z6v-zZ-dZV"/>
                     </view>
@@ -105,4 +166,7 @@
             <point key="canvasLocation" x="-1790" y="-1362"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_rent-it" width="201" height="39"/>
+    </resources>
 </document>
