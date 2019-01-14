@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 import FBSDKLoginKit
 import FBSDKCoreKit
 
@@ -20,10 +21,13 @@ class SignInViewController: UIViewController {
     var userImage = UIImage(named: "")
     var facebookID:String = ""
     //END
+    
+    // Reference for storaging 
+    fileprivate var ref: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
     }
     
     

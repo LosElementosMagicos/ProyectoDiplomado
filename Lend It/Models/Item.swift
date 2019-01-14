@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreLocation
 import FirebaseStorage
 
 struct Item {
@@ -54,7 +53,6 @@ struct Item {
     
     func downloadImage(from storageImagePath: String, completion: @escaping (_ image: UIImage) -> Void) {
         let storageRef = Storage.storage().reference()
-        //let storageDownloadTask: StorageDownloadTask!
         // 1. Get a filePath to save the image at
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
