@@ -135,6 +135,15 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     fileprivate func writeNewItemToDatabase() {
+        if itemTitleTextField.text == "" || itemTitleTextField.text == " " {
+            // Missing fields, present alert
+            let alert = UIAlertController(title: "Nombre del objeto inválido", message: "Por favor intenta con otro nombre.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         guard
             let latitude = locationManager.location?.coordinate.latitude,
             let longitude = locationManager.location?.coordinate.longitude,

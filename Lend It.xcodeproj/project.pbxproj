@@ -28,6 +28,12 @@
 		657A301321D183C400B71CA1 /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657A301221D183C300B71CA1 /* MarkerInfoView.xib */; };
 		657A301721D300AF00B71CA1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A301621D300AF00B71CA1 /* SignInViewController.swift */; };
 		657A301921D3137A00B71CA1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A301821D3137A00B71CA1 /* Item.swift */; };
+		65F5DBCA21E80C0600AE6FB6 /* ItemProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F5DBC921E80C0600AE6FB6 /* ItemProfile.storyboard */; };
+		65F5DBCC21E811F300AE6FB6 /* ItemProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F5DBCB21E811F300AE6FB6 /* ItemProfilePageViewController.swift */; };
+		65F5DBCE21E8123500AE6FB6 /* ItemProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F5DBCD21E8123500AE6FB6 /* ItemProfileViewController.swift */; };
+		65F5DBD021E816F200AE6FB6 /* ItemProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F5DBCF21E816F200AE6FB6 /* ItemProfilePhotoViewController.swift */; };
+		65F5DBD221E869A100AE6FB6 /* UIPageViewControllerWithOverlayIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F5DBD121E869A100AE6FB6 /* UIPageViewControllerWithOverlayIndicator.swift */; };
+		65F5DBD421E91A4300AE6FB6 /* SaveLoadImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F5DBD321E91A4300AE6FB6 /* SaveLoadImageHelper.swift */; };
 		70D424BB42A4B1AA2F452A3E /* Pods_Lend_It.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12850DB4D8394A844308DD2 /* Pods_Lend_It.framework */; };
 		CFB4C17C28108E9B482EB6BC /* Pods_Lend_ItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA517994D72D0D0CA38AB3A /* Pods_Lend_ItUITests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +85,12 @@
 		657A301221D183C300B71CA1 /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
 		657A301621D300AF00B71CA1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		657A301821D3137A00B71CA1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		65F5DBC921E80C0600AE6FB6 /* ItemProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemProfile.storyboard; sourceTree = "<group>"; };
+		65F5DBCB21E811F300AE6FB6 /* ItemProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProfilePageViewController.swift; sourceTree = "<group>"; };
+		65F5DBCD21E8123500AE6FB6 /* ItemProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProfileViewController.swift; sourceTree = "<group>"; };
+		65F5DBCF21E816F200AE6FB6 /* ItemProfilePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProfilePhotoViewController.swift; sourceTree = "<group>"; };
+		65F5DBD121E869A100AE6FB6 /* UIPageViewControllerWithOverlayIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerWithOverlayIndicator.swift; sourceTree = "<group>"; };
+		65F5DBD321E91A4300AE6FB6 /* SaveLoadImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadImageHelper.swift; sourceTree = "<group>"; };
 		6A00B4367A98F548AA587EFB /* Pods-Lend ItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend ItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lend ItTests/Pods-Lend ItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DE2EC19568ACA914AD5836E /* Pods-Lend It.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend It.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lend It/Pods-Lend It.debug.xcconfig"; sourceTree = "<group>"; };
 		A23876C147FD2562F375BF63 /* Pods_Lend_ItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lend_ItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				654A73DC21E31893006A17C9 /* CurrencyField.swift */,
+				65F5DBD121E869A100AE6FB6 /* UIPageViewControllerWithOverlayIndicator.swift */,
+				65F5DBD321E91A4300AE6FB6 /* SaveLoadImageHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -162,6 +176,7 @@
 				657A2FDE21D1673400B71CA1 /* Main.storyboard */,
 				654A73D621E1961A006A17C9 /* AddNewItem.storyboard */,
 				654A73D421DED79E006A17C9 /* UserProfile.storyboard */,
+				65F5DBC921E80C0600AE6FB6 /* ItemProfile.storyboard */,
 				654A73DE21E323DA006A17C9 /* Helpers */,
 				657A301D21D6EC8300B71CA1 /* GoogleMapsHelpers */,
 				657A301C21D6EC1700B71CA1 /* Controllers */,
@@ -219,6 +234,9 @@
 				657A301621D300AF00B71CA1 /* SignInViewController.swift */,
 				654A73D021DEC081006A17C9 /* UserProfileViewController.swift */,
 				654A73DF21E44BD6006A17C9 /* AddItemViewController.swift */,
+				65F5DBCB21E811F300AE6FB6 /* ItemProfilePageViewController.swift */,
+				65F5DBCD21E8123500AE6FB6 /* ItemProfileViewController.swift */,
+				65F5DBCF21E816F200AE6FB6 /* ItemProfilePhotoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +376,7 @@
 				657A300B21D171DC00B71CA1 /* GoogleService-Info.plist in Resources */,
 				654A73D721E1961A006A17C9 /* AddNewItem.storyboard in Resources */,
 				657A301321D183C400B71CA1 /* MarkerInfoView.xib in Resources */,
+				65F5DBCA21E80C0600AE6FB6 /* ItemProfile.storyboard in Resources */,
 				657A2FE221D1678900B71CA1 /* Assets.xcassets in Resources */,
 				657A2FE021D1673400B71CA1 /* Main.storyboard in Resources */,
 			);
@@ -513,7 +532,11 @@
 			files = (
 				657A300F21D1839900B71CA1 /* PlaceMarker.swift in Sources */,
 				657A2FDD21D1673300B71CA1 /* ViewController.swift in Sources */,
+				65F5DBD021E816F200AE6FB6 /* ItemProfilePhotoViewController.swift in Sources */,
+				65F5DBD221E869A100AE6FB6 /* UIPageViewControllerWithOverlayIndicator.swift in Sources */,
+				65F5DBCC21E811F300AE6FB6 /* ItemProfilePageViewController.swift in Sources */,
 				657A300921D1690300B71CA1 /* MapViewController.swift in Sources */,
+				65F5DBD421E91A4300AE6FB6 /* SaveLoadImageHelper.swift in Sources */,
 				654A73DD21E31893006A17C9 /* CurrencyField.swift in Sources */,
 				657A300D21D180CD00B71CA1 /* UIViewExtension.swift in Sources */,
 				657A301721D300AF00B71CA1 /* SignInViewController.swift in Sources */,
@@ -522,6 +545,7 @@
 				654A73D221DEC082006A17C9 /* UserProfileViewController.swift in Sources */,
 				657A2FDB21D1673300B71CA1 /* AppDelegate.swift in Sources */,
 				654A73E021E44BD8006A17C9 /* AddItemViewController.swift in Sources */,
+				65F5DBCE21E8123500AE6FB6 /* ItemProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,9 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var rentButton: UIButton!
     var nearbyPlaces = [Item]()
     // Firebase storage
+    /*
     var storageRef: StorageReference!
-    var storageDownloadTask: StorageDownloadTask!
+    var storageDownloadTask: StorageDownloadTask!*/
     @IBOutlet weak var hamburgerTrailingC: NSLayoutConstraint!
     @IBOutlet weak var hamburgerLeadingC: NSLayoutConstraint!
     @IBOutlet weak var hamburgerView: UIView!
@@ -26,6 +27,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     fileprivate var locationMarker : GMSMarker? = GMSMarker()
     @IBOutlet weak var mapView: GMSMapView!
     private let locationManager = CLLocationManager()
+    var markerNearbyItemIndex = 0
     //private let dataProvider = GoogleDataProvider()
     private let searchRadius: Double = 1000
     @IBOutlet weak var addressLabel: UILabel!
@@ -40,7 +42,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         rentButton.isHidden = true
         searchBar.delegate = self
-        storageRef = Storage.storage().reference()
+        //storageRef = Storage.storage().reference()
         // Place users name
         profileNameLabel.text = UserDefaults.standard.string(forKey: "userName")
         // Hides hamburger menu
@@ -211,7 +213,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         loginManager.logOut()
         performSegue(withIdentifier: "unwindToSignInSegue", sender: self)
     }
-    
+    /*
     func downloadImage(from storageImagePath: String, completion: @escaping (_ image: UIImage) -> Void) {
         // 1. Get a filePath to save the image at
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -235,10 +237,24 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         // 7. Finish download of image
         //return
     }
-    
+    */
     func swapLendRentButtons() {
         lendButton.isHidden = !lendButton.isHidden
         rentButton.isHidden = !rentButton.isHidden
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Im inside prepare func")
+        if segue.identifier == "RentItSegue" {
+            let navigationController = segue.destination as! UINavigationController
+            let vc = navigationController.viewControllers.first as! ItemProfileViewController
+            let selectedItem = nearbyPlaces[markerNearbyItemIndex]
+            vc.item = selectedItem
+            vc.photoData[0] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto1)!
+            vc.photoData[1] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto2)!
+            vc.photoData[2] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto3)!
+            print("New info passed to PageVC")
+        }
     }
 
 }
@@ -295,23 +311,41 @@ extension MapViewController: GMSMapViewDelegate {
     guard let infoView = UIView.viewFromNibName("MarkerInfoView") as? MarkerInfoView else {
       return nil
     }
+    // Keeps track of wich marker in array was touched
+    markerNearbyItemIndex = nearbyPlaces.index(of: placeMarker.place) ?? 0
+    
     // Place marker info
     infoView.nameLabel.text = placeMarker.place.itemName
-    infoView.priceLabel.text = String(placeMarker.place.price)
+    // Format price to currency
+    let formattedPrice = Formatter.currency.string(from: NSDecimalNumber(integerLiteral: placeMarker.place.price))
+    infoView.priceLabel.text = formattedPrice
     // Make image circular
     infoView.placePhoto.layer.cornerRadius = infoView.placePhoto.frame.width / 2
     infoView.placePhoto.clipsToBounds = true
     marker.tracksInfoWindowChanges = true
-    let photoPath = placeMarker.place.itemPhoto1
-    if let imageData = UserDefaults.standard.data(forKey: photoPath) {
-        infoView.placePhoto.image = UIImage(data: imageData)
+    var photoPaths: [String] = ["","",""]
+    photoPaths[0] = placeMarker.place.itemPhoto1
+    photoPaths[1] = placeMarker.place.itemPhoto2
+    photoPaths[2] = placeMarker.place.itemPhoto3
+    if let loadedImage1 = loadImageFromDocuments(imagePath: photoPaths[0]),
+        let loadedImage2 = loadImageFromDocuments(imagePath: photoPaths[1]),
+        let loadedImage3 = loadImageFromDocuments(imagePath: photoPaths[2]) {
+        infoView.placePhoto.animationImages = [loadedImage1,loadedImage2,loadedImage3]
+        infoView.placePhoto.animationDuration = 6.0
+        infoView.placePhoto.animationRepeatCount = 0
+        infoView.placePhoto.startAnimating()
     } else {
-        downloadImage(from: photoPath) { (image) in
+        placeMarker.place.downloadImage(from: photoPaths[0]) { (image) in
             infoView.placePhoto.image = image
             print("finished downloading photo")
-            let imageData = image.jpegData(compressionQuality: 0.1)
-            UserDefaults.standard.set(imageData, forKey: photoPath)
+            saveImageToDocuments(image: image, imagePath: photoPaths[0])
             marker.tracksInfoWindowChanges = false
+        }
+        placeMarker.place.downloadImage(from: photoPaths[1]) { (image) in
+            saveImageToDocuments(image: image, imagePath: photoPaths[1])
+        }
+        placeMarker.place.downloadImage(from: photoPaths[2]) { (image) in
+            saveImageToDocuments(image: image, imagePath: photoPaths[2])
         }
     }
     searchBar.endEditing(true)

@@ -25,6 +25,14 @@
             </objects>
             <point key="canvasLocation" x="1810" y="156"/>
         </scene>
+        <!--ItemProfileStoryboard-->
+        <scene sceneID="8CG-LV-nwV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ItemProfile" referencedIdentifier="ItemProfileStoryboard" id="wTG-9y-TFO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQx-rZ-byM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="289"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -58,6 +66,11 @@
                                     <constraint firstAttribute="width" secondItem="1au-IT-v5Z" secondAttribute="height" multiplier="200:39" id="uVV-2a-DLz"/>
                                 </constraints>
                                 <state key="normal" image="button_rent-it"/>
+                                <connections>
+                                    <segue destination="wTG-9y-TFO" kind="popoverPresentation" identifier="RentItSegue" popoverAnchorView="1au-IT-v5Z" id="wyK-IC-ihI">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1Z-CE-a8o" userLabel="LendButton">
                                 <rect key="frame" x="102.5" y="593.5" width="170" height="33"/>
