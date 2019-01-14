@@ -9,7 +9,12 @@
 import UIKit
 
 class ItemProfileViewController: UIViewController {
-
+    
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var itemPriceLabel: UILabel!
+    @IBOutlet weak var itemReviewsButton: UIButton!
+    @IBOutlet weak var paymentMethodButton: UIButton!
+    
     var item: Item = Item(ownerId: "",
                           borrowingUserId: "",
                           itemName: "",
@@ -26,6 +31,10 @@ class ItemProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Assign item properties to labels and buttons
+        let formattedPrice = Formatter.currency.string(from: NSDecimalNumber(integerLiteral: item.price))
+        itemPriceLabel.text = formattedPrice
+        itemNameLabel.text = item.itemName
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {

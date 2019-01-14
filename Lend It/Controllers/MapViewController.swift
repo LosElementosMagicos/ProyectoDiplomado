@@ -316,7 +316,9 @@ extension MapViewController: GMSMapViewDelegate {
     
     // Place marker info
     infoView.nameLabel.text = placeMarker.place.itemName
-    infoView.priceLabel.text = String(placeMarker.place.price)
+    // Format price to currency
+    let formattedPrice = Formatter.currency.string(from: NSDecimalNumber(integerLiteral: placeMarker.place.price))
+    infoView.priceLabel.text = formattedPrice
     // Make image circular
     infoView.placePhoto.layer.cornerRadius = infoView.placePhoto.frame.width / 2
     infoView.placePhoto.clipsToBounds = true

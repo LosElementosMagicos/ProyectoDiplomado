@@ -52,12 +52,10 @@ class ItemProfilePageViewController: UIPageViewControllerWithOverlayIndicator , 
     // Returns the next view controller, or `nil` if there is no such controller.
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         var index = self.indexOfViewController(viewController as! ItemProfilePhotoViewController)
-        print(index)
         if (index == NSNotFound) {
             return nil
         }
         index += 1
-        print(index)
         if index == self.photoData.count {
             return nil
         }

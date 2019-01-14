@@ -28,8 +28,6 @@
 		04C0284B8DDB1B5AC6778E52655985B5 /* FTreeSortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 49803CC28ADE96767A4098700D175262 /* FTreeSortedDictionary.m */; };
 		04D1E6C33139E1AF51B425DF61C3102E /* FValueIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F457C98D79D50C8120E68ECB52B45E7 /* FValueIndex.m */; };
 		04FDA7751BEDBB4E726A2F616844DAD1 /* FBSDKBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = E4032BEEBBAC574225F01D50A01AB9A5 /* FBSDKBase64.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		053201083EC1E701EBCCE759491A6864 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D705F2F33CC31964C39403DC9775DAED /* SafariServices.framework */; };
-		05766C788E39DC5C6EA48845314AF0E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E61B48E192ABAC2A1E8E0AAF4F8D8FC /* Security.framework */; };
 		05836DBAACDBF3844E1C8C52BA62B3E6 /* FIRGetOOBConfirmationCodeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28152F9C20FE9B4CBC60AEEE51DB509F /* FIRGetOOBConfirmationCodeRequest.m */; };
 		05B6D642BDBCB1168280F41EF68EA73E /* FChildChangeAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FD94645D6399E2665FEEA1964E21C84F /* FChildChangeAccumulator.m */; };
 		0761D530AE9E6D59CCC6A6268B7243D2 /* FBSDKLoginManagerLoginResult+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = ACD7205605BCC5DFD83F9DD5ABBF8398 /* FBSDKLoginManagerLoginResult+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -42,7 +40,6 @@
 		0A427B13C60E218EDC342FF08704080D /* FBSDKLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDAD8E5F628D0583CBE89F92153B259 /* FBSDKLogger.m */; };
 		0A4C5C81804C50CBDF57EF842DE97ED0 /* nanopb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E77DF6B5DDD16A6E0C1BF1F194A39BE9 /* nanopb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A56572637925EF6E14B598FC0112BF4 /* FIREmailPasswordAuthCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B984DDA7857369F9B7EFEBCD99007 /* FIREmailPasswordAuthCredential.m */; };
-		0A620163B94C7371290A43C89E2A3A19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		0A66217F40979377E4DCEE094B85C691 /* FBSDKUIUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 634F04A1FF2A973318335A4D0ABBF57D /* FBSDKUIUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0A6FB62F43961D9D35D2867BB2105AB7 /* coding.cc in Sources */ = {isa = PBXBuildFile; fileRef = E6A376A91BC5BA633DF95558F323FDE0 /* coding.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		0BCF71114FA90D213BD09C4FCFBDACC7 /* version_edit.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7228253A0B99293FC0178697E0B09A66 /* version_edit.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
@@ -51,6 +48,7 @@
 		0C9039605A7D3D5FDF983ABB650C79D3 /* FParsedUrl.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B47CA3528F4A8E2D167534D88D588F /* FParsedUrl.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0CC702C8F99E23DE8D41425BFDD4240D /* FConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 13681832976C6DCF80434289E95F6421 /* FConnection.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0D4854EAF1FD0A812422E950645F9957 /* FBSDKAppEventsState.h in Headers */ = {isa = PBXBuildFile; fileRef = 5075BB466B989D5C772F03E33D1741CB /* FBSDKAppEventsState.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0D611A6D1BA11199662FCA250FFF8CF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		0D69A0CC748413E5F6BC7ED4DF74138F /* FIRUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A7AC314021BD2C4C8F1E102C09010560 /* FIRUserInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DA255473FD9473B5FBFC73EC16165A7 /* FIRStorageTokenAuthorizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B83819EC8A55B015BC1AA40B81352CB /* FIRStorageTokenAuthorizer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0DFC6F43F874D2811BECEB7FDB15CC44 /* FIRMutableData.m in Sources */ = {isa = PBXBuildFile; fileRef = E359F665AC5F3A90C09B37E56700869C /* FIRMutableData.m */; };
@@ -101,7 +99,6 @@
 		1A4E6AEEB9E0813B460A54A99A2FBC2C /* FRangeMerge.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D86673DA7DE398A0E369B0F1EAB2FBE /* FRangeMerge.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1A80F37F4039DE8E5933B30FA5F25D5F /* FIRCoreConfigurable.h in Headers */ = {isa = PBXBuildFile; fileRef = C92A43F83A23DC2F8C981DFA3943F13F /* FIRCoreConfigurable.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1AAA1F1AEBC1385B0C57890D68DC23D1 /* FIRPhoneAuthCredential.h in Headers */ = {isa = PBXBuildFile; fileRef = 173F1F1740A07CB04ED964310AAFD012 /* FIRPhoneAuthCredential.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1ADC0405DE4D8FF2DD3AC7AE4F9B7FA7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E61B48E192ABAC2A1E8E0AAF4F8D8FC /* Security.framework */; };
 		1AF870997BD68984EA40652974C51C26 /* FirebaseCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA5ACB4D00FD973DC34A8EC665A30F61 /* FirebaseCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B30B7085CF1F1BA1106DDBC8D0A73BC /* FIRAuthExceptionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE915E76429945FBC67EDDDFA0788EB9 /* FIRAuthExceptionUtils.m */; };
 		1B4B07230D9E136C2E788BDDCA740238 /* FirebaseAuthVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = B033A274C8BEF92D03EB5C9241BA0235 /* FirebaseAuthVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -114,6 +111,7 @@
 		1C3E3391EF8586FB2143ACAF7B1566CF /* arena.h in Headers */ = {isa = PBXBuildFile; fileRef = 599669FFB6EF50C1F57C61AFC06C0675 /* arena.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1CFA298A847AA9B4CECCA93F2F85DE1B /* FChange.h in Headers */ = {isa = PBXBuildFile; fileRef = 6148A629F077FD8619279178E450812B /* FChange.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1D88B103F90AC866D7DFE9B729D62F9E /* filter_block.cc in Sources */ = {isa = PBXBuildFile; fileRef = CB939A8B36557FD26C8F161D972B814A /* filter_block.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		1D9F66038B5D0520EC95BC8FDE59D384 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		1E35F6BFC09BD06406C29176322A6C61 /* FIRStorageReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 599FB9A1F5AE8CBBB77E7BA13E08B768 /* FIRStorageReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F2AE13E368ADD58D529C15675AC9476 /* FBSDKErrorRecoveryConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 80FD96691B8A25B503C1A665D6B011F6 /* FBSDKErrorRecoveryConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1F4002BDBA3BDD844A82A7FFFAD7FA8E /* FIRAuthErrorUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B697D4B967A5F14A6921E7ABB1413E7B /* FIRAuthErrorUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -148,7 +146,6 @@
 		26FE58CA1E6FBFC560ED14D4092899E1 /* FBSDKCodelessIndexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8309F931D618C58D5C070E6EE2FB04EF /* FBSDKCodelessIndexer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2708BCEE56FB1ACEFF6608A821C20962 /* FIRStorageDownloadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F18FCD065A6E7526F4EF257C27DEB41 /* FIRStorageDownloadTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		275030A0CA31B8AE5264A0C7EBDDDEC6 /* block.cc in Sources */ = {isa = PBXBuildFile; fileRef = 62BDDFDE1858CFCB675CD68733262C92 /* block.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
-		278DEFDEECD0F4E0836BDA7196CF18AB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6024AE0B019A413775A27DA95AF0A3 /* MobileCoreServices.framework */; };
 		27A6CE46833B6FBB7B6A44E4BCCA2F1D /* BFExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB77A9E205F8614178E2B7957B58C2 /* BFExecutor.m */; };
 		27B42F5E7D3CA6ACA91A18A7577669A0 /* FIRCreateAuthURIResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 524738F07524CE9A378667FE878575AB /* FIRCreateAuthURIResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		27D545755B97B5338C0F9132DB514E1E /* FIRAuthUserDefaultsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FEE2FA03DBF4486DA262E01DEA75AD /* FIRAuthUserDefaultsStorage.m */; };
@@ -166,7 +163,6 @@
 		29EED44C0826549DF7427F1AD2BF0AEE /* FBSDKBridgeAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B41E7BF67C3D05C4EC8AAD1BF70DB756 /* FBSDKBridgeAPIRequest.m */; };
 		2A302AD281EE3B624AF794587E2B194D /* BFAppLinkNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C9814C99D7D35DD1798B57A18B03A64 /* BFAppLinkNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A3F91157C7A013D2EF45A92DCCF0C5A /* FIRAuthDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3F4F46DA1C9DD7F58788D091905B35 /* FIRAuthDispatcher.m */; };
-		2A6E366DB3F50C85B00499A07AD9EF47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		2AC9B4419F4F01414415DCFD5840AE92 /* FBSDKViewImpressionTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E350C6068CD8B8FBA5097576B97E17C /* FBSDKViewImpressionTracker.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2B0EB7AD0CE60D98D92D569E3FFCE97F /* FTupleTSN.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE586E1F70ECC71D06D3DE8F7BA904F /* FTupleTSN.m */; };
 		2B8D115E3E217504C48E7FA4FC0EDA21 /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD50D27FB83F24A1064B6C961A76FC9 /* options.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -176,7 +172,6 @@
 		2D175C7F6B192F222045F8D78507F849 /* FBSDKLoginUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = B429261ECD38CBAF685055A822A220F9 /* FBSDKLoginUtility.m */; };
 		2D2254A51153B432346AD3D8E999AA50 /* FIRSecureTokenService.m in Sources */ = {isa = PBXBuildFile; fileRef = DB01133DF15638BF1D263965CC4EAA0D /* FIRSecureTokenService.m */; };
 		2D2C6D574E05173015E9564AF9EB5BFC /* hash.cc in Sources */ = {isa = PBXBuildFile; fileRef = 736E64E0403BFE19BAEBEC16A5D2EA00 /* hash.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
-		2D826FE4A1A56AF3E2611FEB5E7C91EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		2D9C91F8FE84F98F5F999BBFABE0A46F /* FIRSignUpNewUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F31321BF9C1845CC87E6BFDE1047EB /* FIRSignUpNewUserRequest.m */; };
 		2FDF6A76DA40B68076CF9D7CB917CCA1 /* Bolts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5713B1E725E671A5DD17570921E8655D /* Bolts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FE3E801B2DAC1823806BAFC895D0198 /* FChildrenNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4033DCB394D370225C8C6F37017EED8A /* FChildrenNode.m */; };
@@ -186,6 +181,7 @@
 		30D41322F580D4316476A1ADC565D80C /* FIRSetAccountInfoResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA45CBC80802F93998918ADE90F4FA /* FIRSetAccountInfoResponse.m */; };
 		30F3A6A72283933645DB4E43FE95831A /* FBSDKAppLinkResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = E3BBFA2B44BAB33516C18A8709C43F31 /* FBSDKAppLinkResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30FEC1CF01518923644FFB1E2361DFCD /* FIRPhoneAuthProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 44029E65372C60B7F096410D2C1E498B /* FIRPhoneAuthProvider.m */; };
+		31010EF42D84A135C1CB0E1B39A43E4D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AC09A822504D7EA44382E4B161FA3F /* MobileCoreServices.framework */; };
 		31129C3973C92CA7B35C7E3AE5E3773C /* FBSDKLoginManager+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F222CD967BE1A0ECBC590973035A514 /* FBSDKLoginManager+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		318B3071C6AF3E8FAED535AC8DD27834 /* FBSDKURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = FD4AD6901CA0586F4890F6ABE3C3AA95 /* FBSDKURLConnection.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		31CE24A1215D3B4FC23D539976017CF5 /* FIRDataEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D7AE92F50ADB0EE8F047C57EC8A79B /* FIRDataEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -238,7 +234,6 @@
 		3D9350D79FDB7B61DF689B851CFD7068 /* FBSDKTypeUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = A418850FFE75D25BE03FABCCC058F29D /* FBSDKTypeUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3DBEAB39A0A306B73985619EA6F92F22 /* FBSDKGraphRequest+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3491ACC10CDAE64D37D182C9E3DA80B3 /* FBSDKGraphRequest+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3DE16070D4BDD2E4BA4E2124D9888788 /* FCompleteChildSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 48F407BBE66F40B19775DDE4CA396547 /* FCompleteChildSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3E47E9D020D8B7CA20724FC7066B1727 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		3E8F894973AC38BF266BDD945EFC783C /* FBSDKSystemAccountStoreAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2303713D27A7753A9D0D251720631A /* FBSDKSystemAccountStoreAdapter.m */; };
 		3EBB81F472785B0D30E41D21329C73B3 /* FBSDKDeviceLoginCodeInfo+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A4D5A6FE76F1AA12514422717AA760C3 /* FBSDKDeviceLoginCodeInfo+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3F3C35B1471589C8DB1E8162E8D4B86A /* FBSDKGraphRequestMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = F9081FBFCAD7FB7AC1E0D1F6BC4930FF /* FBSDKGraphRequestMetadata.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -253,6 +248,7 @@
 		4117AC404DECEE4E4E98990808A7121F /* FBSDKServerConfigurationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE15BAEECB7ED603B5F3A53B558D40A /* FBSDKServerConfigurationManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		416A7760890657DBACC2BF6F6E3242EB /* FIRStorage_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D02A5294F82DA9EEF383A5F3F9A38608 /* FIRStorage_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		420EA753924C318049F86209DF9AF293 /* FBSDKBoltsMeasurementEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 49885C0602AF83E58EBDF2951C9C7627 /* FBSDKBoltsMeasurementEventListener.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		42417A7D0D3025CE0CD3954A5180448D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FD11A0A04033F8B42DB48636AD5740 /* SystemConfiguration.framework */; };
 		426B07E572AE6BF3E73255E49A2AF5CE /* APLevelDB.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA7867CB27C13C1FE8432637499F8C73 /* APLevelDB.mm */; };
 		427395F3BCF94DD6BA4C6B8BE6637FA9 /* FTupleFirebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A220D3F316D2947793F48217FD645A /* FTupleFirebase.m */; };
 		427799CB422851F585C02C74820C0463 /* pb_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 86C12607AE90761173BF6EB6A7F131B7 /* pb_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -266,7 +262,6 @@
 		43ED2695655E0A26CA8B1A8F6909512A /* FPendingPut.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DEBA20733111B2B3CA7ED6B4D1CBB4 /* FPendingPut.m */; };
 		43F3A258F215117761922683F97D7839 /* GULAppEnvironmentUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FC19A24AD5F70A8B0EBC19F8879B5999 /* GULAppEnvironmentUtil.m */; };
 		44069201EF64663D0F898114F36AF670 /* FBSDKWebDialogView.h in Headers */ = {isa = PBXBuildFile; fileRef = B59E7C0E6D31805B38679334571B5CC8 /* FBSDKWebDialogView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		44241715C33F282942E2D7B1311545DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		4479613A581081CDFAA89987CD5BB2FB /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F637947E4102C1CAD9DEA4B6D77FB9A /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		453547D27DE8FE05B1E58BA16E43DFE8 /* FEmptyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FB74274EC936950BB0B487FB9B960 /* FEmptyNode.m */; };
 		45451DF2DB5A4DC98A516461D47C8A5D /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = C75E80AF3E35988A98BC6AEA04BB519F /* GTMSessionFetcherService.m */; };
@@ -284,6 +279,7 @@
 		486CCCA59EF8A90677252B35E81D55A0 /* comparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 236C7B85D5FA9829BD23F56D9BD05A03 /* comparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		487D4FA6D383090AF1FDFA2788750733 /* FIRStorageMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 12426A8BBB8C39E64DC32CCFB6D5CD5A /* FIRStorageMetadata.m */; };
 		48A7174646366F0690D04085F849109E /* FBSDKKeychainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 765B84FED107726AC1A1BCECCEA37C21 /* FBSDKKeychainStore.m */; };
+		48D7C5BD3555783C57996029AFA59FB5 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE919F1A3BB5C8497248C8375983AE5 /* SafariServices.framework */; };
 		48EA0FD567ED01C39C97DC756B22C8AB /* FRepo_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 58ABA6DBA94F69651A4D8911FD266F80 /* FRepo_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4966DD3476CA919D164219968D1DBF14 /* FIRAuthAPNSToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 240E74130C1915387A91B9F773E12CFF /* FIRAuthAPNSToken.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		49B2236B32E4515B1826C973B8DD158C /* _FBSDKTemporaryErrorRecoveryAttempter.h in Headers */ = {isa = PBXBuildFile; fileRef = A94FA2C249F785CF1508747510B9B0F6 /* _FBSDKTemporaryErrorRecoveryAttempter.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -295,6 +291,7 @@
 		4AA67CFD56CDA29826E6FECC21760563 /* FTuplePathValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C05CAD846677AFA8C5976A393A34CA /* FTuplePathValue.m */; };
 		4AEBE32218F94AFB62AED4DD9161F927 /* FValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F2CA3A35D4A766A0E106CABE53C328 /* FValidation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4B181EF02099871204BA6BF5E3BC9C52 /* FPriorityIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 558C765F2D4EAA15E55E738102AFEDC2 /* FPriorityIndex.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4B71158A817AF0F60DE979F2AC709276 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A5C0AEAB49D94BFF032572C3FAC784 /* Security.framework */; };
 		4B8ED3052EE04FDE569394C9767EB2EA /* FIRAdditionalUserInfo_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A373A50959B35537B603B36FCB11033 /* FIRAdditionalUserInfo_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4BC6A1B6066445EB017E2DA76F14C2D4 /* FIRStorageGetDownloadURLTask_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 68B19B879EFC3A9D142385478552C4FB /* FIRStorageGetDownloadURLTask_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4C72DB40628AEF9FAC87DA58F8FE5174 /* FIRGoogleAuthCredential.h in Headers */ = {isa = PBXBuildFile; fileRef = 81F1319357B24053DB024411C0C87D82 /* FIRGoogleAuthCredential.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -370,6 +367,7 @@
 		5B23F7A6EB21AF26368E8700681E839F /* FBSDKLoginError.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FA22102609D79F345EF78B74FD4009 /* FBSDKLoginError.m */; };
 		5B38F49250D27082A85CB88879DA87EA /* FTupleStringNode.h in Headers */ = {isa = PBXBuildFile; fileRef = D12C4C8C1261A9C109D5D8734EA5611F /* FTupleStringNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5B87217C49CD0AB003D26C4D6FCE284A /* FBSDKSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6C7289AB177188420FBCF7CC7C195 /* FBSDKSettings.m */; };
+		5BB6586929F74062E884EC574F16AB67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		5C6019C79BC278FAB62D6D4881C95FCB /* FIRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5530811C7F35D08B06C4BC60A15B5CAC /* FIRUser.m */; };
 		5C646210AC3F3C67C22A34E0180EF8A7 /* FBSDKAppLinkReturnToRefererController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B44A0B532B5AF1822FF1B0703DC693D /* FBSDKAppLinkReturnToRefererController.m */; };
 		5C6C4CB13D6035CEE07E31F934D0941A /* FIRMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CFE54D1EE8DFC87CFCD667E1269663 /* FIRMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -434,6 +432,7 @@
 		6E17D29F5429EEF1A85FE41F9C923FD7 /* FBSDKDeviceLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD1F0CB31546771FADFCB157A22B236 /* FBSDKDeviceLoginManager.m */; };
 		6ED3FBBD21168A54D4884525D45B4A6D /* FBSDKAccessTokenCacheV4.h in Headers */ = {isa = PBXBuildFile; fileRef = 932106D6CBB3A35DBBC49EFEC2840C65 /* FBSDKAccessTokenCacheV4.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6EDF4C642083F58EED278C84A205F094 /* FIRApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EF28E0BDE8B3075AE167AEC26C634D /* FIRApp.m */; };
+		6F42A6B98CED5A87976CB199EC3007FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		6FD0A35D6AB5DF1F73008E8D4379BE76 /* FBSDKServerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 03746F23FB8D10DC3E19D0AB85B63EFF /* FBSDKServerConfiguration.m */; };
 		7032551099FFAB107D9AB19EAE013E3A /* FIRUserMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = F945C57F74AB5B50EBFFFA66F7A5A32D /* FIRUserMetadata.m */; };
 		7090E26A73C33E7E67F24A2E2B7CDF96 /* FTreeSortedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 8396CD4025D74E835CC0F2C091201224 /* FTreeSortedDictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -468,6 +467,7 @@
 		7A15158D1E3E1C346FFD71FEC092701E /* FBSDKBridgeAPIProtocolWebV1.h in Headers */ = {isa = PBXBuildFile; fileRef = 81F5772C1D910469AC8D54BC10125489 /* FBSDKBridgeAPIProtocolWebV1.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7A16527220A732C41FD54A487CFB7A91 /* _FBSDKLoginRecoveryAttempter.h in Headers */ = {isa = PBXBuildFile; fileRef = 32544834254F5F4B03604ED4601C830E /* _FBSDKLoginRecoveryAttempter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7A3860711B69D25106B6C83EFE82724E /* FBSDKBridgeAPICrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BEE2DD4C4765AD651289E55AE426E0E /* FBSDKBridgeAPICrypto.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7A7A7CF9FFA7934E012A2AB40766BBE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		7A999870D9DD45A47B8EBB3934B8A233 /* FPathIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F91A280EB39E14E017D7637C103CB3 /* FPathIndex.m */; };
 		7AFB98C382890FEB5AEBDCD32B333180 /* FSnapshotHolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D968DCC138CEDFE80CE9C816B8CA4C2 /* FSnapshotHolder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7BACA1330965E7D46F0FB10882100BEF /* FIRGitHubAuthProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 15753E790BC6797D6A296217EE0D7948 /* FIRGitHubAuthProvider.m */; };
@@ -483,13 +483,13 @@
 		7FC4CD60EDD1829786559761CF413E80 /* FBSDKAppLinkNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8FDCB3682B650B7D65552560843B9E /* FBSDKAppLinkNavigation.m */; };
 		804C39B98E2C724514A33DB8BE7F6824 /* FBSDKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5582D2C2626A2EBFCAED5573D68DA63A /* FBSDKMath.m */; };
 		8059B461DCF79B9CE868EF87E6E1DE00 /* FBSDKGraphRequestMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD0165884C37BE550FE11966070E1F1 /* FBSDKGraphRequestMetadata.m */; };
+		80A9EDB4FAB40D47A85B95E8311FABD8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A5C0AEAB49D94BFF032572C3FAC784 /* Security.framework */; };
 		80B064C90A63169E1B8DE90B6517CFD9 /* FIRVerifyPhoneNumberResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56331CBA3F1C537A0BBE0807F15BEB /* FIRVerifyPhoneNumberResponse.m */; };
 		80BA00FDC390DBACF13FD54F540A11E4 /* FBSDKAppLinkTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 128464E2541400CAB521356226EE1887 /* FBSDKAppLinkTarget.m */; };
 		80E37C99D8494655FC0ECEE03AE770CF /* status.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0E388CA1DAF6127BCA111B64C6852BDD /* status.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		80FB782605E62F9507BB559F50B3AB08 /* _FBSDKLoginRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CB889728F3A4135EB365CC9BFD1E54 /* _FBSDKLoginRecoveryAttempter.m */; };
 		816784555D885FEEC21E65F9999C6164 /* FBSDKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = D054A581E1E711022288C2977CA5086D /* FBSDKBase64.m */; };
 		819E20E2A312D0589B713D8AA9C88192 /* FIREmailAuthProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9C88A83E6627F2D91611289163B25 /* FIREmailAuthProvider.m */; };
-		81C2FA1798DBDC3D10403F075AAC6981 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E61B48E192ABAC2A1E8E0AAF4F8D8FC /* Security.framework */; };
 		826D06D193CA64611D6D06C812D3D46D /* FRangedFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7638044D4F24F94A9530CEAA0D48846F /* FRangedFilter.m */; };
 		82767B519B06F45CADFEA98CD250889E /* GULMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC4A3B42B997A530CEA3718D3835CE3 /* GULMutableDictionary.m */; };
 		827C5B6BCF24563E6A85866E71A5211C /* FIRDeleteAccountResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B00049CD9DA88E0480B9B19B57B889 /* FIRDeleteAccountResponse.m */; };
@@ -507,6 +507,7 @@
 		84E546079263EDABD5A6C461E9E5E9AD /* FBSDKURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B9B72CC2C1207FB26C5ACA91A2B28A5 /* FBSDKURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		850F2E13D548D0AF42396FCD31A351F7 /* FIRTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 357B6C42ECFABBA088401F2F1262B716 /* FIRTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8532A754B4C28F62F5964E80078CD669 /* FBSDKApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA695A11280164B35F61D9CF895AFF /* FBSDKApplicationDelegate.m */; };
+		855B80B03AED79DE4172A8F79297F856 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A5C0AEAB49D94BFF032572C3FAC784 /* Security.framework */; };
 		85B91C8B72466E5CDA3738B0C9B8B341 /* FBSDKButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E61E8E2D479F3AFCD3D425E25263447 /* FBSDKButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85D3F3EFD60D310AEE11F78B8E715471 /* FBSDKGraphRequestPiggybackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E3ED920031EECD24862718D8C797A17C /* FBSDKGraphRequestPiggybackManager.m */; };
 		8656E4214A0B1D14B8131B9719943DF8 /* FIRStorageReference_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DE5748C1999D1FD71343E2EA0F7067 /* FIRStorageReference_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -517,7 +518,6 @@
 		873F96538D0A120CF789640F9FE17FB1 /* FTupleObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = 5788CF2F6BE4B5BBDC8848C06A9B997D /* FTupleObjects.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		874C06E3DBD86C3FEE75EE65FF4D68D4 /* FBSDKDeviceLoginManagerResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDF0B5FF02C50F9A64786562ED2665C /* FBSDKDeviceLoginManagerResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		875AAF41A3BA5D50E41DA8B2CE16119F /* FDataEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 171D830EB3DA89BF0AA6E89D4F5179AE /* FDataEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		877338661E95EF1209492FD84CA3A200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		87794F0448C7542B592E6EA264F7D478 /* Pods-Lend ItUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E80577CABE3AC2F9C38A5E1B7E485AA /* Pods-Lend ItUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8811C1B5CA2CB674B8B767B8E2CD5490 /* FIRVerifyClientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B02D15CE5E2E8943F381B15CC69F8819 /* FIRVerifyClientResponse.m */; };
 		8815F832681361C5C4E07C4C8F40342A /* FIREmailLinkSignInRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1AEC706D136B7C3D87593504DC270 /* FIREmailLinkSignInRequest.m */; };
@@ -527,6 +527,7 @@
 		88B95D965B0DDD2DC1A27FD977BDA72B /* FIRAuthSerialTaskQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = BFDD0665A5A3F88152A414DEA93C31D3 /* FIRAuthSerialTaskQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8918C62D9BA2A846F28835E34CF13BCE /* FTupleOnDisconnect.m in Sources */ = {isa = PBXBuildFile; fileRef = EA90877782D43B4485013BBCB56DB6E7 /* FTupleOnDisconnect.m */; };
 		892839C4D58057AE1A96326BB898C0A4 /* FIRDeleteAccountRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FB44FC81B7CBE8F0F6C371C8571EF4 /* FIRDeleteAccountRequest.m */; };
+		894ADDD9F37627A7D90DD05297BED261 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FD11A0A04033F8B42DB48636AD5740 /* SystemConfiguration.framework */; };
 		89B6B709E51E06D40F04EF94DBB7A0AC /* FBSDKIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = AA09E5C754BF16E23498246BD39716F3 /* FBSDKIcon.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		89EBDC231BA2B1DF7AD7DFA458D17BC9 /* filename.h in Headers */ = {isa = PBXBuildFile; fileRef = 1238C1A9C29EA9B4BA861ACB402D428C /* filename.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8A1743A0B92B4BC98B48E7B6BC53BE72 /* log_writer.h in Headers */ = {isa = PBXBuildFile; fileRef = 59975AE401171DD7EC825288AB8717A7 /* log_writer.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -562,7 +563,6 @@
 		91B3761046884D4CEFD906383EB65E6B /* FIRStorageMetadata_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = FD635956B27ABD8A3599FE47A91EA396 /* FIRStorageMetadata_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		92220B096BAC953985661BC5F2DFDD85 /* FPersistentConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = A746360B1BA19D73CDCDEF9EFA682D71 /* FPersistentConnection.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		924C93CD57FD4D8B0BB521D029C213C8 /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 272778403098168D7B38A6D8DA9DAD46 /* cache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9259A9BC79CEE985606B03C171DE3E50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		926BDABD9024BDFE7CB873822E6856EB /* FIRAuthAppCredentialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D31B86328E2630D2A70323EFF0D1 /* FIRAuthAppCredentialManager.m */; };
 		92B58251896AF2A43D3388B4A7A17375 /* FTupleNodePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 3673B0F615A1ADBD3A6AD686EED7CFEB /* FTupleNodePath.m */; };
 		930F2FF02203E6CB571BED9D9F09A1F6 /* arena.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4E1285F93B22A0CC5F7E17D67C14DE66 /* arena.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
@@ -576,8 +576,6 @@
 		942EBF353D5E23BD696F9F84B5A70FDF /* FPersistenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F8DC1599E78D54F2F69E05EC899AA648 /* FPersistenceManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		94364A62761FFAEBA3C8D386C21C0A07 /* FBSDKUserDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F670D332A9C6FC26F2F1D185286B1DA /* FBSDKUserDataStore.m */; };
 		947145C319107C75FAA9C3EB5B270862 /* FOperationSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2DF3BA7D49E0EF8EA37AA1485B638E /* FOperationSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		94FB7E1670F438A032E6AFBCB3C18E4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
-		9644521F7C22ED536D47046E52DF5740 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		96A46134A41459ECD851507FE82A2396 /* FTupleTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 926A1F4CE8A2E07730305350CB02E648 /* FTupleTransaction.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		96A71A9CF82ED4CBBAC6303434D5D498 /* FIRRetryHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A24C40BFB03D23D69A213145539C3AC /* FIRRetryHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		96B08A5F13DBDE83B7DAFE56D35CDF37 /* FIRAuthCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = F7552316F65DBE4836FC1CD1683AAB37 /* FIRAuthCredential.m */; };
@@ -594,6 +592,7 @@
 		99281102B79D0A64554BF80FEA49FDEF /* FIRStorageComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BE204D556701824010ECBD0AAACF547 /* FIRStorageComponent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		99654F2630D639F8BB9425F2954D1739 /* FTupleCallbackStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2FF0AB239F3A51E2C143C4A024CBF /* FTupleCallbackStatus.m */; };
 		99E5EB057B9F5C89A7B5F0F07373E3AE /* FIRAuthDataResult_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C29439925E60BB3F0EAE52458422AA9 /* FIRAuthDataResult_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9A4A67E1694E36A7FE502C8728CB1A5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		9AE3332394CB4E7A85A09470B6274737 /* FIRDataSnapshot_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D747F9EB2ACD450FE92231668CD14349 /* FIRDataSnapshot_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9B334CD8470C1CEBC6EBD9010625836D /* FIRGitHubAuthProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 64645756BA032B39E655BD5BC8B20AC3 /* FIRGitHubAuthProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B6FD78E2B7A0CC622F97FC28180355C /* GTMSessionFetcher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4614AF73E6F20A0D17AA636921BC80 /* GTMSessionFetcher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -609,6 +608,7 @@
 		9E8A8B22F1B5462B0F93D5A9CA885E56 /* FBSDKTimeSpentData.h in Headers */ = {isa = PBXBuildFile; fileRef = 13A647719D862A91572BD7136A4D88BB /* FBSDKTimeSpentData.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9EC35AE5E263F48B43222C73F9569F21 /* FArraySortedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC8A68AF04AC600CDDC67696EEA0FD1 /* FArraySortedDictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9ECD51FE851B60BEDC6998C1F1FF5341 /* BFTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 17DDBB24BF8209DB172A736A07A2907A /* BFTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EF75B2E4E2EDFE1D9446E65835535E4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295FF9DF3768091BAA335F18DE49332F /* CFNetwork.framework */; };
 		9F455805EA81FD2E4536491639F4B3DC /* FBSDKAppLinkResolving.h in Headers */ = {isa = PBXBuildFile; fileRef = 36037E11344B95F36EF6CACE36DD5EA4 /* FBSDKAppLinkResolving.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FB4F4B7F1A734FD4BC2ADF3EF71EE32 /* FBSDKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDACD453A6A2A2944F8CB4FE90A742 /* FBSDKCrypto.m */; };
 		A01D5D1056F4D241B733B39E4BE4688A /* FBSDKAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B232E7B877FFC8C77F037BDC7F151CB /* FBSDKAccessToken.m */; };
@@ -628,6 +628,7 @@
 		A421534A2448E72CE68FC47F85063620 /* FAtomicNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 5981901F115377CCB499D5D2B751D71C /* FAtomicNumber.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A48CE14143B58F919EE47B1934DD357C /* FIRAuthNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 697270E5BFC73E22FF9D6738B3838E3C /* FIRAuthNotificationManager.m */; };
 		A498A24CE89CDACCEFA102FCA9F0D277 /* FIRVerifyPasswordResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8784071A6AF6A013F26B74CECEC97CFD /* FIRVerifyPasswordResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A4AE8E529212651C640D9649EAD0AB95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		A5A407C2729A90B75C962AF9BD33E9EB /* FIRDatabaseReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 82861386E92A6A3236109FFB14F18188 /* FIRDatabaseReference.m */; };
 		A5DF4177C85DB26614437E811E08FE87 /* FIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CCDA324FC864FE7B0C61F35F94CE7C /* FIndex.m */; };
 		A6195F74FAA394A1D67EFCB41378DE58 /* FIRAuthAppCredentialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA9F4F548368CBEA1792B7ED72B0289 /* FIRAuthAppCredentialManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -636,7 +637,6 @@
 		A70170FC8C111DB64EE4B07287A49DA2 /* FIRStorageUploadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = CD07A90B4F8CAD63C4B758A8D99017B2 /* FIRStorageUploadTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A73A021178D0B3E28768A85ECDA4D236 /* FCachePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6963E8ADD1F34E3F3D826BB138D64398 /* FCachePolicy.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A73F734767E6743486C676B21E73248F /* port.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B87703409126C491013C9FCD877233 /* port.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A77650A6BA41C591496ABF671ECBEE2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		A7CF20BBF733B89944F62D68E587435E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9C62EB5AB13006083EC3A1F3519FC4 /* FBSDKCoreKit.framework */; };
 		A7FD3C6C20D1B714EECB1AB525B644CC /* FIRStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2FEDD339673FC14A5737B2169F359B /* FIRStorage.m */; };
 		A84E5B1820410AF647450F7D47D1E2D5 /* FBSDKMeasurementEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 766E2DAD778E59A7592C82B51BDE4052 /* FBSDKMeasurementEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -663,6 +663,7 @@
 		AC5D118A0E6B91C906A8703307E999ED /* FTupleBoolBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 01902EAC0C5D78F005A3B94EF72B6782 /* FTupleBoolBlock.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AC6FD679776A0FDA2847FAD11ED592B0 /* FIRAuthRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE30559BCABA355AB0491267222E750 /* FIRAuthRequestConfiguration.m */; };
 		AC9B52945B98B3778DED12214570D5F0 /* FBSDKHybridAppEventsScriptMessageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C77C90EC350E4D0E9456EAB518398CAB /* FBSDKHybridAppEventsScriptMessageHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ACD1ECA18D3236EAF66845599B07A754 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		AD38B48FFC65147D16EC9C5AD3113BD5 /* GULUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B3BEF1B10097361AC090B76F19DE19 /* GULUserDefaults.m */; };
 		AD63FBD4D1294275A34F7BCCA484DAFB /* FIRStorageDeleteTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B60748717C2C2F159C03B6441E985381 /* FIRStorageDeleteTask.m */; };
 		AD713AD4352D0437F392D8A81D71F4DA /* FCacheNode.h in Headers */ = {isa = PBXBuildFile; fileRef = C02DC8DE8DEECABF0854BA05066E9A5C /* FCacheNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -686,6 +687,7 @@
 		B2CBC6CD40FD2917BDBA17D6C3A5F1F9 /* FIRFacebookAuthProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 9980DBBED30B23D0129BACE28B34452C /* FIRFacebookAuthProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3075229EE77719E713B578BA9D1F17D /* FIRErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 26033E9251F11E2E576FD745C975CC7B /* FIRErrors.m */; };
 		B3949C94FBA322F42278B9B3611B4FA9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E426D732CEC0BDD792FCFFDFC725C3 /* Bolts.framework */; };
+		B39F679C88F321ACF2183E1859B94F76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		B42296DE72D116C0C1A22BA451DC4E39 /* FMerge.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B32D7D398C3DD8AB04C9CD6C6CDDAD5 /* FMerge.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B42C14815D5EAB949909816B361D918D /* FMerge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC4B6CCC0AECF5D66A14A0D7F069CE2 /* FMerge.m */; };
 		B431A77F62F1714B3B3A47FF0BB3B237 /* FRepoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA527F2D3F71001A9CCC65C8679A601 /* FRepoManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -735,6 +737,7 @@
 		BFD72A22B6FD818F1D3EF5526420062D /* BFAppLinkNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = CB728ADE3F7CEBF5021795C2044C9E4F /* BFAppLinkNavigation.m */; };
 		C05D100A10A9DC1AF6C6018CED4053E3 /* FBSDKUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E9816CA41AF4BC1127EB6DEE5EA9E /* FBSDKUtility.m */; };
 		C09BD9A434F0B43F74D694B7F96E55A1 /* FImmutableSortedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = D90F7EC1306517AB6BCA623FBC66FE97 /* FImmutableSortedDictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C0C376DE7896468C126CF8783118E600 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A5C0AEAB49D94BFF032572C3FAC784 /* Security.framework */; };
 		C114626B8269F24FAB6B0EF0F566C709 /* FBSDKTriStateBOOL.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EE301A71AA034A21BD0A8A521EEC1F5 /* FBSDKTriStateBOOL.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C158CEB5D86B674A8465E4E728AF8B07 /* FIRStorageConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EB13666E4E61F6FD4A5363BC40927DCB /* FIRStorageConstants.m */; };
 		C17ECDC5BC4E36EC9A702EDAD8C7A537 /* FBSDKDeviceRequestsHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 38641BC4E31273CCA304BB4FD2428763 /* FBSDKDeviceRequestsHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -786,8 +789,8 @@
 		CAA66C2097632DA3A1B5325C4918E0D0 /* FBSDKGraphRequestConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F531388F9BFE348B418B27F97EFF557F /* FBSDKGraphRequestConnection.m */; };
 		CAEBB45460F35B31CDF27E2516F31B37 /* FBSDKLoginCompletion+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 641B04DFC7F89E1B329F721B6429CE1E /* FBSDKLoginCompletion+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CB4C01E5E9B6FAC216C29D886E7D9C3A /* GULAppDelegateSwizzler_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C227FFA23CAED38A94819163EC1C461 /* GULAppDelegateSwizzler_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CBB3BAF1CEB88C622B578F4338B7D8E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		CC3EBADF44A443776F6DEF3F01844AF2 /* GULNetworkMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = BF968CFD66DF83ED732AE316BAD2FAC3 /* GULNetworkMessageCode.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CC73BEC0033BDB6BC89FADFB82D23197 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE826134237F5772D74CA4D8BF3491D /* CFNetwork.framework */; };
 		CC9F4C22EFCA5EFF06AC1FF9B31CFEF0 /* GULOriginalIMPConvenienceMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FFFDABD65B9336AF63F739AC20DA4E /* GULOriginalIMPConvenienceMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CCA187E70B5B329E24221A04EAA3D921 /* memtable.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E0039DFB97906890AF80414E7409E7 /* memtable.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CCBE56892D136753083CEF8A0986562A /* FBSDKMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E478990FD325748DC9C7ED237B2526F /* FBSDKMath.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -816,7 +819,6 @@
 		D2743BEAE5054ECA336FC2A9F7C7B4D0 /* FValueEventRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1BE9C8E5F4DCD33F6A4EFCCA5D4BBA /* FValueEventRegistration.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D27539497AD3B159A1D756D9EE24295C /* FSnapshotHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD53E60CEED0E90417FCD5C6549D9D /* FSnapshotHolder.m */; };
 		D278365A6BD4C78221EF0ED0A30A111D /* FIRGitHubAuthCredential.h in Headers */ = {isa = PBXBuildFile; fileRef = B67C510B92798C721E9E5D69405442B6 /* FIRGitHubAuthCredential.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D2CEF6761CDAC7A0B8050178B8192AA7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46135FBD3A295ABA96EABFD08A281687 /* SystemConfiguration.framework */; };
 		D2E54B77503C52E26575B9DE2827DF2A /* c.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6ADDF7EFE52609A105F78F5476F95441 /* c.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		D2F79896D6CEFFE56D565F0A01BA9B24 /* FBSDKMaleSilhouetteIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 280E80E1FF60EBF2CCEB90B9BC8D2C40 /* FBSDKMaleSilhouetteIcon.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D2FDAEFD0E0600A8B540AC8BF21753A2 /* FIRComponentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CC3CB9A4793B4771B7716AD3DF6C143 /* FIRComponentType.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -824,6 +826,7 @@
 		D3AA9A65A800E8DD3170DD6258E922F9 /* env_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = D11849A388C4A4BC8C60269E3AFCE2A8 /* env_posix.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		D3DDF4ADB4EF49D92A32F6FC0E73C7CF /* FAuthTokenProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C10B01BD44B9F75335BA16E115C5C0 /* FAuthTokenProvider.m */; };
 		D3F7061510575AFC860180FC19A716DA /* FIRTwitterAuthCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7CA54E5FB58FB5DF81D0E130DE639A /* FIRTwitterAuthCredential.m */; };
+		D413C82AFECE5F9570233200E3B0C1F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		D44C4FB4CA27374589D832296CDA9E24 /* write_batch_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A5C47B951E5F54509744CD099059EB37 /* write_batch_internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D457E4B41EA14AEE91647AC137B64E62 /* FIRVerifyClientRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 137DA0394C65C6310B5F3C72ADCA0973 /* FIRVerifyClientRequest.m */; };
 		D4BFEE56AEF4FE7DEB99D29D246A06DF /* FIRVerifyAssertionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 289D829EC0499907375BD0B437D78531 /* FIRVerifyAssertionRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -863,6 +866,7 @@
 		DDA00BBCD87407C2C2944C2F6F1E24D0 /* FBSDKGraphRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DF860834363E8559F995B4B53114D3A /* FBSDKGraphRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDE08ACF73840138341000C61CA4490C /* db_iter.cc in Sources */ = {isa = PBXBuildFile; fileRef = D45B5C6085B9E8CE3B94187D819F3B4E /* db_iter.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		DE3DF83515B05F09674E4E8EA44E3BBA /* GoogleUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 149115DA33D88BE2DCD3714326C1C444 /* GoogleUtilities-dummy.m */; };
+		DEEF97AA1BEFBF9EEE8DCBB14847F6EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		DF4756064E353805E0B51B5505EC70E8 /* FIRStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = D7EF09A3B829C52F51C161C20EE4785D /* FIRStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF49C9B4D31CDC544544363F876F6EF5 /* FBSDKInternalUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C0ED1B1ABF069C4C31DF414AAA7C38 /* FBSDKInternalUtility.m */; };
 		DF6D29C501B52B981F0B2E81F4B3B7F6 /* FBSDKServerConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD89CB0C12C459CEF4EABB86557713A /* FBSDKServerConfigurationManager.m */; };
@@ -878,7 +882,6 @@
 		E167EC26267F3C0911B6A101A67CBC35 /* GULLoggerLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = F12D2C03DF1B8A6B6E9D029761303934 /* GULLoggerLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1FB6E47F4DA786A554ECABEFF0C2C92 /* db.h in Headers */ = {isa = PBXBuildFile; fileRef = BFFECE46B85A1A25D328AF1B9A76DB29 /* db.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2800FE9D3FB7983C2995A6C0039DDDA /* FBSDKTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122158D7C0357CAE18B794FD7601FCA /* FBSDKTooltipView.m */; };
-		E2FF74441D29D10BD43BC5496F857E9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		E3C64513033D5A3CC8E70E20D588C3AB /* Pods-Lend ItUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C583827D0329F9D8B68353C239714F4 /* Pods-Lend ItUITests-dummy.m */; };
 		E3D61B12973AEA1B4030BC7694B1C1DB /* FBSDKLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C802F97819AF659F0BEDC56D3D5EEA82 /* FBSDKLoginManager.m */; };
 		E3F08E7DA0F4A3B4C985EE5578E834DA /* FBSDKBridgeAPICrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0377E26CD8FFD7C942B3D3A42C3C /* FBSDKBridgeAPICrypto.m */; };
@@ -908,6 +911,7 @@
 		EA0BCE104FF383E29D07A2DCFBB9ACB8 /* GULLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = CE5380DC1F53FB3197A3402290761B5F /* GULLogger.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EA381391F12A92E450399E4296BFA18E /* FirebaseAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4560032A17B5A9F7EEC65A93FFD3C28 /* FirebaseAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA733AAA24308279FC30424B49F41797 /* FIRSignUpNewUserResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E0DFD657951ABC2A9F98B070FF34B8 /* FIRSignUpNewUserResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EAF410F0BDBB78B272F62FF238824A99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		EB2AC44252AA66BCAFA165F4CBE49BFF /* FBSDKURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8EBE1664D2A572A2EC97BEAE1943A9 /* FBSDKURLConnection.m */; };
 		EB97DB162C0B98BCC0F631F39EE8A611 /* FBSDKAppLink_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F82D6FEA226965B5DE68F1F6B3359470 /* FBSDKAppLink_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EBA9C65AED1DDC0D96057E3234269368 /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = BD56090E2EA353D82F22B6C8EFA3CA23 /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -923,10 +927,7 @@
 		EDA4988FE01A717FCD1C5DC90F8C5572 /* FBSDKGraphRequestPiggybackManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 64EFD71B5C3C4E84B8ED72C483FD0932 /* FBSDKGraphRequestPiggybackManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EDDC166F6676421A3ACC0782D95BFFB4 /* FBSDKBridgeAPIProtocolWebV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB3D3EFFF6698E0FB921B4F092BA4D /* FBSDKBridgeAPIProtocolWebV2.m */; };
 		EE005B2A7B1BFEC8A99DA03DA7FEDBF4 /* FIRCreateAuthURIRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C0364752048AFA5367B0D6C17C765E78 /* FIRCreateAuthURIRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EE6A2206BAABB315741C363E707457C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
-		EE907B78746899957C06592208EFE065 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		EE9835D5E3004FD7AD0C44CBF19A4777 /* FIRVerifyCustomTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3FD3A446328921805961EF5FE4A74 /* FIRVerifyCustomTokenResponse.m */; };
-		EF10E200B17A7F7B7960314330AAD1F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46135FBD3A295ABA96EABFD08A281687 /* SystemConfiguration.framework */; };
 		EFAEAB63742E87D002E59DB6BE9C8AA2 /* BFAppLinkReturnToRefererController.m in Sources */ = {isa = PBXBuildFile; fileRef = 625530A88FC8BBC6A09D522EDA871068 /* BFAppLinkReturnToRefererController.m */; };
 		EFB23AD894604024D1C4098FCE8EA735 /* BFURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A1782198EBB7EF7AD7271CE9AE008 /* BFURL.m */; };
 		F00B98F7359A7BCDCA389FF4D14D0610 /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E51043216588B56F708871C437AC1F1 /* GTMSessionUploadFetcher.m */; };
@@ -954,12 +955,14 @@
 		F7B635FDB6C70C897403C64D26495043 /* FIRSignUpNewUserRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D63EBA5DA7B2A20C57DF6CCB761445D8 /* FIRSignUpNewUserRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F7C7517A9557F31BACF29F42990D6181 /* FBSDKProfilePictureView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB5A30B4247BE22AC24B746315EC044 /* FBSDKProfilePictureView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7EE74D29BE586D06045BC930D667CC3 /* BFMeasurementEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8D962BC446A6F88557FB6C1B36C20F /* BFMeasurementEvent.m */; };
+		F7F479DDB4AD3941E505A47680C82DD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		F81F40797EDDAF0A3D3FD493554EF690 /* FBSDKAccessTokenCacheV3_17.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36BE5E60B06FEFFA92393E1A64E6D4 /* FBSDKAccessTokenCacheV3_17.m */; };
 		F8203C8632BDE999A4E00CB2889D8335 /* FirebaseStorage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E148EAB894F995B87DFDD2917B1CAA33 /* FirebaseStorage-dummy.m */; };
 		F82A5AC366CFE91701ACFD28EC220BCE /* merger.cc in Sources */ = {isa = PBXBuildFile; fileRef = D0F9AE8294467AA470D7758635B81241 /* merger.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		F8AEC5CF8A3C66AA46D007EC1978499C /* histogram.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E32BDD49832CE36AC7FC273A1AB9E2B /* histogram.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F8E088D1428E90E4C54CBFD345E81EC4 /* FIRVerifyPhoneNumberRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF3939BF4B98F31B73F940EC13883A6 /* FIRVerifyPhoneNumberRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F9753EFE72DDA05B378A06869B06ACAB /* FAckUserWrite.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CD3E432B909F37D4F261DB308E165 /* FAckUserWrite.m */; };
+		F9D00D0E8CDC4255CA25137F3B76264E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209569A4875F9660D0720F5221FABB90 /* Foundation.framework */; };
 		FA48BD3DC80F6BD21351B56BAB17734F /* FBSDKLoginConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F152A152B1B2BAABA8AC1C81FBDB566 /* FBSDKLoginConstants.m */; };
 		FAB4153F07A5C5DB8D97F59FE1EC3241 /* FIRComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 82F50AB6E6551CA7AB53BA08E0D3229E /* FIRComponent.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		FABE51ADD71394D7F9C5122D7785181E /* _FBSDKTemporaryErrorRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A5C9E493C17C615987F9045A79CFF5 /* _FBSDKTemporaryErrorRecoveryAttempter.m */; };
@@ -970,12 +973,9 @@
 		FC45C279B8E52737EB95338D19C80A4B /* FCachePolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53600CB666FAC09A2D414D6FFFAC7CE3 /* FCachePolicy.m */; };
 		FC8F9A024980EE037EF01526DE755F73 /* FIRStorageUpdateMetadataTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D872B44C17F06ED0390578C7BDE65F7 /* FIRStorageUpdateMetadataTask.m */; };
 		FC9D70C36569D43D58C336C316C14DB0 /* FLimitedFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = A3EEB5C18657299335925EC4C3FE402B /* FLimitedFilter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FD1987BB406D43640B8FB8A5881492F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
 		FD2D2A017203DD92A4E33539B8BBDEA6 /* FValueEventRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 798B1BA3738B18373FD7B6A00C1E4F3A /* FValueEventRegistration.m */; };
 		FD4A76878D1F9BDA183809939B458B28 /* FBSDKAppLinkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 74538BC8762C994DAC97EA6223FC29BB /* FBSDKAppLinkUtility.m */; };
 		FD5441F15A937C867F04996C1B61FC7C /* BFAppLinkReturnToRefererView_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 52517746EE0CEA10E46CC5CBB4709488 /* BFAppLinkReturnToRefererView_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FD7406593326BC67750B6BAC61BDACE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */; };
-		FDB1806DF8702FA99828F24C800E4E8A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E61B48E192ABAC2A1E8E0AAF4F8D8FC /* Security.framework */; };
 		FDCC407FDA0EA85146E8D8486289C5B6 /* FIRResetPasswordResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DB1D7138D345E278718E2F853FBCDA /* FIRResetPasswordResponse.m */; };
 		FDD9ADF8C9013FF0A79F04C417A3D474 /* FTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 58ACB685E74E0C96A26FE10AA9AB2C33 /* FTree.m */; };
 		FE2C3AD6E1C4FAC1185D87C9ED9ABBCD /* FBSDKTestUsersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7357C9786DE107016F18D71760FD5A61 /* FBSDKTestUsersManager.m */; };
@@ -1316,6 +1316,7 @@
 		1FD804088A6E9B4DF5B3017C74E6402F /* FirebaseCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FirebaseCore-dummy.m"; sourceTree = "<group>"; };
 		205216F95B1E97E904B1998E0B309AC4 /* Pods-Lend ItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lend ItUITests.release.xcconfig"; sourceTree = "<group>"; };
 		208DA0ECFA7A258472CA784373724626 /* FIRTwitterAuthCredential.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRTwitterAuthCredential.h; path = Firebase/Auth/Source/AuthProviders/Twitter/FIRTwitterAuthCredential.h; sourceTree = "<group>"; };
+		209569A4875F9660D0720F5221FABB90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		20989BD44D7BCAD94C51B3E8219810CD /* FBSDKAppLinkReturnToRefererView_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppLinkReturnToRefererView_Internal.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKAppLinkReturnToRefererView_Internal.h; sourceTree = "<group>"; };
 		20F09F49215B6B700A0E8690342B0D66 /* FirebaseAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseAuth.modulemap; sourceTree = "<group>"; };
 		20F8B74A65F83CF7F5183E95065E6538 /* FBSDKViewHierarchy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKViewHierarchy.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/Codeless/FBSDKViewHierarchy.h; sourceTree = "<group>"; };
@@ -1324,6 +1325,7 @@
 		21B5F534277BB85D77BE1A2CB8C942F7 /* FIRAuthKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthKeychain.h; path = Firebase/Auth/Source/FIRAuthKeychain.h; sourceTree = "<group>"; };
 		21D20A37834EB7347DA79A5DF02DABA9 /* FBSDKColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKColor.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKColor.h; sourceTree = "<group>"; };
 		21D2247E0574CF36049C7DFF0F044281 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Frameworks/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		21FD11A0A04033F8B42DB48636AD5740 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		228DF4A539651585CCB263DF6D8DE165 /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
 		22FBE580BB32ED851D61B58F59AEBBAC /* FBSDKAccessTokenCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAccessTokenCache.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCache.h; sourceTree = "<group>"; };
 		2337CC1BD0E986E24578323B9708403A /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
@@ -1357,6 +1359,7 @@
 		289D829EC0499907375BD0B437D78531 /* FIRVerifyAssertionRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRVerifyAssertionRequest.h; path = Firebase/Auth/Source/RPCs/FIRVerifyAssertionRequest.h; sourceTree = "<group>"; };
 		28E3EAB5C3447278BFAA581A92CF997B /* FIRAuthAppDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthAppDelegateProxy.h; path = Firebase/Auth/Source/FIRAuthAppDelegateProxy.h; sourceTree = "<group>"; };
 		2905142DE2D2E6CCBEB9C595C1D638BF /* Pods-Lend It.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lend It.debug.xcconfig"; sourceTree = "<group>"; };
+		295FF9DF3768091BAA335F18DE49332F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		296927E46C5EAD880D63926256658DD3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29A80FA6302F0A71232E341C20419A61 /* FBSDKBridgeAPIProtocolWebV1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKBridgeAPIProtocolWebV1.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/ProtocolVersions/FBSDKBridgeAPIProtocolWebV1.m; sourceTree = "<group>"; };
 		29A99888CBEEFFAFAC14C4418A2A5CC5 /* FIRDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabase.h; path = Firebase/Database/Public/FIRDatabase.h; sourceTree = "<group>"; };
@@ -1419,7 +1422,6 @@
 		3DEBEBB6C3DC375028A1732063CB5B1F /* builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = builder.cc; path = db/builder.cc; sourceTree = "<group>"; };
 		3E350C6068CD8B8FBA5097576B97E17C /* FBSDKViewImpressionTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKViewImpressionTracker.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKViewImpressionTracker.h; sourceTree = "<group>"; };
 		3E5EF8D3740CC4DF1770352261C3B44B /* FIRComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRComponent.m; path = Firebase/Core/FIRComponent.m; sourceTree = "<group>"; };
-		3E61B48E192ABAC2A1E8E0AAF4F8D8FC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		3E61E8E2D479F3AFCD3D425E25263447 /* FBSDKButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKButton.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKButton.h; sourceTree = "<group>"; };
 		3E8197859C9EC69B53C4491605AF935A /* FConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FConnection.m; path = Firebase/Database/Realtime/FConnection.m; sourceTree = "<group>"; };
 		3F18FCD065A6E7526F4EF257C27DEB41 /* FIRStorageDownloadTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRStorageDownloadTask.h; path = Firebase/Storage/Public/FIRStorageDownloadTask.h; sourceTree = "<group>"; };
@@ -1443,7 +1445,6 @@
 		444815DB22851CBAAB5D1E618E410530 /* FIRAuthAppDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthAppDelegateProxy.m; path = Firebase/Auth/Source/FIRAuthAppDelegateProxy.m; sourceTree = "<group>"; };
 		44B76529A68E45C447995FD976D9602E /* FTupleBoolBlock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleBoolBlock.m; path = Firebase/Database/Utilities/Tuples/FTupleBoolBlock.m; sourceTree = "<group>"; };
 		44EE35AC7CEDDCFC1DD039D930B5A6C5 /* FWriteTree.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FWriteTree.m; path = Firebase/Database/Core/FWriteTree.m; sourceTree = "<group>"; };
-		46135FBD3A295ABA96EABFD08A281687 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		465E01CE923881645E4109D60C8D778C /* FIRVerifyPasswordRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRVerifyPasswordRequest.h; path = Firebase/Auth/Source/RPCs/FIRVerifyPasswordRequest.h; sourceTree = "<group>"; };
 		46735D09E7CE516090ED960BE50DE356 /* FBSDKLoginButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKLoginButton.m; path = FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginButton.m; sourceTree = "<group>"; };
 		46A5AA44671CB70B40753D23487AB8A8 /* FBSDKAppLinkResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAppLinkResolver.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkResolver.m; sourceTree = "<group>"; };
@@ -1520,6 +1521,7 @@
 		5727254ECAA30DA597997CB3CFB5F764 /* snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = snapshot.h; path = db/snapshot.h; sourceTree = "<group>"; };
 		5762061A82FD4A288CC0D97536BDC688 /* FIRDatabase_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabase_Private.h; path = Firebase/Database/Api/Private/FIRDatabase_Private.h; sourceTree = "<group>"; };
 		5788CF2F6BE4B5BBDC8848C06A9B997D /* FTupleObjects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleObjects.h; path = Firebase/Database/Utilities/Tuples/FTupleObjects.h; sourceTree = "<group>"; };
+		57A5C0AEAB49D94BFF032572C3FAC784 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		57D7AE92F50ADB0EE8F047C57EC8A79B /* FIRDataEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDataEventType.h; path = Firebase/Database/Public/FIRDataEventType.h; sourceTree = "<group>"; };
 		57E46A0F8D22955FF3073A7935CE28A7 /* FIREmailLinkSignInResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIREmailLinkSignInResponse.m; path = Firebase/Auth/Source/RPCs/FIREmailLinkSignInResponse.m; sourceTree = "<group>"; };
 		586E27E301E44D81B13852994B5B913F /* FBSDKBridgeAPIProtocolNativeV1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKBridgeAPIProtocolNativeV1.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/ProtocolVersions/FBSDKBridgeAPIProtocolNativeV1.m; sourceTree = "<group>"; };
@@ -1950,7 +1952,6 @@
 		B84A8FF705077F49F1767E01D73B68C2 /* FCancelEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FCancelEvent.h; path = Firebase/Database/Core/View/FCancelEvent.h; sourceTree = "<group>"; };
 		B85D15E0F19C1CABFD8AE2B49F31C2EB /* FTreeNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTreeNode.m; path = Firebase/Database/Core/Utilities/FTreeNode.m; sourceTree = "<group>"; };
 		B8720643CC3A43234489BD5686077E91 /* FPruneForest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPruneForest.m; path = Firebase/Database/Persistence/FPruneForest.m; sourceTree = "<group>"; };
-		B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B9EAF7F6C3C77CF77CCC15E011D35515 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		B9EDC42DE4EC289DF1BED2CF78835215 /* FBSDKLoginUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKLoginUtility.h; path = FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginUtility.h; sourceTree = "<group>"; };
 		BA5ACB4D00FD973DC34A8EC665A30F61 /* FirebaseCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseCore-umbrella.h"; sourceTree = "<group>"; };
@@ -1980,6 +1981,7 @@
 		C02DC8DE8DEECABF0854BA05066E9A5C /* FCacheNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FCacheNode.h; path = Firebase/Database/Core/View/FCacheNode.h; sourceTree = "<group>"; };
 		C0364752048AFA5367B0D6C17C765E78 /* FIRCreateAuthURIRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCreateAuthURIRequest.h; path = Firebase/Auth/Source/RPCs/FIRCreateAuthURIRequest.h; sourceTree = "<group>"; };
 		C0785C6FF1C0D5121FE2BF3F32D648F1 /* FBSDKWebDialog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKWebDialog.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/WebDialog/FBSDKWebDialog.h; sourceTree = "<group>"; };
+		C0AC09A822504D7EA44382E4B161FA3F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		C0CFB759BCA605944201251957AE00F2 /* FViewProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FViewProcessor.h; path = Firebase/Database/FViewProcessor.h; sourceTree = "<group>"; };
 		C0D0038A74CF81BA3E74B33E1BB9C664 /* BFCancellationTokenRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenRegistration.m; path = Bolts/Common/BFCancellationTokenRegistration.m; sourceTree = "<group>"; };
 		C0E33126A25A9EC86A7E138E8EEA7861 /* FRepo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FRepo.m; path = Firebase/Database/Core/FRepo.m; sourceTree = "<group>"; };
@@ -2067,7 +2069,6 @@
 		D56D9378ECDE7911906838C45E5416D9 /* dumpfile.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = dumpfile.cc; path = db/dumpfile.cc; sourceTree = "<group>"; };
 		D63EBA5DA7B2A20C57DF6CCB761445D8 /* FIRSignUpNewUserRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRSignUpNewUserRequest.h; path = Firebase/Auth/Source/RPCs/FIRSignUpNewUserRequest.h; sourceTree = "<group>"; };
 		D6641D62E752ED3709AB4B1A80F845F4 /* FIRAuthUserDefaultsStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthUserDefaultsStorage.h; path = Firebase/Auth/Source/FIRAuthUserDefaultsStorage.h; sourceTree = "<group>"; };
-		D705F2F33CC31964C39403DC9775DAED /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
 		D710067890A33C034EE29F44B05CCC17 /* iterator_wrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iterator_wrapper.h; path = table/iterator_wrapper.h; sourceTree = "<group>"; };
 		D71C8BAD08E30A311778D217CC76946C /* FTreeNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTreeNode.h; path = Firebase/Database/Core/Utilities/FTreeNode.h; sourceTree = "<group>"; };
 		D7249743505FA2794849446F8AEEB194 /* BFMeasurementEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFMeasurementEvent.h; path = Bolts/iOS/BFMeasurementEvent.h; sourceTree = "<group>"; };
@@ -2086,6 +2087,7 @@
 		DC13BEAD435B45398F4A397F44E080CC /* FIRAuthWebUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthWebUtils.h; path = Firebase/Auth/Source/FIRAuthWebUtils.h; sourceTree = "<group>"; };
 		DC91A923E4BCD12D5290E2D0E2249C31 /* FIRDeleteAccountResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDeleteAccountResponse.h; path = Firebase/Auth/Source/RPCs/FIRDeleteAccountResponse.h; sourceTree = "<group>"; };
 		DC9DE4ADC46F5196B593DFC18EF396D5 /* FBSDKLoginCompletion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKLoginCompletion.h; path = FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginCompletion.h; sourceTree = "<group>"; };
+		DCE919F1A3BB5C8497248C8375983AE5 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
 		DCF84891210123CCEDE84C91BB08A5F7 /* FBSDKLoginManagerLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKLoginManagerLogger.h; path = FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginManagerLogger.h; sourceTree = "<group>"; };
 		DD64650A68A3F825CCF297C1A4EB08F5 /* Pods_Lend_It.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Lend_It.framework; path = "Pods-Lend It.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD689871891327D820BB85C1A714AD24 /* GTMSessionFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Source/GTMSessionFetcher.m; sourceTree = "<group>"; };
@@ -2154,7 +2156,6 @@
 		ED155BBECA53CBA4BF50E7E7DEBC9BFB /* status.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = status.h; path = include/leveldb/status.h; sourceTree = "<group>"; };
 		ED9F087406813154E76FCD050DEBED79 /* FChildEventRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FChildEventRegistration.m; path = Firebase/Database/Core/View/FChildEventRegistration.m; sourceTree = "<group>"; };
 		EDD5E79A51A2DB49DC748D983374848A /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = leveldb.framework; path = "leveldb-library.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDE826134237F5772D74CA4D8BF3491D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		EE05A5615B45E9E58AD946C97519B925 /* FBSDKGraphRequestBody.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphRequestBody.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequestBody.h; sourceTree = "<group>"; };
 		EE62DE1BA057C32206B27C79385553C9 /* FBSDKTooltipView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKTooltipView.h; path = FBSDKLoginKit/FBSDKLoginKit/FBSDKTooltipView.h; sourceTree = "<group>"; };
 		EEAD53E60CEED0E90417FCD5C6549D9D /* FSnapshotHolder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSnapshotHolder.m; path = Firebase/Database/Core/FSnapshotHolder.m; sourceTree = "<group>"; };
@@ -2228,7 +2229,6 @@
 		FF095C76F65C3653195B8DAA3BF38BF9 /* FIRSecureTokenRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRSecureTokenRequest.h; path = Firebase/Auth/Source/RPCs/FIRSecureTokenRequest.h; sourceTree = "<group>"; };
 		FF3F00089AE43851926197DB3769DC20 /* format.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = format.h; path = table/format.h; sourceTree = "<group>"; };
 		FF514EF4A79C6209D246079F8B95191D /* FIRStorageComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRStorageComponent.m; path = Firebase/Storage/FIRStorageComponent.m; sourceTree = "<group>"; };
-		FF6024AE0B019A413775A27DA95AF0A3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		FFBF92979E14CB439986D3D2AC76CF29 /* FOverwrite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FOverwrite.h; path = Firebase/Database/Core/Operation/FOverwrite.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2237,7 +2237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD1987BB406D43640B8FB8A5881492F9 /* Foundation.framework in Frameworks */,
+				6F42A6B98CED5A87976CB199EC3007FA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2245,8 +2245,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E47E9D020D8B7CA20724FC7066B1727 /* Foundation.framework in Frameworks */,
-				1ADC0405DE4D8FF2DD3AC7AE4F9B7FA7 /* Security.framework in Frameworks */,
+				F7F479DDB4AD3941E505A47680C82DD2 /* Foundation.framework in Frameworks */,
+				80A9EDB4FAB40D47A85B95E8311FABD8 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2256,7 +2256,7 @@
 			files = (
 				651C75ED785094EC6622867A370E2BF7 /* Bolts.framework in Frameworks */,
 				A7CF20BBF733B89944F62D68E587435E /* FBSDKCoreKit.framework in Frameworks */,
-				2A6E366DB3F50C85B00499A07AD9EF47 /* Foundation.framework in Frameworks */,
+				ACD1ECA18D3236EAF66845599B07A754 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2264,9 +2264,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2FF74441D29D10BD43BC5496F857E9F /* Foundation.framework in Frameworks */,
-				05766C788E39DC5C6EA48845314AF0E8 /* Security.framework in Frameworks */,
-				D2CEF6761CDAC7A0B8050178B8192AA7 /* SystemConfiguration.framework in Frameworks */,
+				CBB3BAF1CEB88C622B578F4338B7D8E3 /* Foundation.framework in Frameworks */,
+				855B80B03AED79DE4172A8F79297F856 /* Security.framework in Frameworks */,
+				894ADDD9F37627A7D90DD05297BED261 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2274,7 +2274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D826FE4A1A56AF3E2611FEB5E7C91EE /* Foundation.framework in Frameworks */,
+				0D611A6D1BA11199662FCA250FFF8CF4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2283,7 +2283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3949C94FBA322F42278B9B3611B4FA9 /* Bolts.framework in Frameworks */,
-				EE907B78746899957C06592208EFE065 /* Foundation.framework in Frameworks */,
+				7A7A7CF9FFA7934E012A2AB40766BBE5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2291,7 +2291,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44241715C33F282942E2D7B1311545DE /* Foundation.framework in Frameworks */,
+				1D9F66038B5D0520EC95BC8FDE59D384 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2299,7 +2299,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD7406593326BC67750B6BAC61BDACE4 /* Foundation.framework in Frameworks */,
+				B39F679C88F321ACF2183E1859B94F76 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2307,7 +2307,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9644521F7C22ED536D47046E52DF5740 /* Foundation.framework in Frameworks */,
+				D413C82AFECE5F9570233200E3B0C1F3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2315,7 +2315,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94FB7E1670F438A032E6AFBCB3C18E4C /* Foundation.framework in Frameworks */,
+				DEEF97AA1BEFBF9EEE8DCBB14847F6EA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2323,10 +2323,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC73BEC0033BDB6BC89FADFB82D23197 /* CFNetwork.framework in Frameworks */,
-				A77650A6BA41C591496ABF671ECBEE2C /* Foundation.framework in Frameworks */,
-				81C2FA1798DBDC3D10403F075AAC6981 /* Security.framework in Frameworks */,
-				EF10E200B17A7F7B7960314330AAD1F0 /* SystemConfiguration.framework in Frameworks */,
+				9EF75B2E4E2EDFE1D9446E65835535E4 /* CFNetwork.framework in Frameworks */,
+				F9D00D0E8CDC4255CA25137F3B76264E /* Foundation.framework in Frameworks */,
+				4B71158A817AF0F60DE979F2AC709276 /* Security.framework in Frameworks */,
+				42417A7D0D3025CE0CD3954A5180448D /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2334,7 +2334,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9259A9BC79CEE985606B03C171DE3E50 /* Foundation.framework in Frameworks */,
+				9A4A67E1694E36A7FE502C8728CB1A5D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2342,8 +2342,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE6A2206BAABB315741C363E707457C4 /* Foundation.framework in Frameworks */,
-				278DEFDEECD0F4E0836BDA7196CF18AB /* MobileCoreServices.framework in Frameworks */,
+				A4AE8E529212651C640D9649EAD0AB95 /* Foundation.framework in Frameworks */,
+				31010EF42D84A135C1CB0E1B39A43E4D /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2351,9 +2351,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A620163B94C7371290A43C89E2A3A19 /* Foundation.framework in Frameworks */,
-				053201083EC1E701EBCCE759491A6864 /* SafariServices.framework in Frameworks */,
-				FDB1806DF8702FA99828F24C800E4E8A /* Security.framework in Frameworks */,
+				EAF410F0BDBB78B272F62FF238824A99 /* Foundation.framework in Frameworks */,
+				48D7C5BD3555783C57996029AFA59FB5 /* SafariServices.framework in Frameworks */,
+				C0C376DE7896468C126CF8783118E600 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2361,7 +2361,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				877338661E95EF1209492FD84CA3A200 /* Foundation.framework in Frameworks */,
+				5BB6586929F74062E884EC574F16AB67 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2425,19 +2425,6 @@
 				0E44E0516CDDB25340CBC268562F90B7 /* FacebookSDKStrings.bundle */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		10A35842BB3B088D5AFC53B5F4AD7775 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				EDE826134237F5772D74CA4D8BF3491D /* CFNetwork.framework */,
-				B8FFBB8F12464CBCD798F49FE24DDAD9 /* Foundation.framework */,
-				FF6024AE0B019A413775A27DA95AF0A3 /* MobileCoreServices.framework */,
-				D705F2F33CC31964C39403DC9775DAED /* SafariServices.framework */,
-				3E61B48E192ABAC2A1E8E0AAF4F8D8FC /* Security.framework */,
-				46135FBD3A295ABA96EABFD08A281687 /* SystemConfiguration.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		17250FB57CADF09F4A77CC33413F4DDC /* GoogleAppMeasurement */ = {
@@ -2799,6 +2786,19 @@
 			);
 			name = FirebaseAuthInterop;
 			path = FirebaseAuthInterop;
+			sourceTree = "<group>";
+		};
+		5FCF5FCE1CA90CCCF069649BF4D937D3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				295FF9DF3768091BAA335F18DE49332F /* CFNetwork.framework */,
+				209569A4875F9660D0720F5221FABB90 /* Foundation.framework */,
+				C0AC09A822504D7EA44382E4B161FA3F /* MobileCoreServices.framework */,
+				DCE919F1A3BB5C8497248C8375983AE5 /* SafariServices.framework */,
+				57A5C0AEAB49D94BFF032572C3FAC784 /* Security.framework */,
+				21FD11A0A04033F8B42DB48636AD5740 /* SystemConfiguration.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		611FD4623AADB98AB6F87CC6216B979E /* Firebase */ = {
@@ -3488,7 +3488,7 @@
 			children = (
 				10E426D732CEC0BDD792FCFFDFC725C3 /* Bolts.framework */,
 				6E9C62EB5AB13006083EC3A1F3519FC4 /* FBSDKCoreKit.framework */,
-				10A35842BB3B088D5AFC53B5F4AD7775 /* iOS */,
+				5FCF5FCE1CA90CCCF069649BF4D937D3 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -5801,6 +5801,42 @@
 			};
 			name = Release;
 		};
+		3DFE97E97DAC427DAD64F4A959BFB566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8D6934FCBE02B2AC4CC72603492B46 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3E54C925E38597ED245235E86E26193E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CAB4F511624A2D096AE00D166B3BCA6B /* nanopb.xcconfig */;
@@ -5834,65 +5870,6 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		40B45BB3CF3EE4476259302A7FAAD78F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
@@ -5935,7 +5912,7 @@
 			};
 			name = Release;
 		};
-		5B26521D41D15DBEB27BAE8A8C5009BC /* Debug */ = {
+		4943568392EBAD202C9533EC3AC5D659 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2905142DE2D2E6CCBEB9C595C1D638BF /* Pods-Lend It.debug.xcconfig */;
 			buildSettings = {
@@ -5967,8 +5944,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -6011,42 +5986,6 @@
 			};
 			name = Release;
 		};
-		6971A3E1F6A4E0C30D5D6907728EC893 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B8D6934FCBE02B2AC4CC72603492B46 /* SwiftyJSON.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyJSON;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		857FE5A48E3ECE9B804275ECC809989C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3D20F35A9F9DFDDE2E7CA58E82FF0B9 /* FBSDKCoreKit.xcconfig */;
@@ -6082,111 +6021,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		85DC3DBD32811E0688778EB338D30E00 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18B682CE2DEC8ACD94E6ABC0A47644FE /* Pods-Lend It.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Lend It/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Lend It/Pods-Lend It.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		85ED3013A635C27F8B7FAF51362B108C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
 		};
 		8E4BC56DDB5CF9AAF72DC47DEFDB45EC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -6333,6 +6167,111 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		98E98810EEEB96C99CB95CB91F4ADE0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9A249FFC52F514DB06416B3D5445536B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18B682CE2DEC8ACD94E6ABC0A47644FE /* Pods-Lend It.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Lend It/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Lend It/Pods-Lend It.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		9B5764CC950D1CE5E950F2A37A530E45 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -6509,41 +6448,65 @@
 			};
 			name = Debug;
 		};
-		B2F6FD93C3EB5A0769EC1C89994D444F /* Release */ = {
+		B97A7F6ACE1216BB5A2307CA83FC93C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B8D6934FCBE02B2AC4CC72603492B46 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyJSON;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
@@ -6582,6 +6545,41 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		C7B56B2A7AA73BC9F7403D3343992DA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8D6934FCBE02B2AC4CC72603492B46 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		C8CC80A3C51C15C13A8FD484B2C56FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -6946,8 +6944,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85ED3013A635C27F8B7FAF51362B108C /* Debug */,
-				40B45BB3CF3EE4476259302A7FAAD78F /* Release */,
+				98E98810EEEB96C99CB95CB91F4ADE0A /* Debug */,
+				B97A7F6ACE1216BB5A2307CA83FC93C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6964,8 +6962,8 @@
 		368C827C1867D62D31E854EECABF7422 /* Build configuration list for PBXNativeTarget "Pods-Lend It" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B26521D41D15DBEB27BAE8A8C5009BC /* Debug */,
-				85DC3DBD32811E0688778EB338D30E00 /* Release */,
+				4943568392EBAD202C9533EC3AC5D659 /* Debug */,
+				9A249FFC52F514DB06416B3D5445536B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6982,8 +6980,8 @@
 		9523989A1288C4DB9D47308F3D366B8C /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6971A3E1F6A4E0C30D5D6907728EC893 /* Debug */,
-				B2F6FD93C3EB5A0769EC1C89994D444F /* Release */,
+				C7B56B2A7AA73BC9F7403D3343992DA5 /* Debug */,
+				3DFE97E97DAC427DAD64F4A959BFB566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

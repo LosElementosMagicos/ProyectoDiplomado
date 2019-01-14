@@ -31,20 +31,20 @@
                                         </connections>
                                     </containerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inC-hc-flt">
-                                        <rect key="frame" x="87" y="544" width="201" height="39"/>
+                                        <rect key="frame" x="87" y="546" width="201" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="201" id="Bk8-Ad-pNa"/>
                                             <constraint firstAttribute="height" constant="39" id="bJl-Ep-E0n"/>
                                         </constraints>
                                         <state key="normal" image="button_rent-it"/>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tZi-Mn-HsV">
-                                        <rect key="frame" x="16" y="395" width="138" height="149"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tZi-Mn-HsV">
+                                        <rect key="frame" x="16" y="383" width="130" height="133"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="k3y-Ld-1FB">
                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="63.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMI-dy-5ix">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMI-dy-5ix">
                                                         <rect key="frame" x="0.0" y="0.0" width="52" height="33.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                         <nil key="textColor"/>
@@ -57,17 +57,17 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Cnv-2H-pV2">
-                                                <rect key="frame" x="0.0" y="83.5" width="138" height="65.5"/>
+                                                <rect key="frame" x="0.0" y="79.5" width="130" height="53.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ls0-jk-2li">
-                                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="31.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ls0-jk-2li">
+                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIl-Re-bDD">
-                                                        <rect key="frame" x="0.0" y="31.5" width="138" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <rect key="frame" x="0.0" y="20.5" width="130" height="33"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="Payment method"/>
                                                     </button>
                                                 </subviews>
@@ -76,9 +76,10 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="tZi-Mn-HsV" firstAttribute="top" secondItem="bBK-cK-k31" secondAttribute="bottom" constant="20" id="HHx-MR-YAk"/>
+                                    <constraint firstItem="inC-hc-flt" firstAttribute="top" secondItem="XIl-Re-bDD" secondAttribute="bottom" constant="30" id="FrM-OH-GrN"/>
+                                    <constraint firstItem="tZi-Mn-HsV" firstAttribute="top" secondItem="bBK-cK-k31" secondAttribute="bottom" constant="8" id="HHx-MR-YAk"/>
                                     <constraint firstItem="bBK-cK-k31" firstAttribute="leading" secondItem="UKa-3z-WeN" secondAttribute="leading" id="Wgk-pY-mua"/>
-                                    <constraint firstAttribute="bottom" secondItem="inC-hc-flt" secondAttribute="bottom" constant="20" id="mg7-e3-Hbx"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="inC-hc-flt" secondAttribute="bottom" constant="18" id="gvG-l5-7Kp"/>
                                     <constraint firstItem="bBK-cK-k31" firstAttribute="top" secondItem="UKa-3z-WeN" secondAttribute="top" id="nTn-NW-uet"/>
                                     <constraint firstItem="bBK-cK-k31" firstAttribute="centerX" secondItem="inC-hc-flt" secondAttribute="centerX" id="oN8-n7-etC"/>
                                     <constraint firstItem="tZi-Mn-HsV" firstAttribute="leading" secondItem="UKa-3z-WeN" secondAttribute="leading" constant="16" id="oOJ-6Z-txo"/>
@@ -88,7 +89,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UKa-3z-WeN" firstAttribute="leading" secondItem="z6v-zZ-dZV" secondAttribute="leading" id="14b-B5-KuI"/>
                             <constraint firstAttribute="trailing" secondItem="UKa-3z-WeN" secondAttribute="trailing" id="Njo-h5-cyF"/>
@@ -104,6 +105,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="itemNameLabel" destination="TMI-dy-5ix" id="31S-R2-e4D"/>
+                        <outlet property="itemPriceLabel" destination="Ls0-jk-2li" id="joI-qL-9lw"/>
+                        <outlet property="itemReviewsButton" destination="NEa-hX-9jR" id="8kV-ZU-zIc"/>
+                        <outlet property="paymentMethodButton" destination="XIl-Re-bDD" id="la1-eY-tNl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tla-pX-BHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
