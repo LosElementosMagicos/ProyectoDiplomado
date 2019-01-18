@@ -98,7 +98,7 @@
 		6A00B4367A98F548AA587EFB /* Pods-Lend ItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend ItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lend ItTests/Pods-Lend ItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DE2EC19568ACA914AD5836E /* Pods-Lend It.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend It.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lend It/Pods-Lend It.debug.xcconfig"; sourceTree = "<group>"; };
 		A23876C147FD2562F375BF63 /* Pods_Lend_ItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lend_ItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B581DD5A21F0454E006DB866 /* MyItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MyItems.storyboard; path = "Lend It/MyItems.storyboard"; sourceTree = "<group>"; };
+		B581DD5A21F0454E006DB866 /* MyItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyItems.storyboard; sourceTree = "<group>"; };
 		B581DD5C21F0E901006DB866 /* MyItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemsTableViewController.swift; sourceTree = "<group>"; };
 		B581DD5E21F102C4006DB866 /* MyItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemsTableViewCell.swift; sourceTree = "<group>"; };
 		B581DD5F21F102C4006DB866 /* MyItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyItemsTableViewCell.xib; sourceTree = "<group>"; };
@@ -158,7 +158,6 @@
 		657A2FCE21D1673200B71CA1 = {
 			isa = PBXGroup;
 			children = (
-				B581DD5A21F0454E006DB866 /* MyItems.storyboard */,
 				657A2FD921D1673300B71CA1 /* Lend It */,
 				657A2FEE21D1678B00B71CA1 /* Lend ItTests */,
 				657A2FF921D1678C00B71CA1 /* Lend ItUITests */,
@@ -186,6 +185,7 @@
 				654A73D621E1961A006A17C9 /* AddNewItem.storyboard */,
 				654A73D421DED79E006A17C9 /* UserProfile.storyboard */,
 				65F5DBC921E80C0600AE6FB6 /* ItemProfile.storyboard */,
+				B581DD5A21F0454E006DB866 /* MyItems.storyboard */,
 				654A73DE21E323DA006A17C9 /* Helpers */,
 				657A301D21D6EC8300B71CA1 /* GoogleMapsHelpers */,
 				657A301C21D6EC1700B71CA1 /* Controllers */,

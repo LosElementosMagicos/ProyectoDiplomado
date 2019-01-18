@@ -12,7 +12,7 @@ class MyItemsTableViewController: UITableViewController {
     
     var items = [Item]()
     
-    static func loadItems() -> [Item] {
+    func loadItems() -> [Item] {
         
         items = Item.loadSampleItems()
         
@@ -44,14 +44,14 @@ class MyItemsTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = Bundle.main.loadNibNamed("MyItemsTableViewCell", owner: self, options: nil)?.first as MyItemsTableViewCell
-        cell.itemName = items[indexPath.row].itemName
+        let cell = Bundle.main.loadNibNamed("MyItemsTableViewCell", owner: self, options: nil)?.first as! MyItemsTableViewCell
+        cell.itemName.text = items[indexPath.row].itemName
 
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cell = Bundle.main.loadNibNamed("MyItemsTableViewCell", owner: self, options: nil)?.first as MyItemsTableViewCell
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cell = Bundle.main.loadNibNamed("MyItemsTableViewCell", owner: self, options: nil)?.first as! MyItemsTableViewCell
         return cell.frame.height
     }
 

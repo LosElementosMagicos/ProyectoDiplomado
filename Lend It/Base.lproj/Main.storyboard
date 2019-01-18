@@ -17,10 +17,10 @@
             </objects>
             <point key="canvasLocation" x="1690" y="-326"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--MyItems-->
         <scene sceneID="kae-CR-Afd">
             <objects>
-                <viewControllerPlaceholder id="AsU-sZ-PUh" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="MyItems" id="AsU-sZ-PUh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDK-fS-HR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1823" y="-64"/>
