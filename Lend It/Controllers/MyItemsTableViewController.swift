@@ -7,31 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
 class MyItemsTableViewController: UITableViewController {
     
     var items = [Item]()
     
-    func loadItems(){
-        items = Item.loadSampleItems()
-    }
-    
-
-        
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadItems()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem
+        fetchMyItems()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -51,50 +40,49 @@ class MyItemsTableViewController: UITableViewController {
         let cell = Bundle.main.loadNibNamed("MyItemsTableViewCell", owner: self, options: nil)?.first as! MyItemsTableViewCell
         return cell.frame.height
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func fetchMyItems() {
+        let ref = Database.database().reference(withPath: "items")
+        let userID = Auth.auth().currentUser?.uid
+        
+        ref.queryOrdered(byChild: "ownerId").queryEqual(toValue: userID).observeSingleEvent(of: .value, with: { (snapshot)
+            in
+            print(snapshot.value)
+            for child in snapshot.children {
+                guard let snapshot = child as? DataSnapshot else { continue }
+                let value = snapshot.value as? NSDictionary
+                let lat = value?["lat"] as? Double ?? 0
+                let itemName = value?["itemName"] as? String ?? ""
+                let lon = value?["lon"] as? Double ?? 0
+                let ownerId = value?["ownerId"] as? String ?? ""
+                let borrowingUserId = value?["borrowingUserId"] as? String ?? ""
+                let price = value?["price"] as? Int ?? 0
+                let type = value?["type"] as? String ?? ""
+                let itemImagePath1 = value?["itemPhoto1"] as? String ?? ""
+                let itemImagePath2 = value?["itemPhoto2"] as? String ?? ""
+                let itemImagePath3 = value?["itemPhoto3"] as? String ?? ""
+                let fetchedItem = Item(ownerId: ownerId,
+                                       borrowingUserId: borrowingUserId,
+                                       itemName: itemName,
+                                       latitude: lat,
+                                       longitude: lon,
+                                       type: type,
+                                       price: price,
+                                       itemPhoto1: itemImagePath1,
+                                       itemPhoto2: itemImagePath2,
+                                       itemPhoto3: itemImagePath3)
+                self.items.append(fetchedItem)
+                self.tableView.reloadData()
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+        
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

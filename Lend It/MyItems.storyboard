@@ -11,7 +11,7 @@
         <!--myItems-->
         <scene sceneID="AEP-P6-GfP">
             <objects>
-                <tableViewController title="myItems" id="e1a-eu-zcp" sceneMemberID="viewController">
+                <tableViewController title="myItems" id="e1a-eu-zcp" customClass="MyItemsTableViewController" customModule="Lend_It" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0I0-Vi-LY8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,13 @@
                             <outlet property="delegate" destination="e1a-eu-zcp" id="3bc-G7-wBf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Items" id="dQT-x5-pTE"/>
+                    <navigationItem key="navigationItem" title="My Items" id="dQT-x5-pTE">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="9cy-dj-IhY">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="e1a-eu-zcp" id="UFg-0e-LAB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uB4-A7-lYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

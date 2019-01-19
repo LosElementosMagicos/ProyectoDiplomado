@@ -82,7 +82,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     }
     
     func retrieveData(searchBarWord: String, completion: @escaping (_ message: String) -> Void) {
-        print("retrieving data")
         nearbyPlaces.removeAll()
         let ref = Database.database().reference(withPath: "items")
         //let userID = Auth.auth().currentUser?.uid
@@ -96,7 +95,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
             // Returns spots who match longitude with user
             for child in snapshot.children {
                 guard let snapshot = child as? DataSnapshot else { continue }
-                print("im in a child")
                 // Get user value
                 let value = snapshot.value as? NSDictionary
                 // Second filter to check if latitude is also in range
