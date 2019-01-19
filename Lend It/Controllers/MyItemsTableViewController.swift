@@ -31,8 +31,11 @@ class MyItemsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("MyItemsTableViewCell", owner: self, options: nil)?.first as! MyItemsTableViewCell
-        cell.itemName.text = items[indexPath.row].itemName
-
+        let item = items[indexPath.row]
+        let imagePath = item.itemPhoto1
+        cell.itemName.text = item.itemName
+        cell.itemPrice.text = String(item.price)
+        cell.itemImage.image = loadImageFromDocuments(imagePath: imagePath)
         return cell
     }
     
@@ -47,7 +50,6 @@ class MyItemsTableViewController: UITableViewController {
         
         ref.queryOrdered(byChild: "ownerId").queryEqual(toValue: userID).observeSingleEvent(of: .value, with: { (snapshot)
             in
-            print(snapshot.value)
             for child in snapshot.children {
                 guard let snapshot = child as? DataSnapshot else { continue }
                 let value = snapshot.value as? NSDictionary
@@ -72,6 +74,13 @@ class MyItemsTableViewController: UITableViewController {
                                        itemPhoto2: itemImagePath2,
                                        itemPhoto3: itemImagePath3)
                 self.items.append(fetchedItem)
+                
+                if loadImageFromDocuments(imagePath: fetchedItem.itemPhoto1) == nil {
+                    fetchedItem.downloadImage(from: fetchedItem.itemPhoto1, completion: { (image) in
+                        saveImageToDocuments(image: image, imagePath: fetchedItem.itemPhoto1)
+                        self.tableView.reloadData()
+                    })
+                }
                 self.tableView.reloadData()
             }
         }) { (error) in

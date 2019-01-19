@@ -12,11 +12,13 @@ class MyItemsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemPrice: UILabel!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        itemImage.layer.cornerRadius = itemImage.frame.width / 2
+        itemImage.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

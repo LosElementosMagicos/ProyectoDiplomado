@@ -76,17 +76,7 @@ struct Item {
         })
         // 7. Finish download of image
         //return
-    }
-    //MARK: Para pruebas
-    static func loadSampleItems() -> [Item] {
-        
-        let item1 = Item(ownerId: "giem", borrowingUserId: "", itemName: "martillo", latitude: 2.2, longitude: 2.3, type: "Construccion", price: 1, itemPhoto1: "1", itemPhoto2: "1", itemPhoto3: "1")
-        let item2 = Item(ownerId: "manzana", borrowingUserId: "", itemName: "carro", latitude: 2.2, longitude: 2.3, type: "Construccion", price: 1, itemPhoto1: "1", itemPhoto2: "1", itemPhoto3: "1")
-        let item3 = Item(ownerId: "dans", borrowingUserId: "", itemName: "cinta", latitude: 2.2, longitude: 2.3, type: "Construccion", price: 1, itemPhoto1: "1", itemPhoto2: "1", itemPhoto3: "1")
-        
-        return [item1,item2,item3]
-    }
-    
+    }    
 }
 
 extension Item: Equatable {}
