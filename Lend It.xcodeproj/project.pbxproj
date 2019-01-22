@@ -34,6 +34,7 @@
 		65F5DBD021E816F200AE6FB6 /* ItemProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F5DBCF21E816F200AE6FB6 /* ItemProfilePhotoViewController.swift */; };
 		65F5DBD221E869A100AE6FB6 /* UIPageViewControllerWithOverlayIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F5DBD121E869A100AE6FB6 /* UIPageViewControllerWithOverlayIndicator.swift */; };
 		65F5DBD421E91A4300AE6FB6 /* SaveLoadImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F5DBD321E91A4300AE6FB6 /* SaveLoadImageHelper.swift */; };
+		65F5DBD621ECF35200AE6FB6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F5DBD521ECF35200AE6FB6 /* User.swift */; };
 		70D424BB42A4B1AA2F452A3E /* Pods_Lend_It.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12850DB4D8394A844308DD2 /* Pods_Lend_It.framework */; };
 		CFB4C17C28108E9B482EB6BC /* Pods_Lend_ItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA517994D72D0D0CA38AB3A /* Pods_Lend_ItUITests.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		65F5DBCF21E816F200AE6FB6 /* ItemProfilePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProfilePhotoViewController.swift; sourceTree = "<group>"; };
 		65F5DBD121E869A100AE6FB6 /* UIPageViewControllerWithOverlayIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerWithOverlayIndicator.swift; sourceTree = "<group>"; };
 		65F5DBD321E91A4300AE6FB6 /* SaveLoadImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadImageHelper.swift; sourceTree = "<group>"; };
+		65F5DBD521ECF35200AE6FB6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6A00B4367A98F548AA587EFB /* Pods-Lend ItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend ItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lend ItTests/Pods-Lend ItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DE2EC19568ACA914AD5836E /* Pods-Lend It.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend It.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lend It/Pods-Lend It.debug.xcconfig"; sourceTree = "<group>"; };
 		A23876C147FD2562F375BF63 /* Pods_Lend_ItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lend_ItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				657A301821D3137A00B71CA1 /* Item.swift */,
+				65F5DBD521ECF35200AE6FB6 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				65F5DBCC21E811F300AE6FB6 /* ItemProfilePageViewController.swift in Sources */,
 				657A300921D1690300B71CA1 /* MapViewController.swift in Sources */,
 				65F5DBD421E91A4300AE6FB6 /* SaveLoadImageHelper.swift in Sources */,
+				65F5DBD621ECF35200AE6FB6 /* User.swift in Sources */,
 				654A73DD21E31893006A17C9 /* CurrencyField.swift in Sources */,
 				657A300D21D180CD00B71CA1 /* UIViewExtension.swift in Sources */,
 				657A301721D300AF00B71CA1 /* SignInViewController.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 import FBSDKLoginKit
 import FBSDKCoreKit
 
@@ -20,10 +21,13 @@ class SignInViewController: UIViewController {
     var userImage = UIImage(named: "")
     var facebookID:String = ""
     //END
+    
+    // Reference for storaging 
+    fileprivate var ref: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
     }
     
     
@@ -67,6 +71,25 @@ class SignInViewController: UIViewController {
                             print(error.localizedDescription)
                             return
                         }
+                        // Save User to firebase
+                        if let newUserId = Auth.auth().currentUser?.uid {
+                            self.ref.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
+                                if snapshot.hasChild(newUserId) {
+                                    // Returns if user is already saved
+                                    return
+                                } else {
+                                    // Saves new user
+                                    let newUser = User(userID: newUserId,
+                                                       userName: self.name,
+                                                       email: self.email,
+                                                       phoneNumber: "",
+                                                       isVerified: false,
+                                                       profilePhoto: "")
+                                    // Access the "users" child reference and then create a unique child reference within it and finally set its value
+                                    self.ref.child("users").child(newUserId).setValue(newUser.toAnyObject())
+                                }
+                            })
+                        }
                         // User is signed in with firebase
                         self.performSegue(withIdentifier: "LoggedInSegue", sender: nil)
                     }
@@ -77,20 +100,5 @@ class SignInViewController: UIViewController {
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
     }
-    
-
-    // MARK: - Navigation
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "LoggedInSegue" && facebookID != "" {
-            guard let navigationController = segue.destination as? UINavigationController,
-                let controller = navigationController.topViewController as? MapViewController else {
-                    return
-            }
-            let user = User(name: name, email: email, facebookID: facebookID)
-            print(user)
-            controller.user = user
-        }
-    }
-    */
+ 
 }
