@@ -244,7 +244,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Im inside prepare func")
         if segue.identifier == "RentItSegue" {
             let navigationController = segue.destination as! UINavigationController
             let vc = navigationController.viewControllers.first as! ItemProfileViewController
@@ -253,7 +252,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
             vc.photoData[0] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto1)!
             vc.photoData[1] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto2)!
             vc.photoData[2] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto3)!
-            print("New info passed to PageVC")
         }
     }
 
