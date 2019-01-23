@@ -15,20 +15,15 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var rentButton: UIButton!
     var nearbyPlaces = [Item]()
     // Firebase storage
-    /*
-    var storageRef: StorageReference!
-    var storageDownloadTask: StorageDownloadTask!*/
     @IBOutlet weak var hamburgerTrailingC: NSLayoutConstraint!
     @IBOutlet weak var hamburgerLeadingC: NSLayoutConstraint!
     @IBOutlet weak var hamburgerView: UIView!
     var hamburgerMenuIsVisible = false
     @IBOutlet weak var searchBar: UISearchBar!
-    //private var infoWindow = MapMarkerWindow()
     fileprivate var locationMarker : GMSMarker? = GMSMarker()
     @IBOutlet weak var mapView: GMSMapView!
     private let locationManager = CLLocationManager()
     var markerNearbyItemIndex = 0
-    //private let dataProvider = GoogleDataProvider()
     private let searchRadius: Double = 1000
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet private weak var mapCenterPinImage: UIImageView!
@@ -42,7 +37,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         rentButton.isHidden = true
         searchBar.delegate = self
-        //storageRef = Storage.storage().reference()
         // Place users name
         profileNameLabel.text = UserDefaults.standard.string(forKey: "userName")
         // Hides hamburger menu
@@ -76,7 +70,8 @@ class MapViewController: UIViewController, UISearchBarDelegate {
                 self.present(alert, animated: true, completion: nil)
                 return
             }
-            print(self.nearbyPlaces)
+            // Hides center pin
+            self.mapCenterPinImage.fadeOut(0.25)
             self.fetchNearbyPlaces()
         }
     }
@@ -84,7 +79,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     func retrieveData(searchBarWord: String, completion: @escaping (_ message: String) -> Void) {
         nearbyPlaces.removeAll()
         let ref = Database.database().reference(withPath: "items")
-        //let userID = Auth.auth().currentUser?.uid
         var items = [Item]()
         let myLon = self.mapView.camera.target.longitude
         let myLat = self.mapView.camera.target.latitude
@@ -195,47 +189,12 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         }
     }
 
-  /*
-  // MARK: - Pass Data
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard let navigationController = segue.destination as? UINavigationController,
-      let controller = navigationController.topViewController as? TypesTableViewController else {
-        return
-    }
-    controller.selectedTypes = searchedTypes
-    controller.delegate = self
-  }
- */
     @IBAction func exitButtonTapped(_ sender: Any) {
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
         performSegue(withIdentifier: "unwindToSignInSegue", sender: self)
     }
-    /*
-    func downloadImage(from storageImagePath: String, completion: @escaping (_ image: UIImage) -> Void) {
-        // 1. Get a filePath to save the image at
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        let filePath = "file:\(documentsDirectory)/myimage.jpg"
-        // 2. Get the url of that file path
-        guard let fileURL = URL(string: filePath) else { return }
-        
-        // 3. Start download of image and write it to the file url
-        storageDownloadTask = storageRef.child(storageImagePath).write(toFile: fileURL, completion: { (url, error) in
-            // 4. Check for error
-            if let error = error {
-                print("Error downloading:\(error)")
-                return
-                // 5. Get the url path of the image
-            } else if let imagePath = url?.path {
-                // 6. Return the image
-                completion(UIImage(contentsOfFile: imagePath)!)
-            }
-        })
-        // 7. Finish download of image
-        //return
-    }
-    */
+    
     func swapLendRentButtons() {
         lendButton.isHidden = !lendButton.isHidden
         rentButton.isHidden = !rentButton.isHidden
@@ -247,9 +206,14 @@ class MapViewController: UIViewController, UISearchBarDelegate {
             let vc = navigationController.viewControllers.first as! ItemProfileViewController
             let selectedItem = nearbyPlaces[markerNearbyItemIndex]
             vc.item = selectedItem
-            vc.photoData[0] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto1)!
-            vc.photoData[1] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto2)!
-            vc.photoData[2] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto3)!
+            let paths: [String] = [selectedItem.itemPhoto1,
+                                   selectedItem.itemPhoto2,
+                                   selectedItem.itemPhoto3]
+            let images = loadAllImagesFromDocuments(imagePaths: paths)
+            for index in 0..<vc.photoData.count {
+                vc.photoData[index] = images[index]!
+            }
+            
         }
     }
 
@@ -260,109 +224,101 @@ class MapViewController: UIViewController, UISearchBarDelegate {
 
 // MARK: - CLLocationManagerDelegate
 extension MapViewController: CLLocationManagerDelegate {
-  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-    guard status == .authorizedWhenInUse else {
-      return
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        guard status == .authorizedWhenInUse else {
+          return
+        }
+        locationManager.startUpdatingLocation()
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
     }
-    locationManager.startUpdatingLocation()
-    mapView.isMyLocationEnabled = true
-    mapView.settings.myLocationButton = true
-  }
 
-  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    guard let location = locations.first else {
-      return
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else {
+          return
+        }
+        mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        locationManager.stopUpdatingLocation()
     }
-    mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
-    locationManager.stopUpdatingLocation()
-  }
 }
 
 // MARK: - GMSMapViewDelegate
 extension MapViewController: GMSMapViewDelegate {
-  func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-    reverseGeocodeCoordinate(position.target)
-  }
-  
-  func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
-    addressLabel.lock()
-    if (gesture) {
-      mapCenterPinImage.fadeIn(0.25)
-      mapView.selectedMarker = nil
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        reverseGeocodeCoordinate(position.target)
     }
-  }
+  
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        addressLabel.lock()
+        if (gesture) {
+            mapCenterPinImage.fadeIn(0.25)
+            mapView.selectedMarker = nil
+        }
+    }
     
-  func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-    searchBar.endEditing(true)
-  }
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        searchBar.endEditing(true)
+    }
   
     func mapView(_ mapView: GMSMapView, didCloseInfoWindowOf marker: GMSMarker) {
         swapLendRentButtons()
     }
     
-  func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
-    guard let placeMarker = marker as? PlaceMarker else {
-      return nil
-    }
-    guard let infoView = UIView.viewFromNibName("MarkerInfoView") as? MarkerInfoView else {
-      return nil
-    }
-    // Keeps track of wich marker in array was touched
-    markerNearbyItemIndex = nearbyPlaces.index(of: placeMarker.place) ?? 0
-    
-    // Place marker info
-    infoView.nameLabel.text = placeMarker.place.itemName
-    // Format price to currency
-    let formattedPrice = Formatter.currency.string(from: NSDecimalNumber(integerLiteral: placeMarker.place.price))
-    infoView.priceLabel.text = formattedPrice
-    // Make image circular
-    infoView.placePhoto.layer.cornerRadius = infoView.placePhoto.frame.width / 2
-    infoView.placePhoto.clipsToBounds = true
-    marker.tracksInfoWindowChanges = true
-    var photoPaths: [String] = ["","",""]
-    photoPaths[0] = placeMarker.place.itemPhoto1
-    photoPaths[1] = placeMarker.place.itemPhoto2
-    photoPaths[2] = placeMarker.place.itemPhoto3
-    if let loadedImage1 = loadImageFromDocuments(imagePath: photoPaths[0]),
-        let loadedImage2 = loadImageFromDocuments(imagePath: photoPaths[1]),
-        let loadedImage3 = loadImageFromDocuments(imagePath: photoPaths[2]) {
-        infoView.placePhoto.animationImages = [loadedImage1,loadedImage2,loadedImage3]
-        infoView.placePhoto.animationDuration = 6.0
-        infoView.placePhoto.animationRepeatCount = 0
-        infoView.placePhoto.startAnimating()
-        self.rentButton.fadeIn(2.0)
-    } else {
-        placeMarker.place.downloadImage(from: photoPaths[0]) { (image) in
-            infoView.placePhoto.image = image
-            print("finished downloading photo")
-            saveImageToDocuments(image: image, imagePath: photoPaths[0])
-            marker.tracksInfoWindowChanges = false
+    func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
+        guard let placeMarker = marker as? PlaceMarker else {
+            return nil
         }
-        placeMarker.place.downloadImage(from: photoPaths[1]) { (image) in
-            saveImageToDocuments(image: image, imagePath: photoPaths[1])
+        guard let infoView = UIView.viewFromNibName("MarkerInfoView") as? MarkerInfoView else {
+            return nil
         }
-        placeMarker.place.downloadImage(from: photoPaths[2]) { (image) in
-            saveImageToDocuments(image: image, imagePath: photoPaths[2])
-            self.rentButton.fadeIn(2.0)
+        // Keeps track of wich marker in array was touched
+        markerNearbyItemIndex = nearbyPlaces.index(of: placeMarker.place) ?? 0
+        // Place marker info
+        infoView.nameLabel.text = placeMarker.place.itemName
+        // Format price to currency
+        let formattedPrice = Formatter.currency.string(from: NSDecimalNumber(integerLiteral: placeMarker.place.price))
+        infoView.priceLabel.text = formattedPrice
+        // Make image circular
+        infoView.placePhoto.layer.cornerRadius = infoView.placePhoto.frame.width / 2
+        infoView.placePhoto.clipsToBounds = true
+        marker.tracksInfoWindowChanges = true
+        var photoPaths: [String] = [placeMarker.place.itemPhoto1,
+                                    placeMarker.place.itemPhoto2,
+                                    placeMarker.place.itemPhoto3]
+        // Loads or downloads images and presents them in marker view
+        if let loadedImage1 = loadImageFromDocuments(imagePath: photoPaths[0]),
+            let loadedImage2 = loadImageFromDocuments(imagePath: photoPaths[1]),
+            let loadedImage3 = loadImageFromDocuments(imagePath: photoPaths[2]) {
+            infoView.placePhoto.animationImages = [loadedImage1,loadedImage2,loadedImage3]
+            infoView.placePhoto.animationDuration = 6.0
+            infoView.placePhoto.animationRepeatCount = 0
+            infoView.placePhoto.startAnimating()
+            self.rentButton.fadeIn(1.0)
+        } else {
+            placeMarker.place.downloadAllImages(from: photoPaths) { (images) in            infoView.placePhoto.animationImages = images
+                infoView.placePhoto.animationDuration = 6.0
+                infoView.placePhoto.animationRepeatCount = 0
+                infoView.placePhoto.startAnimating()
+                self.rentButton.fadeIn(1.0)
+            }
         }
+        searchBar.endEditing(true)
+        return infoView
     }
-    searchBar.endEditing(true)
-    return infoView
-  }
   
-  func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-    mapCenterPinImage.fadeOut(0.25)
-    // Change lend rent buttons
-    rentButton.alpha = 0
-    swapLendRentButtons()
-    return false
-  }
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        mapCenterPinImage.fadeOut(0.25)
+        // Change lend rent buttons
+        rentButton.alpha = 0
+        swapLendRentButtons()
+        return false
+    }
   
-  func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
-    mapCenterPinImage.fadeIn(0.25)
-    mapView.selectedMarker = nil
-    return false
-  }
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        mapCenterPinImage.fadeIn(0.25)
+        mapView.selectedMarker = nil
+        return false
+    }
 }
 
  
