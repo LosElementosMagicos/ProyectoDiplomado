@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kuo-jY-1Dq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--myItems-->
+        <scene sceneID="AEP-P6-GfP">
+            <objects>
+                <tableViewController title="myItems" id="e1a-eu-zcp" customClass="MyItemsTableViewController" customModule="Lend_It" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0I0-Vi-LY8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="e1a-eu-zcp" id="Ard-Ck-n46"/>
+                            <outlet property="delegate" destination="e1a-eu-zcp" id="3bc-G7-wBf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Items" id="dQT-x5-pTE">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="9cy-dj-IhY">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="e1a-eu-zcp" id="UFg-0e-LAB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="HhD-6y-muM" kind="show" identifier="itemProfileSegue" id="lH7-cx-jAF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uB4-A7-lYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="-855"/>
+        </scene>
+        <!--ItemProfileStoryboard-->
+        <scene sceneID="FpI-Wn-oST">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ItemProfile" referencedIdentifier="ItemProfileStoryboard" id="HhD-6y-muM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zhi-Ke-26i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="-1089"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XOt-Wk-ep4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kuo-jY-1Dq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ywV-Jc-va3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e1a-eu-zcp" kind="relationship" relationship="rootViewController" id="gXz-5N-PJA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fl9-qc-ueA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="-855"/>
+        </scene>
+    </scenes>
+</document>

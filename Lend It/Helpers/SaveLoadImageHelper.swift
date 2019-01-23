@@ -35,6 +35,19 @@ func loadImageFromDocuments(imagePath: String) -> UIImage? {
     }
 }
 
+func loadImageFromDocuments(imagePath: String, completion: @escaping (_ image: UIImage, _ path: String) -> Void) {
+    let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    let imageURL = docDir.appendingPathComponent(String(imagePath.suffix(16)))
+    if let image = UIImage(contentsOfFile: imageURL.path) {
+        print("file loaded")
+        completion(image, imagePath)
+        return
+    } else {
+        print("error loading file")
+        return
+    }
+}
+
 func clearAllFilesFromTempDirectory()
 {
     let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!

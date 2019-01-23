@@ -82,7 +82,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     }
     
     func retrieveData(searchBarWord: String, completion: @escaping (_ message: String) -> Void) {
-        print("retrieving data")
         nearbyPlaces.removeAll()
         let ref = Database.database().reference(withPath: "items")
         //let userID = Auth.auth().currentUser?.uid
@@ -96,7 +95,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
             // Returns spots who match longitude with user
             for child in snapshot.children {
                 guard let snapshot = child as? DataSnapshot else { continue }
-                print("im in a child")
                 // Get user value
                 let value = snapshot.value as? NSDictionary
                 // Second filter to check if latitude is also in range
@@ -332,6 +330,7 @@ extension MapViewController: GMSMapViewDelegate {
         infoView.placePhoto.animationDuration = 6.0
         infoView.placePhoto.animationRepeatCount = 0
         infoView.placePhoto.startAnimating()
+        self.rentButton.fadeIn(2.0)
     } else {
         placeMarker.place.downloadImage(from: photoPaths[0]) { (image) in
             infoView.placePhoto.image = image
@@ -344,6 +343,7 @@ extension MapViewController: GMSMapViewDelegate {
         }
         placeMarker.place.downloadImage(from: photoPaths[2]) { (image) in
             saveImageToDocuments(image: image, imagePath: photoPaths[2])
+            self.rentButton.fadeIn(2.0)
         }
     }
     searchBar.endEditing(true)
@@ -353,6 +353,7 @@ extension MapViewController: GMSMapViewDelegate {
   func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
     mapCenterPinImage.fadeOut(0.25)
     // Change lend rent buttons
+    rentButton.alpha = 0
     swapLendRentButtons()
     return false
   }
