@@ -28,10 +28,21 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="HhD-6y-muM" kind="show" identifier="itemProfileSegue" id="lH7-cx-jAF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uB4-A7-lYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="953" y="-855"/>
+        </scene>
+        <!--ItemProfileStoryboard-->
+        <scene sceneID="FpI-Wn-oST">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ItemProfile" referencedIdentifier="ItemProfileStoryboard" id="HhD-6y-muM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zhi-Ke-26i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="-1089"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XOt-Wk-ep4">

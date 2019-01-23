@@ -75,6 +75,24 @@ class MyItemsTableViewController: UITableViewController {
         return cell.frame.height
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "itemProfileSegue", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "itemProfileSegue" {
+            let index = sender as! Int
+            let navigationController = segue.destination as! UINavigationController
+            let vc = navigationController.viewControllers.first as! ItemProfileViewController
+            let selectedItem = items[index]
+            vc.item = selectedItem
+            vc.photoData[0] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto1)!
+            //vc.photoData[1] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto2)!
+            //vc.photoData[2] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto3)!
+            print("New info passed to PageVC")
+        }
+    }
+    
     func fetchMyItems(completion: @escaping (_ items: [Item]) -> Void) {
         let ref = Database.database().reference(withPath: "items")
         let userID = Auth.auth().currentUser?.uid
