@@ -10,12 +10,37 @@ import UIKit
 import Firebase
 
 class MyItemsTableViewController: UITableViewController {
-    
     var items = [Item]()
+    var itemImages = [UIImage]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    var images = [String:UIImage]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchMyItems()
+        fetchMyItems { fetchedItems in
+            self.items = fetchedItems
+            for item in fetchedItems {
+                
+                print(self.items)
+                item.downloadImage(from: item.itemPhoto1, completion: { (image, path) in
+                    print("Loaded image")
+                    self.itemImages.append(image)
+                    saveImageToDocuments(image: image, imagePath: path)
+                })
+                
+                
+                self.tableView.reloadData()
+            }
+            print(self.images)
+            
+        }
     }
 
     // MARK: - Table view data source
@@ -31,11 +56,17 @@ class MyItemsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("MyItemsTableViewCell", owner: self, options: nil)?.first as! MyItemsTableViewCell
+        cell.tag = indexPath.row
         let item = items[indexPath.row]
-        let imagePath = item.itemPhoto1
+        
+        if cell.tag == indexPath.row {
+            cell.itemImage.alpha = 0
+            cell.itemImage.image = loadImageFromDocuments(imagePath: item.itemPhoto1)
+            cell.itemImage.fadeIn(2.0)
+        }
+        //cell.itemImage.image = images[item.itemPhoto1]
         cell.itemName.text = item.itemName
         cell.itemPrice.text = String(item.price)
-        cell.itemImage.image = loadImageFromDocuments(imagePath: imagePath)
         return cell
     }
     
@@ -44,9 +75,10 @@ class MyItemsTableViewController: UITableViewController {
         return cell.frame.height
     }
     
-    func fetchMyItems() {
+    func fetchMyItems(completion: @escaping (_ items: [Item]) -> Void) {
         let ref = Database.database().reference(withPath: "items")
         let userID = Auth.auth().currentUser?.uid
+        var fetchedItems = [Item]()
         
         ref.queryOrdered(byChild: "ownerId").queryEqual(toValue: userID).observeSingleEvent(of: .value, with: { (snapshot)
             in
@@ -73,21 +105,16 @@ class MyItemsTableViewController: UITableViewController {
                                        itemPhoto1: itemImagePath1,
                                        itemPhoto2: itemImagePath2,
                                        itemPhoto3: itemImagePath3)
-                self.items.append(fetchedItem)
+                fetchedItems.append(fetchedItem)
                 
-                if loadImageFromDocuments(imagePath: fetchedItem.itemPhoto1) == nil {
-                    fetchedItem.downloadImage(from: fetchedItem.itemPhoto1, completion: { (image) in
-                        saveImageToDocuments(image: image, imagePath: fetchedItem.itemPhoto1)
-                        self.tableView.reloadData()
-                    })
-                }
+                
                 self.tableView.reloadData()
+                
             }
+            completion(fetchedItems)
         }) { (error) in
             print(error.localizedDescription)
         }
-        
-        
     }
     @IBAction func backButtonTapped(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)

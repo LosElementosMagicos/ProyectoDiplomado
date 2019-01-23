@@ -76,7 +76,35 @@ struct Item {
         })
         // 7. Finish download of image
         //return
-    }    
+    }
+    
+    func downloadImage(from storageImagePath: String, completion: @escaping (_ image: UIImage, _ path: String) -> Void) {
+        let storageRef = Storage.storage().reference()
+        //let storageDownloadTask: StorageDownloadTask!
+        let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let imageURL = docDir.appendingPathComponent(String(storageImagePath.suffix(16)))
+        if !FileManager.default.fileExists(atPath: imageURL.path) {
+            do {
+                // writes the image data to disk
+                // 3. Start download of image and write it to the file url
+                let _: StorageDownloadTask = storageRef.child(storageImagePath).write(toFile: imageURL, completion: { (url, error) in
+                    // 4. Check for error
+                    if let error = error {
+                        print("Error downloading:\(error)")
+                        return
+                        // 5. Get the url path of the image
+                    } else if let imagePath = url?.path {
+                        // 6. Return the image
+                        completion(UIImage(contentsOfFile: imagePath)!, storageImagePath)
+                    }
+                })
+                print("file saved")
+            }
+        }
+        
+        // 7. Finish download of image
+        //return
+    }
 }
 
 extension Item: Equatable {}

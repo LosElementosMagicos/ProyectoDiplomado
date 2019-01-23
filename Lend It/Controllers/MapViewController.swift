@@ -242,7 +242,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Im inside prepare func")
         if segue.identifier == "RentItSegue" {
             let navigationController = segue.destination as! UINavigationController
             let vc = navigationController.viewControllers.first as! ItemProfileViewController
@@ -332,6 +331,7 @@ extension MapViewController: GMSMapViewDelegate {
         infoView.placePhoto.animationDuration = 6.0
         infoView.placePhoto.animationRepeatCount = 0
         infoView.placePhoto.startAnimating()
+        self.rentButton.fadeIn(2.0)
     } else {
         placeMarker.place.downloadImage(from: photoPaths[0]) { (image) in
             infoView.placePhoto.image = image
@@ -344,6 +344,7 @@ extension MapViewController: GMSMapViewDelegate {
         }
         placeMarker.place.downloadImage(from: photoPaths[2]) { (image) in
             saveImageToDocuments(image: image, imagePath: photoPaths[2])
+            self.rentButton.fadeIn(2.0)
         }
     }
     searchBar.endEditing(true)
@@ -353,6 +354,7 @@ extension MapViewController: GMSMapViewDelegate {
   func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
     mapCenterPinImage.fadeOut(0.25)
     // Change lend rent buttons
+    rentButton.alpha = 0
     swapLendRentButtons()
     return false
   }
