@@ -16,30 +16,19 @@ class MyItemsTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
-    var images = [String:UIImage]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchMyItems { fetchedItems in
             self.items = fetchedItems
             for item in fetchedItems {
-                
-                print(self.items)
                 item.downloadImage(from: item.itemPhoto1, completion: { (image, path) in
                     print("Loaded image")
                     self.itemImages.append(image)
                     saveImageToDocuments(image: image, imagePath: path)
                 })
-                
-                
                 self.tableView.reloadData()
             }
-            print(self.images)
-            
         }
     }
 
@@ -64,9 +53,9 @@ class MyItemsTableViewController: UITableViewController {
             cell.itemImage.image = loadImageFromDocuments(imagePath: item.itemPhoto1)
             cell.itemImage.fadeIn(2.0)
         }
-        //cell.itemImage.image = images[item.itemPhoto1]
         cell.itemName.text = item.itemName
-        cell.itemPrice.text = String(item.price)
+        let formattedPrice = Formatter.currency.string(from: NSDecimalNumber(integerLiteral: item.price))
+        cell.itemPrice.text = formattedPrice
         return cell
     }
     
@@ -76,7 +65,17 @@ class MyItemsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "itemProfileSegue", sender: indexPath.row)
+        // When a row is selected, if needed, downloads and saves rest of images to documents, to be able to pass then to next view controller
+        let item = items[indexPath.row]
+        let paths: [String] = [item.itemPhoto2, item.itemPhoto3]
+        if let _ = loadImageFromDocuments(imagePath: item.itemPhoto2),
+            let _ = loadImageFromDocuments(imagePath: item.itemPhoto3) {
+            self.performSegue(withIdentifier: "itemProfileSegue", sender: indexPath.row)
+        } else {
+            item.downloadAllImages(from: paths) { (images) in
+                self.performSegue(withIdentifier: "itemProfileSegue", sender: indexPath.row)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -87,8 +86,8 @@ class MyItemsTableViewController: UITableViewController {
             let selectedItem = items[index]
             vc.item = selectedItem
             vc.photoData[0] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto1)!
-            //vc.photoData[1] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto2)!
-            //vc.photoData[2] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto3)!
+            vc.photoData[1] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto2)!
+            vc.photoData[2] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto3)!
             print("New info passed to PageVC")
         }
     }
@@ -124,10 +123,7 @@ class MyItemsTableViewController: UITableViewController {
                                        itemPhoto2: itemImagePath2,
                                        itemPhoto3: itemImagePath3)
                 fetchedItems.append(fetchedItem)
-                
-                
                 self.tableView.reloadData()
-                
             }
             completion(fetchedItems)
         }) { (error) in
@@ -136,7 +132,6 @@ class MyItemsTableViewController: UITableViewController {
     }
     @IBAction func backButtonTapped(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
-        
     }
     
 }
