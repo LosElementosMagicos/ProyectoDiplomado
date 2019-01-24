@@ -39,6 +39,7 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
+        // Access previous view controller to pass new image
         let previousNC = presentingViewController as? UINavigationController
         if let previousVC = previousNC?.viewControllers.first as? MapViewController {
             previousVC.profileImageView.image = profileImageView.image
