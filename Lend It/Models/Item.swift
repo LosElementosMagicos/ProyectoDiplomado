@@ -51,96 +51,66 @@ struct Item {
         ]
     }
     
-    func downloadImage(from storageImagePath: String, completion: @escaping (_ image: UIImage) -> Void) {
-        let storageRef = Storage.storage().reference()
-        // 1. Get a filePath to save the image at
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        let filePath = "file:\(documentsDirectory)/myimage.jpg"
-        // 2. Get the url of that file path
-        guard let fileURL = URL(string: filePath) else { return }
-        
-        // 3. Start download of image and write it to the file url
-        let _: StorageDownloadTask = storageRef.child(storageImagePath).write(toFile: fileURL, completion: { (url, error) in
-            // 4. Check for error
-            if let error = error {
-                print("Error downloading:\(error)")
-                return
-                // 5. Get the url path of the image
-            } else if let imagePath = url?.path {
-                // 6. Return the image
-                completion(UIImage(contentsOfFile: imagePath)!)
-            }
-        })
-        // 7. Finish download of image
-        //return
-    }
-    
     func downloadImage(from storageImagePath: String, completion: @escaping (_ image: UIImage, _ path: String) -> Void) {
         let storageRef = Storage.storage().reference()
-        //let storageDownloadTask: StorageDownloadTask!
         let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let imageURL = docDir.appendingPathComponent(String(storageImagePath.suffix(16)))
         if !FileManager.default.fileExists(atPath: imageURL.path) {
             do {
-                // writes the image data to disk
-                // 3. Start download of image and write it to the file url
+                // Writes the image data to disk
+                // Start download of image and write it to the file url
                 let _: StorageDownloadTask = storageRef.child(storageImagePath).write(toFile: imageURL, completion: { (url, error) in
-                    // 4. Check for error
+                    // Check for error
                     if let error = error {
                         print("Error downloading:\(error)")
                         return
-                        // 5. Get the url path of the image
+                        // Get the url path of the image
                     } else if let imagePath = url?.path {
-                        // 6. Return the image
+                        // Return the image
+                        print("file saved")
                         completion(UIImage(contentsOfFile: imagePath)!, storageImagePath)
                     }
                 })
-                print("file saved")
             }
         }
-        
-        // 7. Finish download of image
-        //return
     }
     
     func downloadAllImages(from storagePaths: [String], completion: @escaping (_ images: [UIImage]) -> Void) {
         var downloadCounter = 0
         var downloadedImages = [UIImage]()
         let storageRef = Storage.storage().reference()
-        //let storageDownloadTask: StorageDownloadTask!
         let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         for storagePath in storagePaths {
             let imageURL = docDir.appendingPathComponent(String(storagePath.suffix(16)))
             if !FileManager.default.fileExists(atPath: imageURL.path) {
                 do {
-                    // writes the image data to disk
-                    // 3. Start download of image and write it to the file url
+                    // Writes the image data to disk
+                    // Start download of image and write it to the file url
                     let _: StorageDownloadTask = storageRef.child(storagePath).write(toFile: imageURL, completion: { (url, error) in
-                        // 4. Check for error
+                        // Check for error
                         if let error = error {
                             print("Error downloading:\(error)")
                             return
-                            // 5. Get the url path of the image
+                            // Get the url path of the image
                         } else if let imagePath = url?.path {
-                            // 6. Return the image
-                        downloadedImages.append(UIImage(contentsOfFile: imagePath)!)
+                            // Return the image
+                            print("file saved")
                             downloadCounter += 1
+                            downloadedImages.append(UIImage(contentsOfFile: imagePath)!)
                             if downloadCounter == storagePaths.count {
                                 completion(downloadedImages)
                             }
                         }
                     })
-                    print("file saved")
                 }
+            } else {
+                print("file already exists")
+                downloadCounter += 1
+                downloadedImages.append(UIImage(contentsOfFile: imageURL.path)!)
             }
         }
-        // 7. Finish download of image
-        //return
     }
 }
-
-
 
 extension Item: Equatable {}
 

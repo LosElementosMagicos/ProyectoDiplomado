@@ -26,8 +26,8 @@ class ItemProfileViewController: UIViewController {
                           itemPhoto2: "",
                           itemPhoto3: "")
     var photoData: [UIImage] = [UIImage(named: "add-camera.png")!,
-                                UIImage(named: "icon_item.png")!,
-                                UIImage(named: "icon_me.png")!]
+                                UIImage(named: "add-camera.png")!,
+                                UIImage(named: "add-camera.png")!]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,6 @@ class ItemProfileViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Im prep func")
         if (segue.identifier == "PhotoPageVCSegue") {
             let childViewController = segue.destination as! ItemProfilePageViewController
             childViewController.photoData[0] = self.photoData[0]
@@ -51,15 +50,5 @@ class ItemProfileViewController: UIViewController {
         }
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

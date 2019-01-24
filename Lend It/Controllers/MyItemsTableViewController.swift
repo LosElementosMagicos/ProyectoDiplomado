@@ -19,13 +19,12 @@ class MyItemsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Fetch items and when finished, download their first image
         fetchMyItems { fetchedItems in
             self.items = fetchedItems
             for item in fetchedItems {
                 item.downloadImage(from: item.itemPhoto1, completion: { (image, path) in
-                    print("Loaded image")
                     self.itemImages.append(image)
-                    saveImageToDocuments(image: image, imagePath: path)
                 })
                 self.tableView.reloadData()
             }
@@ -42,12 +41,10 @@ class MyItemsTableViewController: UITableViewController {
         return items.count
     }
 
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("MyItemsTableViewCell", owner: self, options: nil)?.first as! MyItemsTableViewCell
         cell.tag = indexPath.row
         let item = items[indexPath.row]
-        
         if cell.tag == indexPath.row {
             cell.itemImage.alpha = 0
             cell.itemImage.image = loadImageFromDocuments(imagePath: item.itemPhoto1)
@@ -67,9 +64,8 @@ class MyItemsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // When a row is selected, if needed, downloads and saves rest of images to documents, to be able to pass then to next view controller
         let item = items[indexPath.row]
-        let paths: [String] = [item.itemPhoto2, item.itemPhoto3]
-        if let _ = loadImageFromDocuments(imagePath: item.itemPhoto2),
-            let _ = loadImageFromDocuments(imagePath: item.itemPhoto3) {
+        let paths: [String] = [item.itemPhoto1, item.itemPhoto2, item.itemPhoto3]
+        if loadAllImagesFromDocuments(imagePaths: paths).count == paths.count {
             self.performSegue(withIdentifier: "itemProfileSegue", sender: indexPath.row)
         } else {
             item.downloadAllImages(from: paths) { (images) in
@@ -88,7 +84,6 @@ class MyItemsTableViewController: UITableViewController {
             vc.photoData[0] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto1)!
             vc.photoData[1] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto2)!
             vc.photoData[2] = loadImageFromDocuments(imagePath: selectedItem.itemPhoto3)!
-            print("New info passed to PageVC")
         }
     }
     

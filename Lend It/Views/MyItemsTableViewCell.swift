@@ -14,7 +14,6 @@ class MyItemsTableViewCell: UITableViewCell {
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         itemImage.layer.cornerRadius = itemImage.frame.width / 2
@@ -23,8 +22,6 @@ class MyItemsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

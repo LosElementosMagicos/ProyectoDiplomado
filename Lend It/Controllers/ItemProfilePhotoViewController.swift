@@ -11,7 +11,7 @@ import UIKit
 class ItemProfilePhotoViewController: UIViewController {
 
     @IBOutlet weak var itemImageView: UIImageView!
-    var dataObject = UIImage(named: "")
+    var dataObject = UIImage(named: "add-camera.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
