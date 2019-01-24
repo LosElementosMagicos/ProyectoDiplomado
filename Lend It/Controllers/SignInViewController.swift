@@ -20,7 +20,6 @@ class SignInViewController: UIViewController {
     var name:String = ""
     var userImage = UIImage(named: "")
     var facebookID:String = ""
-    //END
     
     // Reference for storaging 
     fileprivate var ref: DatabaseReference!
@@ -29,7 +28,6 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
     }
-    
     
     //MARK:- Facebook Login
     @IBAction func facebookLoginButtonClick(_ sender: UIButton) {
@@ -97,8 +95,4 @@ class SignInViewController: UIViewController {
             })
         }
     }
-    
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
-    }
- 
 }

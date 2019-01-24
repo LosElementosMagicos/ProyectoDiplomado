@@ -14,8 +14,7 @@ class ItemProfilePageViewController: UIPageViewControllerWithOverlayIndicator , 
     var photoData: [UIImage] = [UIImage(named: "add-camera.png")!,
                                 UIImage(named: "add-camera.png")!,
                                 UIImage(named: "add-camera.png")!]
-    
-    /// Configures self as the data source and first-presented view controller.
+    // Configures self as the data source and first-presented view controller.
     override func viewDidLoad() {
         super.viewDidLoad()
         // Install this class as the data source

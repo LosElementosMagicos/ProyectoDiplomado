@@ -7,6 +7,7 @@
 
 import UIKit
 
+// Used to give different formats to currency text fields
 class CurrencyField: UITextField {
 
     var string: String { return text ?? "" }

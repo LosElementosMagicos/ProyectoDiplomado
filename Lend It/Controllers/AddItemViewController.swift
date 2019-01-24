@@ -94,7 +94,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:
         [UIImagePickerController.InfoKey : Any]) {
-        // 1. Get image data from selected image
+        // Get image data from selected image
         guard
             let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage,
             let imageData = image.jpegData(compressionQuality: 0.1) else {
@@ -108,19 +108,19 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             if button?.tag == 1 {
                 button?.setImage(image, for: .normal)
                 button?.tag = 0
-                // 2. Create a unique image path for image. In the case I am using the googleAppId of my account appended to the interval between 00:00:00 UTC on 1 January 2001 and the current date and time as an Integer and then I append .jpg. You can use whatever you prefer as long as it ends up unique.
+                // Create a unique image path for image. In the case I am using the googleAppId of my account appended to the interval between 00:00:00 UTC on 1 January 2001 and the current date and time as an Integer and then I append .jpg. You can use whatever you prefer as long as it ends up unique.
                 let imagePath = Auth.auth().app!.options.googleAppID + "/\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
                 imagePaths[index] = imagePath
-                // 3. Set up metadata with appropriate content type
+                // Set up metadata with appropriate content type
                 let metadata = StorageMetadata()
                 metadata.contentType = "image/jpeg"
-                // 4. Show activity indicator
+                // Show activity indicator
                 showNetworkActivityIndicator = true
-                // 5. Start upload task
+                // Start upload task
                 storageUploadTask = storageRef.child(imagePath).putData(imageData, metadata: metadata) { (_, error) in
-                    // 6. Hide activity indicator because uploading is done with or without an error
+                    // Hide activity indicator because uploading is done with or without an error
                     self.showNetworkActivityIndicator = false
-                    
+                
                     guard error == nil else {
                         print("Error uploading: \(error!)")
                         return
@@ -138,6 +138,15 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         if itemTitleTextField.text == "" || itemTitleTextField.text == " " {
             // Missing fields, present alert
             let alert = UIAlertController(title: "Nombre del objeto inválido", message: "Por favor intenta con otro nombre.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        if itemPriceTextField.decimal < 10.0 {
+            // Invalid price, present alert
+            let alert = UIAlertController(title: "Precio inválido", message: "No se aceptan precios menores a MX$5.00", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
                 NSLog("The \"OK\" alert occured.")
             }))
@@ -186,7 +195,6 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
-    
     
 }
 
