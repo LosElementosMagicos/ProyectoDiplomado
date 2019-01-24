@@ -23,12 +23,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var photoButton2: UIButton!
     @IBOutlet weak var photoButton3: UIButton!
     var imagePaths: [String?] = [nil,nil,nil]
-    // Helps handlinh NetworkActivityIndicator
-    fileprivate var showNetworkActivityIndicator = false {
-        didSet {
-            UIApplication.shared.isNetworkActivityIndicatorVisible =              showNetworkActivityIndicator
-        }
-    }
+    
     // References for storaging images and database
     fileprivate var ref: DatabaseReference!
     fileprivate var storageRef: StorageReference!
@@ -114,13 +109,8 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
                 // Set up metadata with appropriate content type
                 let metadata = StorageMetadata()
                 metadata.contentType = "image/jpeg"
-                // Show activity indicator
-                showNetworkActivityIndicator = true
                 // Start upload task
                 storageUploadTask = storageRef.child(imagePath).putData(imageData, metadata: metadata) { (_, error) in
-                    // Hide activity indicator because uploading is done with or without an error
-                    self.showNetworkActivityIndicator = false
-                
                     guard error == nil else {
                         print("Error uploading: \(error!)")
                         return
