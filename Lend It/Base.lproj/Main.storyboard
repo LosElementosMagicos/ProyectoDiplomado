@@ -17,10 +17,18 @@
             </objects>
             <point key="canvasLocation" x="1690" y="-326"/>
         </scene>
-        <!--MyItems-->
+        <!--MyRentedItemsStoryboard-->
+        <scene sceneID="Y72-5M-bBo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyRentedItems" referencedIdentifier="MyRentedItemsStoryboard" id="Uyb-yo-vD4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NdL-9R-maq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="-207"/>
+        </scene>
+        <!--MyItemsStoryboard-->
         <scene sceneID="kae-CR-Afd">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyItems" id="AsU-sZ-PUh" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="MyItems" referencedIdentifier="MyItemsStoryboard" id="AsU-sZ-PUh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDK-fS-HR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1823" y="-64"/>
@@ -149,6 +157,11 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sD-K4-UTL">
                                                 <rect key="frame" x="0.0" y="66" width="119" height="30"/>
                                                 <state key="normal" title="Objetos rentados"/>
+                                                <connections>
+                                                    <segue destination="Uyb-yo-vD4" kind="popoverPresentation" popoverAnchorView="0sD-K4-UTL" id="wB6-8b-Gjo">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20O-NY-dJ2">
                                                 <rect key="frame" x="0.0" y="132" width="35" height="30"/>

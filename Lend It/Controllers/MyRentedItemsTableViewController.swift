@@ -1,15 +1,15 @@
 //
-//  MyItemsTableViewController.swift
+//  MyRentedItemsTableViewController.swift
 //  Lend It
 //
-//  Created by Grecia Escárcega on 1/17/19.
+//  Created by Daniel Esteban Salinas Suárez on 1/25/19.
 //  Copyright © 2019 Daniel Esteban Salinas Suárez. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class MyItemsTableViewController: UITableViewController {
+class MyRentedItemsTableViewController: UITableViewController {
     var items = [Item]()
     var itemImages = [UIImage]()
     
@@ -29,17 +29,17 @@ class MyItemsTableViewController: UITableViewController {
             }
         }
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("MyItemsTableViewCell", owner: self, options: nil)?.first as! MyItemsTableViewCell
         cell.tag = indexPath.row
@@ -94,7 +94,7 @@ class MyItemsTableViewController: UITableViewController {
         let userID = Auth.auth().currentUser?.uid
         var fetchedItems = [Item]()
         
-        ref.queryOrdered(byChild: "ownerId").queryEqual(toValue: userID).observeSingleEvent(of: .value, with: { (snapshot)
+        ref.queryOrdered(byChild: "borrowingUserId").queryEqual(toValue: userID).observeSingleEvent(of: .value, with: { (snapshot)
             in
             for child in snapshot.children {
                 guard let snapshot = child as? DataSnapshot else { continue }
@@ -126,6 +126,7 @@ class MyItemsTableViewController: UITableViewController {
             print(error.localizedDescription)
         }
     }
+    
     @IBAction func backButtonTapped(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
