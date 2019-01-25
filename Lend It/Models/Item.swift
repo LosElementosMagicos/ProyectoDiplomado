@@ -54,7 +54,7 @@ struct Item {
     func downloadImage(from storageImagePath: String, completion: @escaping (_ image: UIImage, _ path: String) -> Void) {
         let storageRef = Storage.storage().reference()
         let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let imageURL = docDir.appendingPathComponent(String(storageImagePath.suffix(16)))
+        let imageURL = docDir.appendingPathComponent(String(storageImagePath))
         if !FileManager.default.fileExists(atPath: imageURL.path) {
             do {
                 // Writes the image data to disk
@@ -81,7 +81,7 @@ struct Item {
         let storageRef = Storage.storage().reference()
         let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         for storagePath in storagePaths {
-            let imageURL = docDir.appendingPathComponent(String(storagePath.suffix(16)))
+            let imageURL = docDir.appendingPathComponent(String(storagePath))
             if !FileManager.default.fileExists(atPath: imageURL.path) {
                 do {
                     // Writes the image data to disk

@@ -49,8 +49,14 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         // Makes profile view circular
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         profileImageView.clipsToBounds = true
+        
+        // Loads image for user.
+        let imagePath = "profileImages/" + (Auth.auth().currentUser?.uid)! + ".jpg"
+        downloadProfileImage(from: imagePath) { (image) in
+            self.profileImageView.image = image
+        }
         // Makes Navigation Bar invisible
-    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
@@ -192,6 +198,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     @IBAction func exitButtonTapped(_ sender: Any) {
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
+        clearAllFilesFromTempDirectory()
         performSegue(withIdentifier: "unwindToSignInSegue", sender: self)
     }
     

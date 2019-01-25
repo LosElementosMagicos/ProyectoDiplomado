@@ -17,6 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAm-PK-6Pz">
+                                <rect key="frame" x="118" y="104" width="140" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="profileImageTapped:" destination="4tZ-OM-hbe" eventType="touchUpInside" id="OBD-gd-ags"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="ymy-1b-ug8">
                                 <rect key="frame" x="117.5" y="104" width="140" height="140"/>
                                 <constraints>
@@ -92,8 +99,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkH-FV-lD3">
-                                <rect key="frame" x="315" y="384" width="40" height="30"/>
-                                <state key="normal" title="editar"/>
+                                <rect key="frame" x="274" y="384" width="81" height="30"/>
+                                <state key="normal" title="Sin verificar">
+                                    <color key="titleColor" red="0.80325048575129532" green="0.0" blue="0.062439067174707534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,7 +118,7 @@
                         <viewLayoutGuide key="safeArea" id="Iuv-YC-mXs"/>
                     </view>
                     <navigationItem key="navigationItem" id="pSX-e6-9eS">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="y4n-ik-edz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="y4n-ik-edz">
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="4tZ-OM-hbe" id="6iP-1m-Rmi"/>
                             </connections>
