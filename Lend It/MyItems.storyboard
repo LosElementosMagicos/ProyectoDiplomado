@@ -21,7 +21,7 @@
                             <outlet property="delegate" destination="e1a-eu-zcp" id="3bc-G7-wBf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Items" id="dQT-x5-pTE">
+                    <navigationItem key="navigationItem" title="Mis Objetos" id="dQT-x5-pTE">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="9cy-dj-IhY">
                             <connections>
                                 <action selector="backButtonTapped:" destination="e1a-eu-zcp" id="UFg-0e-LAB"/>
@@ -47,7 +47,7 @@
         <!--Navigation Controller-->
         <scene sceneID="XOt-Wk-ep4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kuo-jY-1Dq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MyItemsStoryboard" automaticallyAdjustsScrollViewInsets="NO" id="Kuo-jY-1Dq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ywV-Jc-va3">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
