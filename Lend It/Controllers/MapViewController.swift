@@ -194,13 +194,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
             }
         }
     }
-
-    @IBAction func exitButtonTapped(_ sender: Any) {
-        let loginManager = FBSDKLoginManager()
-        loginManager.logOut()
-        clearAllFilesFromTempDirectory()
-        performSegue(withIdentifier: "unwindToSignInSegue", sender: self)
-    }
     
     func swapLendRentButtons() {
         lendButton.isHidden = !lendButton.isHidden

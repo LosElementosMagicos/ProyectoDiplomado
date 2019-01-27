@@ -49,6 +49,14 @@
             </objects>
             <point key="canvasLocation" x="1825" y="289"/>
         </scene>
+        <!--configurationStoryboard-->
+        <scene sceneID="YPc-KP-hqm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Configuration" referencedIdentifier="configurationStoryboard" id="e04-xy-9fp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9a-qh-758" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="394"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -123,7 +131,7 @@
                                                 <rect key="frame" x="0.0" y="75" width="80" height="30"/>
                                                 <state key="normal" title="editar"/>
                                                 <connections>
-                                                    <segue destination="mav-G4-Haf" kind="popoverPresentation" popoverAnchorView="hPU-SF-ANN" id="OHf-Ml-JNs">
+                                                    <segue destination="mav-G4-Haf" kind="popoverPresentation" identifier="" popoverAnchorView="hPU-SF-ANN" id="OHf-Ml-JNs">
                                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                     </segue>
                                                 </connections>
@@ -143,7 +151,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="hez-ua-xlQ">
-                                        <rect key="frame" x="8" y="169" width="119" height="360"/>
+                                        <rect key="frame" x="8" y="169" width="119" height="294"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gt-c4-Kfm">
                                                 <rect key="frame" x="0.0" y="0.0" width="79" height="30"/>
@@ -174,12 +182,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-Aq-mPu">
                                                 <rect key="frame" x="0.0" y="264" width="97" height="30"/>
                                                 <state key="normal" title="Configuración"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jV-4K-TcS">
-                                                <rect key="frame" x="0.0" y="330" width="30" height="30"/>
-                                                <state key="normal" title="Salir"/>
                                                 <connections>
-                                                    <action selector="exitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgb-v4-Kwj"/>
+                                                    <segue destination="e04-xy-9fp" kind="popoverPresentation" popoverAnchorView="SdQ-Aq-mPu" id="R6A-MG-CyY">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
                                                 </connections>
                                             </button>
                                         </subviews>

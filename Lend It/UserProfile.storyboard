@@ -118,7 +118,7 @@
                         <viewLayoutGuide key="safeArea" id="Iuv-YC-mXs"/>
                     </view>
                     <navigationItem key="navigationItem" id="pSX-e6-9eS">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="y4n-ik-edz">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="y4n-ik-edz">
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="4tZ-OM-hbe" id="6iP-1m-Rmi"/>
                             </connections>
