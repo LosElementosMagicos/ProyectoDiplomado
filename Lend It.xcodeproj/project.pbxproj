@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		651A148521FB7C0400E80967 /* MyRentedItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A148421FB7C0400E80967 /* MyRentedItemsTableViewController.swift */; };
 		651A148721FB8CC400E80967 /* MyRentedItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651A148621FB8CC400E80967 /* MyRentedItems.storyboard */; };
+		651A148921FE598900E80967 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A148821FE598900E80967 /* ConfigurationViewController.swift */; };
+		651A148B21FE59A600E80967 /* Configuration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651A148A21FE59A600E80967 /* Configuration.storyboard */; };
 		654A73D221DEC082006A17C9 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A73D021DEC081006A17C9 /* UserProfileViewController.swift */; };
 		654A73D521DED79E006A17C9 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A73D421DED79E006A17C9 /* UserProfile.storyboard */; };
 		654A73D721E1961A006A17C9 /* AddNewItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A73D621E1961A006A17C9 /* AddNewItem.storyboard */; };
@@ -67,6 +69,8 @@
 		40BAF0BB104BE63278CCAD00 /* Pods_Lend_It.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lend_It.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		651A148421FB7C0400E80967 /* MyRentedItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRentedItemsTableViewController.swift; sourceTree = "<group>"; };
 		651A148621FB8CC400E80967 /* MyRentedItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyRentedItems.storyboard; sourceTree = "<group>"; };
+		651A148821FE598900E80967 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		651A148A21FE59A600E80967 /* Configuration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Configuration.storyboard; sourceTree = "<group>"; };
 		652031E621FA78DF00B07232 /* Lend It.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Lend It.entitlements"; sourceTree = "<group>"; };
 		654A73D021DEC081006A17C9 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		654A73D421DED79E006A17C9 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				65F5DBC921E80C0600AE6FB6 /* ItemProfile.storyboard */,
 				B581DD5A21F0454E006DB866 /* MyItems.storyboard */,
 				651A148621FB8CC400E80967 /* MyRentedItems.storyboard */,
+				651A148A21FE59A600E80967 /* Configuration.storyboard */,
 				654A73DE21E323DA006A17C9 /* Helpers */,
 				657A301D21D6EC8300B71CA1 /* GoogleMapsHelpers */,
 				657A301C21D6EC1700B71CA1 /* Controllers */,
@@ -247,6 +252,7 @@
 				65F5DBCF21E816F200AE6FB6 /* ItemProfilePhotoViewController.swift */,
 				B581DD5C21F0E901006DB866 /* MyItemsTableViewController.swift */,
 				651A148421FB7C0400E80967 /* MyRentedItemsTableViewController.swift */,
+				651A148821FE598900E80967 /* ConfigurationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				654A73D521DED79E006A17C9 /* UserProfile.storyboard in Resources */,
 				657A2FE521D1678900B71CA1 /* LaunchScreen.storyboard in Resources */,
 				657A300B21D171DC00B71CA1 /* GoogleService-Info.plist in Resources */,
+				651A148B21FE59A600E80967 /* Configuration.storyboard in Resources */,
 				654A73D721E1961A006A17C9 /* AddNewItem.storyboard in Resources */,
 				657A301321D183C400B71CA1 /* MarkerInfoView.xib in Resources */,
 				651A148721FB8CC400E80967 /* MyRentedItems.storyboard in Resources */,
@@ -571,6 +578,7 @@
 				657A300D21D180CD00B71CA1 /* UIViewExtension.swift in Sources */,
 				B581DD5D21F0E901006DB866 /* MyItemsTableViewController.swift in Sources */,
 				657A301721D300AF00B71CA1 /* SignInViewController.swift in Sources */,
+				651A148921FE598900E80967 /* ConfigurationViewController.swift in Sources */,
 				657A301921D3137A00B71CA1 /* Item.swift in Sources */,
 				657A301121D183BD00B71CA1 /* MarkerInfoView.swift in Sources */,
 				654A73D221DEC082006A17C9 /* UserProfileViewController.swift in Sources */,
