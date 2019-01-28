@@ -24,7 +24,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var mapView: GMSMapView!
     private let locationManager = CLLocationManager()
     var markerNearbyItemIndex = 0
-    private let searchRadius: Double = 1000
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet private weak var mapCenterPinImage: UIImageView!
     @IBOutlet private weak var pinImageVerticalConstraint: NSLayoutConstraint!
@@ -32,11 +31,15 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var profileRepLabel: UILabel!
+    // search radius
+    var searchRadius: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         rentButton.isHidden = true
         searchBar.delegate = self
+        // Assign search radius
+        searchRadius = UserDefaults.standard.double(forKey: "searchRadius") //* 1000 // in meters
         // Place users name
         profileNameLabel.text = UserDefaults.standard.string(forKey: "userName")
         // Hides hamburger menu
@@ -88,8 +91,11 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         var items = [Item]()
         let myLon = self.mapView.camera.target.longitude
         let myLat = self.mapView.camera.target.latitude
-
-        ref.queryOrdered(byChild: "lon").queryStarting(atValue: myLon-0.02).queryEnding(atValue: myLon+0.02).observeSingleEvent(of: .value, with: { (snapshot)
+        // Will search based on my location +- searchRadius user configs
+        // 1 degree = 111.14km
+        // lat away = myLat + sliderDistance/111.14km
+        let radiusInDegrees = searchRadius/111.14
+        ref.queryOrdered(byChild: "lon").queryStarting(atValue: myLon-radiusInDegrees).queryEnding(atValue: myLon+radiusInDegrees).observeSingleEvent(of: .value, with: { (snapshot)
             in
             // Firebase can only do one filer at a time so next filter (lat) must be in code
             // Returns spots who match longitude with user
@@ -99,7 +105,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
                 let value = snapshot.value as? NSDictionary
                 // Second filter to check if latitude is also in range
                 let lat = value?["lat"] as? Double ?? 0
-                if !(lat<myLat+0.02 && lat>myLat-0.02) { continue }
+                if !(lat<myLat+radiusInDegrees && lat>myLat-radiusInDegrees) { continue }
                 // Third filter to check if name matches with search
                 let itemName = value?["itemName"] as? String ?? ""
                 if !(itemName.lowercased().contains(searchBarWord.lowercased())) { continue }
@@ -320,5 +326,3 @@ extension MapViewController: GMSMapViewDelegate {
         return false
     }
 }
-
- 

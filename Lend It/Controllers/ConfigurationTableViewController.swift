@@ -35,10 +35,17 @@ class ConfigurationTableViewController: UITableViewController {
         if let image = loadImageFromDocuments(imagePath: imagePath) {
             profileImageView.image = image
         }
+        // Set slider position
+        let sliderValue = UserDefaults.standard.integer(forKey: "searchRadius")
+        maxDistanceSlider.value = Float(sliderValue)
+        maxDistanceLabel.text = "\(sliderValue) km"
+        
     }
     
     @IBAction func maxDistanceSliderValueChanged(_ sender: UISlider) {
-        
+        let sliderValue = Int(round(sender.value))
+        maxDistanceLabel.text = "\(sliderValue) km"
+        UserDefaults.standard.set(sliderValue, forKey: "searchRadius")
     }
     
 
@@ -94,6 +101,7 @@ class ConfigurationTableViewController: UITableViewController {
         let previousNC = presentingViewController as? UINavigationController
         if let previousVC = previousNC?.viewControllers.first as? MapViewController {
             previousVC.profileImageView.image = profileImageView.image
+            previousVC.searchRadius = Double(maxDistanceSlider.value)
         }
         self.navigationController?.dismiss(animated: true, completion: nil)
     }

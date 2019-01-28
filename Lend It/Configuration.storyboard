@@ -145,7 +145,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="maxDistanceLabel" destination="DlL-DE-efJ" id="FSC-kW-bMd"/>
-                        <outlet property="maxDistanceSlider" destination="bmx-Uy-kqc" id="ZpV-Wv-usk"/>
+                        <outlet property="maxDistanceSlider" destination="bmx-Uy-kqc" id="JdQ-wQ-gq7"/>
                         <outlet property="profileEmailLabel" destination="bpm-hG-oJx" id="TYW-xP-5YN"/>
                         <outlet property="profileImageView" destination="LCm-z9-evl" id="x8B-2o-SC5"/>
                         <outlet property="profileNameLabel" destination="wxo-UE-Izk" id="khM-cd-WZg"/>

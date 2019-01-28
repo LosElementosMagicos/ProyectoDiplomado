@@ -61,6 +61,9 @@ class SignInViewController: UIViewController {
                     // Save user basic data
                     UserDefaults.standard.set(self.name, forKey: "userName")
                     UserDefaults.standard.set(self.email, forKey: "userEmail")
+                    if UserDefaults.standard.object(forKey: "searchRadius") == nil {
+                        UserDefaults.standard.set(10, forKey: "searchRadius") // in km
+                    }
                     
                     // FIREBASE
                     let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
