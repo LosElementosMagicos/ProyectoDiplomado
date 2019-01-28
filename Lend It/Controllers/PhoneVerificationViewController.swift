@@ -21,7 +21,6 @@ class PhoneVerificationViewController: UIViewController {
         if _accountKit == nil {
             print("Account is nil")
             _accountKit = AKFAccountKit(responseType: .accessToken)
-            phoneVerificationWithPhone()
         }
     }
     
@@ -66,22 +65,13 @@ class PhoneVerificationViewController: UIViewController {
     }
     
     //MARK: - Actions
-    @IBAction func btnLoginWithPhoneOnClick(_ sender: UIButton) {
+    @IBAction func verifyPhoneButtonTapped(_ sender: UIButton) {
         self.phoneVerificationWithPhone()
     }
     
 }
 
 extension PhoneVerificationViewController: AKFViewControllerDelegate {
-    
-    func viewController(viewController: UIViewController!, didCompleteLoginWithAccessToken accessToken: AKFAccessToken!, state: String!) {
-        print("did complete login with access token \(accessToken.tokenString) state \(String(describing: state))")
-    }
-    
-    // handle callback on successful login to show authorization code
-    func viewController(_ viewController: (UIViewController & AKFViewController)!, didCompleteLoginWithAuthorizationCode code: String!, state: String!) {
-        print("didCompleteLoginWithAuthorizationCode")
-    }
     
     func viewControllerDidCancel(_ viewController: (UIViewController & AKFViewController)!) {
         // ... handle user cancellation of the login process ...
@@ -95,6 +85,17 @@ extension PhoneVerificationViewController: AKFViewControllerDelegate {
     
     func viewController(_ viewController: (UIViewController & AKFViewController)!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
         print("didCompleteLoginWith")
+        print("Access token \(accessToken.tokenString) state \(String(describing: state))")
+        _accountKit.requestAccount { (account, error) in
+            if(error != nil){
+                //error while fetching information
+            } else {
+                print("Account ID  \(String(describing: account?.accountID))")
+                if let phoneNum = account?.phoneNumber{
+                    print("Phone Number\(phoneNum.stringRepresentation())")
+                }
+            }
+        }
     }
 
 }
