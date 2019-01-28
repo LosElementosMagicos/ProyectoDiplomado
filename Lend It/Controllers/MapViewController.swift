@@ -43,8 +43,8 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         // Place users name
         profileNameLabel.text = UserDefaults.standard.string(forKey: "userName")
         // Hides hamburger menu
-        hamburgerLeadingC.constant = -400
-        hamburgerTrailingC.constant = -400
+        hamburgerLeadingC.constant = -500
+        hamburgerTrailingC.constant = -500
         // Prepares location
         locationManager.delegate = self
         mapView.delegate = self
@@ -158,8 +158,8 @@ class MapViewController: UIViewController, UISearchBarDelegate {
             self.navigationController?.navigationBar.isHidden = true
         } else {
             //if the hamburger menu IS visible, then move the ubeView back to its original position
-            hamburgerLeadingC.constant = -400
-            hamburgerTrailingC.constant = -400
+            hamburgerLeadingC.constant = -500
+            hamburgerTrailingC.constant = -500
             hamburgerMenuIsVisible = false
             mapView.isUserInteractionEnabled = true
             searchBar.isUserInteractionEnabled = true
