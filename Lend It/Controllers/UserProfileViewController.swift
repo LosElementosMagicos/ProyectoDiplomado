@@ -44,6 +44,9 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
         if let previousVC = previousNC?.viewControllers.first as? MapViewController {
             previousVC.profileImageView.image = profileImageView.image
         }
+        if let previousVC = previousNC?.viewControllers.first as? ConfigurationTableViewController {
+            previousVC.profileImageView.image = profileImageView.image
+        }
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
