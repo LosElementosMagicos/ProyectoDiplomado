@@ -58,11 +58,14 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         downloadProfileImage(from: imagePath) { (image) in
             self.profileImageView.image = image
         }
+        // Change status bar to white
+        self.navigationController?.navigationBar.barStyle = .default
         // Makes Navigation Bar invisible
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
+ 
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

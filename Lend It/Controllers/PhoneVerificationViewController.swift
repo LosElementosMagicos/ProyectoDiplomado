@@ -45,18 +45,19 @@ class PhoneVerificationViewController: UIViewController {
         
         //Costumize the theme
         let theme:AKFTheme = AKFTheme.default()
-        theme.headerBackgroundColor = UIColor(red: 0.325, green: 0.557, blue: 1, alpha: 1)
-        theme.headerTextColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        theme.iconColor = UIColor(red: 0.325, green: 0.557, blue: 1, alpha: 1)
+        theme.headerTextType = .appName
+        theme.headerBackgroundColor = UIColor.black
+        theme.headerTextColor = UIColor.white
+        theme.iconColor = UIColor.black
         theme.inputTextColor = UIColor(white: 0.4, alpha: 1.0)
-        theme.statusBarStyle = .default
+        theme.statusBarStyle = .lightContent
         theme.textColor = UIColor(white: 0.3, alpha: 1.0)
         theme.titleColor = UIColor(red: 0.247, green: 0.247, blue: 0.247, alpha: 1)
         phoneVerificationViewController.setTheme(theme)
     }
     
     //Login with phone number
-    func phoneVerificationWithPhone(){
+    func phoneVerification(){
         let inputState = UUID().uuidString
         let vc = (_accountKit?.viewControllerForPhoneLogin(with: nil, state: inputState))!
         vc.enableSendToFacebook = true
@@ -66,7 +67,7 @@ class PhoneVerificationViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func verifyPhoneButtonTapped(_ sender: UIButton) {
-        self.phoneVerificationWithPhone()
+        self.phoneVerification()
     }
     
 }
