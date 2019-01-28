@@ -103,6 +103,9 @@
                                 <state key="normal" title="Sin verificar">
                                     <color key="titleColor" red="0.80325048575129532" green="0.0" blue="0.062439067174707534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="REo-1j-fHw" kind="show" id="nCa-5m-BUH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -135,6 +138,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZ4-IH-EkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1788" y="127.28635682158921"/>
+        </scene>
+        <!--Phone Verification View Controller-->
+        <scene sceneID="ANT-fD-i9U">
+            <objects>
+                <viewController id="REo-1j-fHw" customClass="PhoneVerificationViewController" customModule="Lend_It" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xa5-FB-ibs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="niE-IJ-zCx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGZ-WT-GWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2613" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qzm-Pp-9L7">
