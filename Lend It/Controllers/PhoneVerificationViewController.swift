@@ -11,25 +11,26 @@ import AccountKit
 
 class PhoneVerificationViewController: UIViewController {
 
-    //MARK: - Variabes
-    var _accountKit: AKFAccountKit!
+    var accountKit: AKFAccountKit!
+    var phoneNumber: String? = nil
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // initialize Account Kit
-        if _accountKit == nil {
-            print("Account is nil")
-            _accountKit = AKFAccountKit(responseType: .accessToken)
+        if accountKit == nil {
+            accountKit = AKFAccountKit(responseType: .accessToken)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if _accountKit?.currentAccessToken != nil{
+        if phoneNumber != nil {
+            self.dismiss(animated: false, completion: nil)
+        }
+        if accountKit?.currentAccessToken != nil{
             // if the user is already logged in, go to the main screen
             print("Already Logged in")
-            
         }
         else{
             // Show the login screen
@@ -40,9 +41,8 @@ class PhoneVerificationViewController: UIViewController {
     
     //MARK: - Helper Methods
     
-    func preparePhoneVerificationViewController(phoneVerificationViewController: AKFViewController) {
+    func preparePhoneVerificationVC(phoneVerificationViewController: AKFViewController) {
         phoneVerificationViewController.delegate = self
-        
         //Costumize the theme
         let theme:AKFTheme = AKFTheme.default()
         theme.headerTextType = .appName
@@ -59,15 +59,10 @@ class PhoneVerificationViewController: UIViewController {
     //Login with phone number
     func phoneVerification(){
         let inputState = UUID().uuidString
-        let vc = (_accountKit?.viewControllerForPhoneLogin(with: nil, state: inputState))!
+        let vc = (accountKit?.viewControllerForPhoneLogin(with: nil, state: inputState))!
         vc.enableSendToFacebook = true
-        self.preparePhoneVerificationViewController(phoneVerificationViewController: vc)
+        self.preparePhoneVerificationVC(phoneVerificationViewController: vc)
         self.present(vc as UIViewController, animated: true, completion: nil)
-    }
-    
-    //MARK: - Actions
-    @IBAction func verifyPhoneButtonTapped(_ sender: UIButton) {
-        self.phoneVerification()
     }
     
 }
@@ -87,13 +82,14 @@ extension PhoneVerificationViewController: AKFViewControllerDelegate {
     func viewController(_ viewController: (UIViewController & AKFViewController)!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
         print("didCompleteLoginWith")
         print("Access token \(accessToken.tokenString) state \(String(describing: state))")
-        _accountKit.requestAccount { (account, error) in
+        accountKit.requestAccount { (account, error) in
             if(error != nil){
                 //error while fetching information
             } else {
                 print("Account ID  \(String(describing: account?.accountID))")
                 if let phoneNum = account?.phoneNumber{
                     print("Phone Number\(phoneNum.stringRepresentation())")
+                    self.phoneNumber = phoneNum.stringRepresentation()
                 }
             }
         }

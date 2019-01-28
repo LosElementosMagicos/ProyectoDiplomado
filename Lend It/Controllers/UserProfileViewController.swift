@@ -9,8 +9,9 @@
 import UIKit
 import FirebaseAuth
 import FirebaseStorage
+import AccountKit
 
-class UserProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class UserProfileViewController: PhoneVerificationViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -59,6 +60,11 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func verifyPhoneNumberTapped(_ sender: Any) {
+        phoneVerification()
+    }
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:
         [UIImagePickerController.InfoKey : Any]) {
