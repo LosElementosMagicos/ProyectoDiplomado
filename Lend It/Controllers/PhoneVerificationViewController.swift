@@ -8,11 +8,12 @@
 
 import UIKit
 import AccountKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class PhoneVerificationViewController: UIViewController {
 
     var accountKit: AKFAccountKit!
-    var phoneNumber: String? = nil
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -25,9 +26,6 @@ class PhoneVerificationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if phoneNumber != nil {
-            self.dismiss(animated: false, completion: nil)
-        }
         if accountKit?.currentAccessToken != nil{
             // if the user is already logged in, go to the main screen
             print("Already Logged in")
@@ -81,15 +79,17 @@ extension PhoneVerificationViewController: AKFViewControllerDelegate {
     
     func viewController(_ viewController: (UIViewController & AKFViewController)!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
         print("didCompleteLoginWith")
-        print("Access token \(accessToken.tokenString) state \(String(describing: state))")
         accountKit.requestAccount { (account, error) in
             if(error != nil){
                 //error while fetching information
             } else {
-                print("Account ID  \(String(describing: account?.accountID))")
                 if let phoneNum = account?.phoneNumber{
-                    print("Phone Number\(phoneNum.stringRepresentation())")
-                    self.phoneNumber = phoneNum.stringRepresentation()
+                    // Store new number in Firebase
+                    let userId = Auth.auth().currentUser?.uid
+                    var ref: DatabaseReference!
+                    ref = Database.database().reference()
+                    ref.child("users/\(userId!)/phoneNumber").setValue(phoneNum.stringRepresentation())
+                    ref.child("users/\(userId!)/isVerified").setValue(true)
                 }
             }
         }

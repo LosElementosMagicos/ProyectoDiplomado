@@ -32,7 +32,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="w7P-Vy-Rxi">
-                                <rect key="frame" x="20" y="346" width="295" height="190.5"/>
+                                <rect key="frame" x="20" y="346" width="295" height="216.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PFS-a4-Bsx">
                                         <rect key="frame" x="0.0" y="0.0" width="131" height="43.5"/>
@@ -52,25 +52,25 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VhY-PY-hm4">
-                                        <rect key="frame" x="0.0" y="73.5" width="174" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="73.5" width="196.5" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número Telefónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-WP-w5j">
-                                                <rect key="frame" x="0.0" y="0.0" width="174" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="196.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vZn-QT-ZO8">
-                                                <rect key="frame" x="0.0" y="19.5" width="174" height="24"/>
+                                                <rect key="frame" x="0.0" y="19.5" width="196.5" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0447773124567" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gye-Bn-YQ5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="044777123456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gye-Bn-YQ5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="141.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1H-IC-Crt">
-                                                        <rect key="frame" x="157" y="0.0" width="17" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1H-IC-Crt">
+                                                        <rect key="frame" x="146.5" y="0.0" width="50" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pd1-lR-6TC">
-                                        <rect key="frame" x="0.0" y="147" width="295" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="173" width="295" height="43.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo Electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUN-cx-Vc3">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="19.5"/>
@@ -99,9 +99,9 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkH-FV-lD3">
-                                <rect key="frame" x="274" y="436" width="81" height="30"/>
-                                <state key="normal" title="Sin verificar">
-                                    <color key="titleColor" red="0.80325048575129532" green="0.0" blue="0.062439067174707534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="276" y="449" width="79" height="30"/>
+                                <state key="normal" title="sin verificar">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="verifyPhoneNumberTapped:" destination="4tZ-OM-hbe" eventType="touchUpInside" id="dV3-VT-iWQ"/>
@@ -131,6 +131,7 @@
                         <outlet property="emailLabel" destination="k0s-fP-d20" id="Zql-QH-jh2"/>
                         <outlet property="nameLabel" destination="Hki-Xz-p2p" id="FXj-IZ-KpY"/>
                         <outlet property="phoneNumberLabel" destination="Gye-Bn-YQ5" id="BTP-Jl-6vV"/>
+                        <outlet property="phoneVerificationButton" destination="jkH-FV-lD3" id="cEm-yH-3e5"/>
                         <outlet property="phoneVerifiedLabel" destination="q1H-IC-Crt" id="pY1-cC-02N"/>
                         <outlet property="profileImageView" destination="ymy-1b-ug8" id="mok-QZ-lKd"/>
                     </connections>

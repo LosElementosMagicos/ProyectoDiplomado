@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseStorage
-import AccountKit
+import FirebaseDatabase
 
 class UserProfileViewController: PhoneVerificationViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -18,6 +18,8 @@ class UserProfileViewController: PhoneVerificationViewController, UIImagePickerC
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var phoneVerifiedLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneVerificationButton: UIButton!
+    var ref: DatabaseReference!
     // References for storaging image
     fileprivate var storageRef: StorageReference!
     fileprivate var storageUploadTask: StorageUploadTask!
@@ -25,6 +27,10 @@ class UserProfileViewController: PhoneVerificationViewController, UIImagePickerC
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Loads phone and verification
+        ref = Database.database().reference()
+        loadPhoneNumber()
+        loadVerification()
         // Reference used to upload photos
         storageRef = Storage.storage().reference()
         // Makes profile view circular
@@ -36,6 +42,47 @@ class UserProfileViewController: PhoneVerificationViewController, UIImagePickerC
         imagePath = "profileImages/" + (Auth.auth().currentUser?.uid)! + ".jpg"
         if let image = loadImageFromDocuments(imagePath: imagePath) {
             profileImageView.image = image
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Gives time for Database to update
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.loadVerification()
+            self.loadPhoneNumber()
+        })
+    }
+    
+    func loadVerification() {
+        let userId = Auth.auth().currentUser?.uid
+        ref.child("users/\(userId!)/isVerified").observeSingleEvent(of: .value) {
+            (snapshot) in
+            if let isVerified = snapshot.value as? Bool {
+                self.updateVerificationUI(to: isVerified)
+            }
+        }
+    }
+    
+    func loadPhoneNumber() {
+        let userId = Auth.auth().currentUser?.uid
+        ref.child("users/\(userId!)/phoneNumber").observeSingleEvent(of: .value) {
+            (snapshot) in
+            if let phoneNumber = snapshot.value as? String {
+                self.phoneNumberLabel.text = phoneNumber
+            }
+        }
+    }
+    
+    func updateVerificationUI(to isVerified: Bool) {
+        print("heeer \(isVerified)")
+        if isVerified {
+            phoneVerifiedLabel.text = "✅"
+            phoneVerificationButton.setTitle("verificado", for: .normal)
+            phoneVerificationButton.setTitleColor(UIColor.green, for: .normal)
+        } else {
+            phoneVerifiedLabel.text = "❌"
+            phoneVerificationButton.setTitle("sin verificar", for: .normal)
+            phoneVerificationButton.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
