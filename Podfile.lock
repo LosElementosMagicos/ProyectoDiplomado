@@ -1,4 +1,5 @@
 PODS:
+  - AccountKit (4.35.0)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -91,6 +92,7 @@ PODS:
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
+  - AccountKit
   - Bolts
   - FBSDKCoreKit (= 4.39.1)
   - FBSDKLoginKit (= 4.39.1)
@@ -103,6 +105,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AccountKit
     - Bolts
     - FBSDKCoreKit
     - FBSDKLoginKit
@@ -123,6 +126,7 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  AccountKit: 870ccaf5d33facda9408783e28fbe68c5211e069
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FBSDKCoreKit: f442aa96179cc9b382bb4abeb7e340a47cca8f91
   FBSDKLoginKit: c3079d9a4db27c492287b1eed7a4272b28cf8a59
@@ -142,6 +146,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 3cd051631b377f0613ada6846c3cdfb15b515659
+PODFILE CHECKSUM: c226af1641e52bd5a72ba9a96b593357ff3dfda6
 
 COCOAPODS: 1.5.3

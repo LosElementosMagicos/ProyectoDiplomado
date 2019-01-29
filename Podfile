@@ -5,6 +5,7 @@ target 'Lend It' do
   use_frameworks!
   pod 'FBSDKLoginKit', '4.39.1'
   pod 'FBSDKCoreKit', '4.39.1'
+  pod 'AccountKit'
   pod 'GoogleMaps'
   pod 'Firebase/Core'
   pod 'Firebase/Database'

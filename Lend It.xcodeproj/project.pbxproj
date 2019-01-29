@@ -11,6 +11,7 @@
 		651A148721FB8CC400E80967 /* MyRentedItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651A148621FB8CC400E80967 /* MyRentedItems.storyboard */; };
 		651A148B21FE59A600E80967 /* Configuration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651A148A21FE59A600E80967 /* Configuration.storyboard */; };
 		651A148D21FE65E200E80967 /* ConfigurationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A148C21FE65E200E80967 /* ConfigurationTableViewController.swift */; };
+		651A148F21FEDB3F00E80967 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A148E21FEDB3F00E80967 /* PhoneVerificationViewController.swift */; };
 		654A73D221DEC082006A17C9 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A73D021DEC081006A17C9 /* UserProfileViewController.swift */; };
 		654A73D521DED79E006A17C9 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A73D421DED79E006A17C9 /* UserProfile.storyboard */; };
 		654A73D721E1961A006A17C9 /* AddNewItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A73D621E1961A006A17C9 /* AddNewItem.storyboard */; };
@@ -71,6 +72,7 @@
 		651A148621FB8CC400E80967 /* MyRentedItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyRentedItems.storyboard; sourceTree = "<group>"; };
 		651A148A21FE59A600E80967 /* Configuration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Configuration.storyboard; sourceTree = "<group>"; };
 		651A148C21FE65E200E80967 /* ConfigurationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTableViewController.swift; sourceTree = "<group>"; };
+		651A148E21FEDB3F00E80967 /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
 		652031E621FA78DF00B07232 /* Lend It.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Lend It.entitlements"; sourceTree = "<group>"; };
 		654A73D021DEC081006A17C9 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		654A73D421DED79E006A17C9 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				B581DD5C21F0E901006DB866 /* MyItemsTableViewController.swift */,
 				651A148421FB7C0400E80967 /* MyRentedItemsTableViewController.swift */,
 				651A148C21FE65E200E80967 /* ConfigurationTableViewController.swift */,
+				651A148E21FEDB3F00E80967 /* PhoneVerificationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -545,12 +548,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lend It/Pods-Lend It-resources.sh",
+				"${PODS_ROOT}/AccountKit/AccountKitStrings.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccountKitStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				657A300F21D1839900B71CA1 /* PlaceMarker.swift in Sources */,
+				651A148F21FEDB3F00E80967 /* PhoneVerificationViewController.swift in Sources */,
 				65F5DBD021E816F200AE6FB6 /* ItemProfilePhotoViewController.swift in Sources */,
 				65F5DBD221E869A100AE6FB6 /* UIPageViewControllerWithOverlayIndicator.swift in Sources */,
 				B581DD6021F102C4006DB866 /* MyItemsTableViewCell.swift in Sources */,

@@ -29,6 +29,17 @@
 	<string>1</string>
 	<key>FacebookAppID</key>
 	<string>600526513750729</string>
+    <key>AccountKitClientToken</key>
+    <string>5158fd1cfb5bf2c153793b31c0854959</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb600526513750729</string>
+            </array>
+        </dict>
+    </array>
 	<key>FacebookDisplayName</key>
 	<string>Lend It</string>
 	<key>LSApplicationQueriesSchemes</key>
