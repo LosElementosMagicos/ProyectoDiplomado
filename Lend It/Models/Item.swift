@@ -11,6 +11,7 @@ import FirebaseStorage
 
 struct Item {
     
+    let itemId : String
     let ownerId: String
     let borrowingUserId: String
     let itemName: String
@@ -22,7 +23,8 @@ struct Item {
     let itemPhoto2: String
     let itemPhoto3: String
     
-    init(ownerId: String, borrowingUserId: String, itemName: String, latitude: Double, longitude: Double, type: String, price: Int, itemPhoto1: String, itemPhoto2: String, itemPhoto3: String) {
+    init(itemId: String, ownerId: String, borrowingUserId: String, itemName: String, latitude: Double, longitude: Double, type: String, price: Int, itemPhoto1: String, itemPhoto2: String, itemPhoto3: String) {
+        self.itemId = itemId
         self.ownerId = ownerId
         self.borrowingUserId = borrowingUserId
         self.itemName = itemName
@@ -38,6 +40,7 @@ struct Item {
     // Func to conver model for easier writing to database
     func toAnyObject() -> Any {
         return [
+            "itemId": itemId,
             "itemName": itemName,
             "lat": latitude,
             "lon": longitude,

@@ -103,8 +103,8 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             if button?.tag == 1 {
                 button?.setImage(image, for: .normal)
                 button?.tag = 0
-                // Create a unique image path for image. In the case I am using the googleAppId of my account appended to the interval between 00:00:00 UTC on 1 January 2001 and the current date and time as an Integer and then I append .jpg. You can use whatever you prefer as long as it ends up unique.
-                let imagePath = Auth.auth().app!.options.googleAppID + "/\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
+                // Create a unique image path for image.
+                let imagePath = "itemImages/\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
                 imagePaths[index] = imagePath
                 // Set up metadata with appropriate content type
                 let metadata = StorageMetadata()
@@ -163,18 +163,20 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         let price = itemPriceTextField.integerValue
         let borrowingUserId = ""
         let type = "Tool"
-        let newItem = Item(ownerId: ownerId,
-                               borrowingUserId: borrowingUserId,
-                               itemName: itemName,
-                               latitude: latitude,
-                               longitude: longitude,
-                               type: type,
-                               price: price,
-                               itemPhoto1: itemImagePath1,
-                               itemPhoto2: itemImagePath2,
-                               itemPhoto3: itemImagePath3)
+        let itemId = String(Int((Date.timeIntervalSinceReferenceDate * 1000)))
+        let newItem = Item(itemId: itemId,
+                           ownerId: ownerId,
+                           borrowingUserId: borrowingUserId,
+                           itemName: itemName,
+                           latitude: latitude,
+                           longitude: longitude,
+                           type: type,
+                           price: price,
+                           itemPhoto1: itemImagePath1,
+                           itemPhoto2: itemImagePath2,
+                           itemPhoto3: itemImagePath3)
         // Access the "items" child reference and then create a unique child reference within it and finally set its value
-        ref.child("items").child("\(Int(Date.timeIntervalSinceReferenceDate * 1000))").setValue(newItem.toAnyObject())
+        ref.child("items").child("\(itemId)").setValue(newItem.toAnyObject())
         let alert  = UIAlertController(title: "Subida Exitosa!", message: "Tu objeto se encuentra listo para ser rentado!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
             self.navigationController?.dismiss(animated: true, completion: nil)

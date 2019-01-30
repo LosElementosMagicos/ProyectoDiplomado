@@ -7,7 +7,9 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 class MyItemsTableViewController: UITableViewController {
     var items = [Item]()
@@ -76,6 +78,52 @@ class MyItemsTableViewController: UITableViewController {
         }
     }
     
+    // Methods for deletion
+    override func tableView(_ tableView: UITableView, canEditRowAt
+        indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, commit
+        editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath:
+        IndexPath) {
+        if editingStyle == .delete {
+            // Logic for Firebase deletion...
+            let alert  = UIAlertController(title: "Advertencia", message: "¿Estás seguro que deseas borrar este elemento?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "SI", style: .destructive, handler: {
+                (_) in
+                // If user is certain, delete item
+                self.deleteItemAndImagesFromFirebase(for: self.items[indexPath.row])
+                self.items.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }))
+            alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func deleteItemAndImagesFromFirebase(for item: Item) {
+        let storageRef = Storage.storage().reference()
+        let databaseRef = Database.database().reference()
+        let urls = [item.itemPhoto1, item.itemPhoto2, item.itemPhoto3]
+        // Remove item photos from Firebase Storage
+        for url in urls {
+            //Removes image from storage
+            storageRef.child(url).delete { error in
+                if let error = error {
+                    print(error)
+                } else {
+                    print("Succesfully deleted image with url: \(url)")
+                }
+            }
+        }
+        // Remove item from Firebase Database
+        databaseRef.child("items/" + item.itemId).removeValue()
+    }
+    
+    // Mark - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "itemProfileSegue" {
             let index = sender as! Int
@@ -109,7 +157,9 @@ class MyItemsTableViewController: UITableViewController {
                 let itemImagePath1 = value?["itemPhoto1"] as? String ?? ""
                 let itemImagePath2 = value?["itemPhoto2"] as? String ?? ""
                 let itemImagePath3 = value?["itemPhoto3"] as? String ?? ""
-                let fetchedItem = Item(ownerId: ownerId,
+                let itemId = value?["itemId"] as? String ?? ""
+                let fetchedItem = Item(itemId: itemId,
+                                       ownerId: ownerId,
                                        borrowingUserId: borrowingUserId,
                                        itemName: itemName,
                                        latitude: lat,

@@ -15,7 +15,8 @@ class ItemProfileViewController: UIViewController {
     @IBOutlet weak var itemReviewsButton: UIButton!
     @IBOutlet weak var paymentMethodButton: UIButton!
     
-    var item: Item = Item(ownerId: "",
+    var item: Item = Item(itemId: "",
+                          ownerId: "",
                           borrowingUserId: "",
                           itemName: "",
                           latitude: 0,

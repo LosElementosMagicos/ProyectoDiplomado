@@ -109,7 +109,9 @@ class MyRentedItemsTableViewController: UITableViewController {
                 let itemImagePath1 = value?["itemPhoto1"] as? String ?? ""
                 let itemImagePath2 = value?["itemPhoto2"] as? String ?? ""
                 let itemImagePath3 = value?["itemPhoto3"] as? String ?? ""
-                let fetchedItem = Item(ownerId: ownerId,
+                let itemId = value?["itemId"] as? String ?? ""
+                let fetchedItem = Item(itemId: itemId,
+                                       ownerId: ownerId,
                                        borrowingUserId: borrowingUserId,
                                        itemName: itemName,
                                        latitude: lat,
