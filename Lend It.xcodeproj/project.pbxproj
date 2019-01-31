@@ -44,6 +44,7 @@
 		B581DD5D21F0E901006DB866 /* MyItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581DD5C21F0E901006DB866 /* MyItemsTableViewController.swift */; };
 		B581DD6021F102C4006DB866 /* MyItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581DD5E21F102C4006DB866 /* MyItemsTableViewCell.swift */; };
 		B581DD6121F102C4006DB866 /* MyItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B581DD5F21F102C4006DB866 /* MyItemsTableViewCell.xib */; };
+		B598A8DF220396BB00CE602B /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B598A8DE220396BB00CE602B /* Help.storyboard */; };
 		B902303E9A82E1E8CFAFE787 /* Pods_Lend_ItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DD93570C7A9FB3E2A9942 /* Pods_Lend_ItUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +113,7 @@
 		B581DD5C21F0E901006DB866 /* MyItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemsTableViewController.swift; sourceTree = "<group>"; };
 		B581DD5E21F102C4006DB866 /* MyItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemsTableViewCell.swift; sourceTree = "<group>"; };
 		B581DD5F21F102C4006DB866 /* MyItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyItemsTableViewCell.xib; sourceTree = "<group>"; };
+		B598A8DE220396BB00CE602B /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		BB5DD93570C7A9FB3E2A9942 /* Pods_Lend_ItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lend_ItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D250A57A15E6CAB24AF756D4 /* Pods-Lend ItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend ItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lend ItTests/Pods-Lend ItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9D583573881DB3505AEEADC /* Pods-Lend ItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend ItUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lend ItUITests/Pods-Lend ItUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				652031E621FA78DF00B07232 /* Lend It.entitlements */,
 				657A2FDA21D1673300B71CA1 /* AppDelegate.swift */,
 				657A2FDE21D1673400B71CA1 /* Main.storyboard */,
+				B598A8DE220396BB00CE602B /* Help.storyboard */,
 				654A73D621E1961A006A17C9 /* AddNewItem.storyboard */,
 				654A73D421DED79E006A17C9 /* UserProfile.storyboard */,
 				65F5DBC921E80C0600AE6FB6 /* ItemProfile.storyboard */,
@@ -417,6 +420,7 @@
 				657A2FE221D1678900B71CA1 /* Assets.xcassets in Resources */,
 				657A2FE021D1673400B71CA1 /* Main.storyboard in Resources */,
 				B581DD5B21F0454E006DB866 /* MyItems.storyboard in Resources */,
+				B598A8DF220396BB00CE602B /* Help.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,14 +771,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LPDGZV2E8C;
+				DEVELOPMENT_TEAM = SEHP955C97;
 				INFOPLIST_FILE = "Lend It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.project8.Lend-It";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.project8.Lend-It3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -787,14 +791,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LPDGZV2E8C;
+				DEVELOPMENT_TEAM = SEHP955C97;
 				INFOPLIST_FILE = "Lend It/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.project8.Lend-It";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.project8.Lend-It3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
