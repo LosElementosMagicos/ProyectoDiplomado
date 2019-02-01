@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 struct HelpModel: Decodable {
     let id: Int
     let title: String

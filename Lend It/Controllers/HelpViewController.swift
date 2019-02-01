@@ -11,12 +11,15 @@ import UIKit
 class HelpViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var helpTextLabel: UITextView!
-    
+    @IBOutlet weak var helpTextView: UITextView!
+    var helpTitle = ""
+    var helpText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = helpTitle
-        helpTextLabel.text = helpText
+        helpTextView.text = helpText
+        // helpTextView starting at top and not bottom
+        helpTextView.setContentOffset(CGPoint.zero, animated: false)
     }
 }
