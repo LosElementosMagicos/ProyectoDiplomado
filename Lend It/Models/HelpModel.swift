@@ -10,14 +10,14 @@ import Foundation
 
 
 
-struct Help: Decodable {
-    let id: String
+struct HelpModel: Decodable {
+    let id: Int
     let title: String
     let text: String
     
-    init(id: String, title: String, text: String) {
-        self.id = id
-        self.title = title
-        self.text = text
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case text
     }
 }

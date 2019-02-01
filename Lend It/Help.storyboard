@@ -41,7 +41,7 @@
                                                 <constraint firstAttribute="height" constant="22" id="yke-hh-hWN"/>
                                             </constraints>
                                             <connections>
-                                                <segue destination="HkZ-g8-CaG" kind="showDetail" identifier="segue" id="gyi-2D-n48"/>
+                                                <segue destination="HkZ-g8-CaG" kind="show" id="ZZN-D8-Cn7"/>
                                             </connections>
                                         </button>
                                     </subviews>

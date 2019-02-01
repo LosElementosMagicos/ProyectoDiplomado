@@ -10,7 +10,7 @@ import UIKit
 
 class HelpTableViewController: UITableViewController {
     
-    var helpItems = [Help]()
+    var helpItems = [HelpModel]()
 
     
     @IBAction func exitButtonPressed(_ sender: Any) {
@@ -30,13 +30,19 @@ class HelpTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return helpItems.count
+        return self.helpItems.count
     }
 
-    func getHelpItems() -> [Help] {
+    func getHelpItems() -> [HelpModel] {
+        debugPrint(HelpDataSource().helpItems)
         let decoder = JSONDecoder()
-        let result = try? decoder.decode([Help].self, from: HelpDataSource().helpItems)
-        return result ?? []
+        if let result = try? decoder.decode([HelpModel].self, from: HelpDataSource().helpItems){
+            return result
+        }
+        else {
+            debugPrint("error")
+        }
+        return []
     }
     
     
@@ -67,7 +73,7 @@ class HelpTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "helpItemCell", for: indexPath) as! HelpTableViewCell
 
-        cell.helpItemLabel.text = helpItems[indexPath.row].title
+        cell.helpItemLabel.text = self.helpItems[indexPath.row].title
 
         return cell
     }
@@ -112,10 +118,10 @@ class HelpTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   // override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
+    //}
 
 
 }
