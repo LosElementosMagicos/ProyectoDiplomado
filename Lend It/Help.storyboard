@@ -18,32 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="helpItemCell" id="HOq-qg-owz" customClass="HelpTableViewCell" customModule="Lend_It" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="helpItemCell" id="HOq-qg-owz">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HOq-qg-owz" id="J63-m6-Y8C">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxS-2W-PKy">
-                                            <rect key="frame" x="16" y="11.5" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="Ghf-cB-mJk"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="VxS-2W-PKy" firstAttribute="leading" secondItem="J63-m6-Y8C" secondAttribute="leading" constant="16" id="EJY-Ye-cHm"/>
-                                        <constraint firstItem="VxS-2W-PKy" firstAttribute="centerY" secondItem="J63-m6-Y8C" secondAttribute="centerY" id="RPB-jY-6qq"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="helpItemLabel" destination="VxS-2W-PKy" id="APj-zB-mfD"/>
-                                    <segue destination="HkZ-g8-CaG" kind="show" identifier="helpSegue" id="Qy3-fk-NEr"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,6 +39,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="HkZ-g8-CaG" kind="show" identifier="helpSegue" id="Fsb-54-al4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2u-Ov-KpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

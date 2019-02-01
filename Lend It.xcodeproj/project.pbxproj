@@ -48,7 +48,6 @@
 		B5CE9CC42203C434002003A2 /* HelpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE9CC32203C434002003A2 /* HelpModel.swift */; };
 		B5CE9CC92203CCDF002003A2 /* HelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE9CC82203CCDF002003A2 /* HelpTableViewController.swift */; };
 		B5CE9CCB220437E8002003A2 /* HelpDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE9CCA220437E8002003A2 /* HelpDataSource.swift */; };
-		B5CE9CCD22043D67002003A2 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE9CCC22043D67002003A2 /* HelpTableViewCell.swift */; };
 		B5CE9CCF220446A5002003A2 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE9CCE220446A5002003A2 /* HelpViewController.swift */; };
 		B902303E9A82E1E8CFAFE787 /* Pods_Lend_ItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DD93570C7A9FB3E2A9942 /* Pods_Lend_ItUITests.framework */; };
 /* End PBXBuildFile section */
@@ -122,7 +121,6 @@
 		B5CE9CC32203C434002003A2 /* HelpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpModel.swift; sourceTree = "<group>"; };
 		B5CE9CC82203CCDF002003A2 /* HelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewController.swift; sourceTree = "<group>"; };
 		B5CE9CCA220437E8002003A2 /* HelpDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDataSource.swift; sourceTree = "<group>"; };
-		B5CE9CCC22043D67002003A2 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
 		B5CE9CCE220446A5002003A2 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		BB5DD93570C7A9FB3E2A9942 /* Pods_Lend_ItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lend_ItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D250A57A15E6CAB24AF756D4 /* Pods-Lend ItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend ItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lend ItTests/Pods-Lend ItTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -272,7 +270,6 @@
 				651A148C21FE65E200E80967 /* ConfigurationTableViewController.swift */,
 				651A148E21FEDB3F00E80967 /* PhoneVerificationViewController.swift */,
 				B5CE9CC82203CCDF002003A2 /* HelpTableViewController.swift */,
-				B5CE9CCC22043D67002003A2 /* HelpTableViewCell.swift */,
 				B5CE9CCE220446A5002003A2 /* HelpViewController.swift */,
 			);
 			path = Controllers;
@@ -617,7 +614,6 @@
 				657A301721D300AF00B71CA1 /* SignInViewController.swift in Sources */,
 				657A301921D3137A00B71CA1 /* Item.swift in Sources */,
 				657A301121D183BD00B71CA1 /* MarkerInfoView.swift in Sources */,
-				B5CE9CCD22043D67002003A2 /* HelpTableViewCell.swift in Sources */,
 				654A73D221DEC082006A17C9 /* UserProfileViewController.swift in Sources */,
 				651A148D21FE65E200E80967 /* ConfigurationTableViewController.swift in Sources */,
 				657A2FDB21D1673300B71CA1 /* AppDelegate.swift in Sources */,

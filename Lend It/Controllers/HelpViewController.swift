@@ -13,13 +13,10 @@ class HelpViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var helpTextLabel: UILabel!
 
-    var text: String = ""
-    var titleHelp: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = titleHelp
-        helpTextLabel.text = text
+        titleLabel.text = helpTitle
+        helpTextLabel.text = helpText
     }
-
 }

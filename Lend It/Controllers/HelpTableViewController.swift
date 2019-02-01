@@ -8,11 +8,13 @@
 
 import UIKit
 
+var helpTitle = ""
+var helpText = ""
+
 class HelpTableViewController: UITableViewController {
     
     var helpItems = [HelpModel]()
-    var helpTitle = ""
-    var helpText = ""
+    
     
     @IBAction func exitButtonPressed(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
@@ -47,27 +49,18 @@ class HelpTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.helpTitle = self.helpItems[indexPath.row].title
-        self.helpText = self.helpItems[indexPath.row].text
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if segue.identifier == "helpSegue" {
-                    let vc = segue.destination as! HelpViewController
-                    vc.text = self.helpText
-                    vc.titleHelp = self.helpTitle
-                }
-        
+        helpText = helpItems[indexPath.row].text
+        helpTitle = helpItems[indexPath.row].title
+        performSegue(withIdentifier: "helpSegue", sender: self)
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "helpItemCell", for: indexPath) as! HelpTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "helpItemCell", for: indexPath)
 
-        cell.helpItemLabel.text = self.helpItems[indexPath.row].title
+        cell.textLabel?.text = self.helpItems[indexPath.row].title
 
         return cell
     }
-
 }
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "helpSegue" {
