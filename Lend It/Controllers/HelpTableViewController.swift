@@ -48,8 +48,8 @@ class HelpTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = HelpViewController()
         
-        vc.titleLabel!.text = self.helpItems[indexPath.row].title
-        vc.helpTextLabel!.text = self.helpItems[indexPath.row].text
+        vc.titleLabel?.text = self.helpItems[indexPath.row].title
+        vc.helpTextLabel?.text = self.helpItems[indexPath.row].text
         
         performSegue(withIdentifier: "helpSegue", sender: self)
     }
