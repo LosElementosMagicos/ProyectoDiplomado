@@ -44,6 +44,11 @@
 		B581DD5D21F0E901006DB866 /* MyItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581DD5C21F0E901006DB866 /* MyItemsTableViewController.swift */; };
 		B581DD6021F102C4006DB866 /* MyItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581DD5E21F102C4006DB866 /* MyItemsTableViewCell.swift */; };
 		B581DD6121F102C4006DB866 /* MyItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B581DD5F21F102C4006DB866 /* MyItemsTableViewCell.xib */; };
+		B598A8DF220396BB00CE602B /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B598A8DE220396BB00CE602B /* Help.storyboard */; };
+		B5CE9CC42203C434002003A2 /* HelpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE9CC32203C434002003A2 /* HelpModel.swift */; };
+		B5CE9CC92203CCDF002003A2 /* HelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE9CC82203CCDF002003A2 /* HelpTableViewController.swift */; };
+		B5CE9CCB220437E8002003A2 /* HelpDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE9CCA220437E8002003A2 /* HelpDataSource.swift */; };
+		B5CE9CCF220446A5002003A2 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE9CCE220446A5002003A2 /* HelpViewController.swift */; };
 		B902303E9A82E1E8CFAFE787 /* Pods_Lend_ItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DD93570C7A9FB3E2A9942 /* Pods_Lend_ItUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +117,11 @@
 		B581DD5C21F0E901006DB866 /* MyItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemsTableViewController.swift; sourceTree = "<group>"; };
 		B581DD5E21F102C4006DB866 /* MyItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemsTableViewCell.swift; sourceTree = "<group>"; };
 		B581DD5F21F102C4006DB866 /* MyItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyItemsTableViewCell.xib; sourceTree = "<group>"; };
+		B598A8DE220396BB00CE602B /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		B5CE9CC32203C434002003A2 /* HelpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpModel.swift; sourceTree = "<group>"; };
+		B5CE9CC82203CCDF002003A2 /* HelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewController.swift; sourceTree = "<group>"; };
+		B5CE9CCA220437E8002003A2 /* HelpDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDataSource.swift; sourceTree = "<group>"; };
+		B5CE9CCE220446A5002003A2 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		BB5DD93570C7A9FB3E2A9942 /* Pods_Lend_ItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lend_ItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D250A57A15E6CAB24AF756D4 /* Pods-Lend ItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend ItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lend ItTests/Pods-Lend ItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9D583573881DB3505AEEADC /* Pods-Lend ItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lend ItUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lend ItUITests/Pods-Lend ItUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,12 +194,14 @@
 				652031E621FA78DF00B07232 /* Lend It.entitlements */,
 				657A2FDA21D1673300B71CA1 /* AppDelegate.swift */,
 				657A2FDE21D1673400B71CA1 /* Main.storyboard */,
+				B598A8DE220396BB00CE602B /* Help.storyboard */,
 				654A73D621E1961A006A17C9 /* AddNewItem.storyboard */,
 				654A73D421DED79E006A17C9 /* UserProfile.storyboard */,
 				65F5DBC921E80C0600AE6FB6 /* ItemProfile.storyboard */,
 				B581DD5A21F0454E006DB866 /* MyItems.storyboard */,
 				651A148621FB8CC400E80967 /* MyRentedItems.storyboard */,
 				651A148A21FE59A600E80967 /* Configuration.storyboard */,
+				B5CE9CC52203C819002003A2 /* Data Sources */,
 				654A73DE21E323DA006A17C9 /* Helpers */,
 				657A301D21D6EC8300B71CA1 /* GoogleMapsHelpers */,
 				657A301C21D6EC1700B71CA1 /* Controllers */,
@@ -226,6 +238,7 @@
 			children = (
 				657A301821D3137A00B71CA1 /* Item.swift */,
 				65F5DBD521ECF35200AE6FB6 /* User.swift */,
+				B5CE9CC32203C434002003A2 /* HelpModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,6 +269,8 @@
 				651A148421FB7C0400E80967 /* MyRentedItemsTableViewController.swift */,
 				651A148C21FE65E200E80967 /* ConfigurationTableViewController.swift */,
 				651A148E21FEDB3F00E80967 /* PhoneVerificationViewController.swift */,
+				B5CE9CC82203CCDF002003A2 /* HelpTableViewController.swift */,
+				B5CE9CCE220446A5002003A2 /* HelpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -289,6 +304,14 @@
 				D9D583573881DB3505AEEADC /* Pods-Lend ItUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5CE9CC52203C819002003A2 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B5CE9CCA220437E8002003A2 /* HelpDataSource.swift */,
+			);
+			path = "Data Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +440,7 @@
 				657A2FE221D1678900B71CA1 /* Assets.xcassets in Resources */,
 				657A2FE021D1673400B71CA1 /* Main.storyboard in Resources */,
 				B581DD5B21F0454E006DB866 /* MyItems.storyboard in Resources */,
+				B598A8DF220396BB00CE602B /* Help.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +597,11 @@
 				657A300F21D1839900B71CA1 /* PlaceMarker.swift in Sources */,
 				651A148F21FEDB3F00E80967 /* PhoneVerificationViewController.swift in Sources */,
 				65F5DBD021E816F200AE6FB6 /* ItemProfilePhotoViewController.swift in Sources */,
+				B5CE9CCF220446A5002003A2 /* HelpViewController.swift in Sources */,
+				B5CE9CCB220437E8002003A2 /* HelpDataSource.swift in Sources */,
 				65F5DBD221E869A100AE6FB6 /* UIPageViewControllerWithOverlayIndicator.swift in Sources */,
+				B5CE9CC42203C434002003A2 /* HelpModel.swift in Sources */,
+				B5CE9CC92203CCDF002003A2 /* HelpTableViewController.swift in Sources */,
 				B581DD6021F102C4006DB866 /* MyItemsTableViewCell.swift in Sources */,
 				65F5DBCC21E811F300AE6FB6 /* ItemProfilePageViewController.swift in Sources */,
 				657A300921D1690300B71CA1 /* MapViewController.swift in Sources */,

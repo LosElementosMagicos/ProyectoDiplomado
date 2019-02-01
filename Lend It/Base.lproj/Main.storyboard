@@ -76,15 +76,15 @@
                                     <constraint firstAttribute="width" constant="30" id="xPv-xu-myo"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.85000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9AS-tk-Y2P">
-                                <rect key="frame" x="0.0" y="646.5" width="375" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.85000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9AS-tk-Y2P">
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1au-IT-v5Z" userLabel="RentButton">
-                                <rect key="frame" x="102.5" y="593.5" width="170" height="33"/>
+                                <rect key="frame" x="102.5" y="614" width="170" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="3bZ-Or-lWX"/>
                                     <constraint firstAttribute="width" secondItem="1au-IT-v5Z" secondAttribute="height" multiplier="200:39" id="uVV-2a-DLz"/>
@@ -97,7 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1Z-CE-a8o" userLabel="LendButton">
-                                <rect key="frame" x="102.5" y="593.5" width="170" height="33"/>
+                                <rect key="frame" x="102.5" y="614" width="170" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="S1Z-CE-a8o" secondAttribute="height" multiplier="200:39" id="BVI-2C-TyF"/>
                                     <constraint firstAttribute="width" constant="170" id="Ss9-g6-tR5"/>
@@ -178,6 +178,11 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6re-yo-l69">
                                                 <rect key="frame" x="0.0" y="198" width="43" height="30"/>
                                                 <state key="normal" title="Ayuda"/>
+                                                <connections>
+                                                    <segue destination="jrk-Nm-Ifd" kind="popoverPresentation" popoverAnchorView="6re-yo-l69" id="tFx-lE-3C0">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-Aq-mPu">
                                                 <rect key="frame" x="0.0" y="264" width="97" height="30"/>
@@ -261,6 +266,14 @@
                 <exit id="wqn-iL-Rhc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="JAv-f2-OgA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Help" id="jrk-Nm-Ifd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cff-OT-ypv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="537"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="BiF-ok-PbT">
