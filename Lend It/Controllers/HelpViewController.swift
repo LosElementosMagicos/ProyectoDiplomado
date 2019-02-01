@@ -19,6 +19,9 @@ class HelpViewController: UIViewController {
         super.viewDidLoad()
         titleLabel.text = helpTitle
         helpTextView.text = helpText
+    }
+    
+    override func viewDidLayoutSubviews() {
         // helpTextView starting at top and not bottom
         helpTextView.setContentOffset(CGPoint.zero, animated: false)
     }
