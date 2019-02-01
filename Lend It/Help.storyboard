@@ -55,45 +55,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="32" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Np-DA-BUJ">
-                                <rect key="frame" x="16" y="180" width="343" height="38"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="label">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" paragraphSpacingBefore="1" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSB-eR-Uau">
-                                <rect key="frame" x="16" y="116" width="343" height="48"/>
+                                <rect key="frame" x="16" y="116" width="343" height="99"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="zda-3M-Pj8"/>
+                                    <constraint firstAttribute="height" constant="99" id="XGr-65-LpO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="con-fY-C3T">
+                                <rect key="frame" x="16" y="223" width="343" height="424"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gSB-eR-Uau" firstAttribute="leading" secondItem="ocT-39-mxR" secondAttribute="leading" constant="16" id="9xU-kt-H5F"/>
-                            <constraint firstItem="7Np-DA-BUJ" firstAttribute="top" secondItem="gSB-eR-Uau" secondAttribute="bottom" constant="16" id="I53-kT-huf"/>
-                            <constraint firstItem="7Np-DA-BUJ" firstAttribute="leading" secondItem="ocT-39-mxR" secondAttribute="leading" constant="16" id="PXw-hK-qeE"/>
-                            <constraint firstItem="gSB-eR-Uau" firstAttribute="top" secondItem="ocT-39-mxR" secondAttribute="top" id="Sbi-8k-8qf"/>
-                            <constraint firstItem="ocT-39-mxR" firstAttribute="trailing" secondItem="gSB-eR-Uau" secondAttribute="trailing" constant="16" id="VIb-9n-47v"/>
-                            <constraint firstItem="ocT-39-mxR" firstAttribute="trailing" secondItem="7Np-DA-BUJ" secondAttribute="trailing" constant="16" id="hso-ZI-Vv0"/>
+                            <constraint firstItem="con-fY-C3T" firstAttribute="leading" secondItem="ocT-39-mxR" secondAttribute="leading" constant="16" id="3r3-ZH-2T0"/>
+                            <constraint firstItem="ocT-39-mxR" firstAttribute="trailing" secondItem="gSB-eR-Uau" secondAttribute="trailing" constant="16" id="FKi-By-tM7"/>
+                            <constraint firstItem="ocT-39-mxR" firstAttribute="trailing" secondItem="con-fY-C3T" secondAttribute="trailing" constant="16" id="JfW-1M-OHN"/>
+                            <constraint firstItem="gSB-eR-Uau" firstAttribute="top" secondItem="ocT-39-mxR" secondAttribute="top" id="NBw-KM-eRB"/>
+                            <constraint firstItem="ocT-39-mxR" firstAttribute="bottom" secondItem="con-fY-C3T" secondAttribute="bottom" constant="20" id="ZOP-LK-WgD"/>
+                            <constraint firstItem="gSB-eR-Uau" firstAttribute="leading" secondItem="ocT-39-mxR" secondAttribute="leading" constant="16" id="nQW-vb-dJb"/>
+                            <constraint firstItem="con-fY-C3T" firstAttribute="top" secondItem="gSB-eR-Uau" secondAttribute="bottom" constant="8" id="yAv-hM-UUE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ocT-39-mxR"/>
                     </view>
                     <connections>
-                        <outlet property="helpTextLabel" destination="7Np-DA-BUJ" id="YjV-pS-afi"/>
+                        <outlet property="helpTextLabel" destination="con-fY-C3T" id="Tyf-2a-Zki"/>
                         <outlet property="titleLabel" destination="gSB-eR-Uau" id="NXr-gj-DQc"/>
                     </connections>
                 </viewController>
