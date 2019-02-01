@@ -11,7 +11,8 @@ import UIKit
 class HelpTableViewController: UITableViewController {
     
     var helpItems = [HelpModel]()
-
+    var helpTitle = ""
+    var helpText = ""
     
     @IBAction func exitButtonPressed(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
@@ -46,12 +47,17 @@ class HelpTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = HelpViewController()
+        self.helpTitle = self.helpItems[indexPath.row].title
+        self.helpText = self.helpItems[indexPath.row].text
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                if segue.identifier == "helpSegue" {
+                    let vc = segue.destination as! HelpViewController
+                    vc.text = self.helpText
+                    vc.titleHelp = self.helpTitle
+                }
         
-        vc.titleLabel?.text = self.helpItems[indexPath.row].title
-        vc.helpTextLabel?.text = self.helpItems[indexPath.row].text
-        
-        performSegue(withIdentifier: "helpSegue", sender: self)
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
