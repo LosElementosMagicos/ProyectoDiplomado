@@ -284,29 +284,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34v-m9-DSX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lendItHammer" translatesAutoresizingMaskIntoConstraints="NO" id="Sf9-Xg-wbU">
+                                        <rect key="frame" x="67.5" y="60" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="B6S-KG-YTJ"/>
+                                            <constraint firstAttribute="width" constant="240" id="WGf-g6-aGI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lend iT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQh-fa-JFj">
+                                        <rect key="frame" x="113" y="308" width="149.5" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="34v-m9-DSX" secondAttribute="height" multiplier="375:374" id="eM7-Kd-h2c"/>
+                                    <constraint firstItem="YQh-fa-JFj" firstAttribute="top" secondItem="Sf9-Xg-wbU" secondAttribute="bottom" constant="8" id="K6F-br-zcm"/>
+                                    <constraint firstItem="YQh-fa-JFj" firstAttribute="centerX" secondItem="34v-m9-DSX" secondAttribute="centerX" id="UDO-aa-WO8"/>
+                                    <constraint firstAttribute="width" secondItem="34v-m9-DSX" secondAttribute="height" multiplier="1:1.2" id="eM7-Kd-h2c"/>
+                                    <constraint firstItem="Sf9-Xg-wbU" firstAttribute="centerX" secondItem="34v-m9-DSX" secondAttribute="centerX" id="emB-BD-7Wf"/>
+                                    <constraint firstItem="Sf9-Xg-wbU" firstAttribute="top" secondItem="34v-m9-DSX" secondAttribute="top" constant="60" id="s8L-0G-pMZ"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQh-fa-JFj">
-                                <rect key="frame" x="145.5" y="137" width="84" height="100.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="84"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PJp-10-ROD">
-                                <rect key="frame" x="37.5" y="507.5" width="300" height="79.5"/>
+                                <rect key="frame" x="37.5" y="508" width="300" height="79"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rent everything with Lend iT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U3-v2-LGk">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="27.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rent everything with Lend iT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U3-v2-LGk">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="27"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR4-ez-8Ha">
-                                        <rect key="frame" x="0.0" y="35.5" width="300" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="300" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="P35-2e-Zgc"/>
                                             <constraint firstAttribute="height" constant="44" id="l4X-ng-duO"/>
@@ -325,10 +338,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="34v-m9-DSX" firstAttribute="trailing" secondItem="wIi-pd-DTH" secondAttribute="trailing" id="HR2-oq-dY9"/>
-                            <constraint firstItem="YQh-fa-JFj" firstAttribute="centerY" secondItem="34v-m9-DSX" secondAttribute="centerY" id="RRr-XT-gpS"/>
                             <constraint firstItem="34v-m9-DSX" firstAttribute="leading" secondItem="wIi-pd-DTH" secondAttribute="leading" id="Smk-e5-zGh"/>
                             <constraint firstItem="PJp-10-ROD" firstAttribute="centerX" secondItem="wIi-pd-DTH" secondAttribute="centerX" id="b0b-WN-aWA"/>
-                            <constraint firstItem="YQh-fa-JFj" firstAttribute="centerX" secondItem="wIi-pd-DTH" secondAttribute="centerX" id="cVu-jS-uDE"/>
                             <constraint firstItem="34v-m9-DSX" firstAttribute="top" secondItem="mqS-R8-igz" secondAttribute="top" id="kM7-4j-w1q"/>
                             <constraint firstItem="wIi-pd-DTH" firstAttribute="bottom" secondItem="PJp-10-ROD" secondAttribute="bottom" constant="80" id="qIb-Ew-QFI"/>
                         </constraints>
@@ -368,5 +379,6 @@
         <image name="facebook" width="300" height="44"/>
         <image name="hamburgerMenu" width="22.5" height="22.5"/>
         <image name="icon_me" width="445" height="720"/>
+        <image name="lendItHammer" width="1024" height="1024"/>
     </resources>
 </document>
