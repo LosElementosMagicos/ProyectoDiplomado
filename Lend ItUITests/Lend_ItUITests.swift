@@ -31,7 +31,6 @@ class Lend_ItUITests: XCTestCase {
     override func tearDown() {
         // This method is called after the invocation of each test method in the class.
         // Log out of app
-        app.navigationBars["Lend_It.MapView"].buttons["Item"].tap()
         app.buttons["Configuración"].tap()
         app.tables.staticTexts["Cerrar sesión"].tap()
     }
@@ -55,6 +54,36 @@ class Lend_ItUITests: XCTestCase {
         app.keys["0"].tap()
         element.tap()
         app.navigationBars["Lend_It.AddItemView"].buttons["Cancel"].tap()
+        app.navigationBars["Lend_It.MapView"].buttons["Item"].tap()
+    }
+    
+    func testHamburguerMenu() {
+        // Profile
+        app.navigationBars["Lend_It.MapView"].buttons["Item"].tap()
+        app.buttons["editar"].tap()
+        app.buttons["verificado"].tap()
+        app.keys["1"].tap()
+        app.keys["2"].tap()
+        app.navigationBars["Lend It"].buttons["Back"].tap()
+        app.navigationBars["Mi Perfil"].buttons["Back"].tap()
+        // My items
+        app.buttons["Mis objetos"].tap()
+        app.navigationBars["Mis Objetos"].buttons["Back"].tap()
+        // Rented items
+        app.buttons["Objetos rentados"].tap()
+        app.navigationBars["Mis Rentados"].buttons["Back"].tap()
+        // Help
+        app.buttons["Ayuda"].tap()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["¿Cómo puedo rentar?"].tap()
+        let helpButton = app.navigationBars["Lend_It.HelpView"].buttons["Ayuda"]
+        helpButton.tap()
+        tablesQuery.staticTexts["No aparece el objeto que estoy buscando."].tap()
+        helpButton.tap()
+        app.navigationBars["Ayuda"].buttons["Done"].tap()
+        // Configuration
+        app.buttons["Configuración"].tap()
+        app.navigationBars["Configuración"].buttons["Done"].tap()
     }
 
 }
