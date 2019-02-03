@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '12.0'
 
 target 'Lend It' do
   use_frameworks!
@@ -14,19 +14,16 @@ target 'Lend It' do
   pod 'Firebase/Storage'
   pod 'Bolts', inhibit_warnings: true
 
-  
+ end
   
   
   # Pods for Lend It
 
   target 'Lend ItTests' do
-    inherit! :search_paths
-    # Pods for testing
+    inherit! :complete
+    pod 'Firebase'
   end
 
   target 'Lend ItUITests' do
-    inherit! :search_paths
-    # Pods for testing
+      inherit! :complete
   end
-
-end
